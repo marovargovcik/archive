@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+const http = require('http');
+
+const setupWsServer = require('../src/ws');
+const app = require('../src/app');
+
+const port = process.env.PORT || 3000;
+const server = http.createServer(app);
+app.set('port', port);
+setupWsServer(server);
+
+server.listen(port);

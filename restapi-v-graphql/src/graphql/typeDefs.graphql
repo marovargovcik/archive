@@ -1,0 +1,105 @@
+type Query {
+  customer(customerNumber: Int): Customer
+  customers: [Customer]!
+  employee(employeeNumber: Int): Employee
+  employees: [Employee]!
+  office(officeCode: Int): Office
+  offices: [Office]!
+  order(orderNumber: Int): Order
+  orders: [Order]!
+  payment(checkNumber: String): Payment
+  payments: [Payment]!
+  product(productCode: String): Product
+  productLine(productLine: String): ProductLine
+  productLines: [ProductLine]!
+  products: [Product]!
+}
+
+type Office {
+  officeCode: String!
+  city: String!
+  phone: String!
+  addressLine1: String!
+  addressLine2: String
+  state: String
+  country: String!
+  postalCode: String!
+  territory: String!
+  employees: [Employee]!
+}
+
+type Employee {
+  employeeNumber: Int!
+  lastName: String!
+  firstName: String!
+  extension: String!
+  email: String!
+  jobTitle: String!
+  office: Office!
+  supervisor: Employee
+  supervisees: [Employee]!
+  customers: [Customer]!
+}
+
+type Customer {
+  customerNumber: Int!
+  customerName: String!
+  contactLastName: String!
+  contactFirstName: String!
+  phone: String!
+  addressLine1: String!
+  addressLine2: String
+  city: String!
+  state: String
+  postalCode: String
+  country: String!
+  creditLimit: Float
+  orders: [Order]!
+  payments: [Payment]!
+  salesRepresentative: Employee
+}
+
+type Product {
+  productCode: String!
+  productName: String!
+  productScale: String!
+  productVendor: String!,
+  productDescription: String!
+  quantityInStock: Int!
+  buyPrice: Float!
+  MSRP: Float!
+  orders: [Order]!
+  productLine: ProductLine!
+}
+
+type ProductLine {
+  productLine: String!
+  textDescription: String
+  products: [Product]!
+}
+
+type Payment {
+  checkNumber: String!
+  paymentDate: String!
+  amount: Float!
+  customer: Customer!
+}
+
+type Order {
+  orderNumber: Int!
+  orderDate: String!
+  requiredDate: String!
+  shippedDate: String
+  status: String!
+  comments: String
+  customerNumber: Int!
+  customer: Customer!
+  orderDetails: [OrderDetails]!
+}
+
+type OrderDetails {
+  productCode: String!
+  quantityOrdered: Int!
+  priceEach: Float!
+  product: Product!,
+}

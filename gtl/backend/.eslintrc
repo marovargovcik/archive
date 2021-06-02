@@ -1,0 +1,46 @@
+{
+  "extends": [
+    "canonical",
+    "canonical/typescript",
+    "canonical/jest",
+    "canonical/node",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "project": ["./tsconfig.json"],
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ],
+    "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/unbound-method": "off",
+    "consistent-return": "off",
+    "filenames/match-exported": "off",
+    "filenames/match-regex": "off",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "caseInsensitive": true,
+          "order": "asc"
+        },
+        "newlines-between": "always"
+      }
+    ],
+    "import/unambiguous": "off",
+    "jest/prefer-expect-assertions": "off",
+    "newline-before-return": "off",
+    "node/callback-return": "off",
+    "node/no-process-env": "off",
+    "node/no-unpublished-import": "off",
+    "unicorn/prevent-abbreviations": "off"
+  }
+}

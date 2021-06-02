@@ -1,0 +1,9 @@
+.configrc
+security/**/*
+!security/.gitkeep
+node_modules
+coverage
+.idea
+.vscode
+.DS_Store
+dist/**/*

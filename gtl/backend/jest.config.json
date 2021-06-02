@@ -1,0 +1,16 @@
+{
+  "globals": {
+    "ts-jest": {
+      "tsconfig": "tsconfig.json"
+    }
+  },
+  "silent": true,
+  "moduleFileExtensions": ["ts", "js"],
+  "setupFilesAfterEnv": ["./src/__tests__/setup.ts"],
+  "testEnvironment": "node",
+  "testPathIgnorePatterns": ["./dist", "./src/__tests__/utils.ts", "./src/__tests__/setup.ts"],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  },
+  "verbose": true
+}

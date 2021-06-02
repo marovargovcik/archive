@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Docs</title>
+</head>
+<body>
+Schema:
+<p>
+  Entity: Office [offices, office(officeCode)]
+  <ul>
+    <li>employees: Array of Employee</li>
+  </ul>
+</p>
+<p>
+  Entity: Employee [employees, employee(employeeNumber)]
+  <ul>
+    <li>office: Office</li>
+    <li>supervisor: Employee</li>
+    <li>supervisees: Array of Employee</li>
+    <li>customers: Array of Customer</li>
+  </ul>
+</p>
+<p>
+  Entity: Customer [customers, customer(customerNumber)]
+  <ul>
+    <li>salesRepresentative: Employee</li>
+    <li>orders: Array of Order</li>
+    <li>payments: Array of Payment</li>
+  </ul>
+</p>
+<p>
+  Entity: Order [orders, order(orderNumber)]
+  <ul>
+    <li>customer: Customer</li>
+    <li>orderDetails: Array of OrderDetail</li>
+  </ul>
+</p>
+<p>
+  Entity: Order details [can only be queried as part of order]
+  <ul>
+    <li>product: Product</li>
+  </ul>
+</p>
+<p>
+  Entity: ProductLine [productLines, productLine(productLine)]
+  <ul>
+    <li>products: Array of Product</li>
+  </ul>
+</p>
+<p>
+  Entity: Product [products, product(productCode)]
+  <ul>
+    <li>productLine: ProductLine</li>
+    <li>orders: Array of Order</li>
+  </ul>
+</p>
+<p>
+  Entity: Payments [payments, payment(checkNumber)]
+  <ul>
+    <li>customer: Customer</li>
+  </ul>
+</p>
+</body>
+</html>

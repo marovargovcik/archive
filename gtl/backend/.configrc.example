@@ -1,0 +1,26 @@
+{
+  "database": {
+    "name": "",
+    "password": "",
+    "server": "",
+    "user": ""
+  },
+  "port": 3000,
+  "redis": {
+    "url": "",
+    "host": "",
+    "port": ""
+  },
+  "security": {
+    "accessTokenPrivateKeyFilename": "accessTokenPrivate.pem",
+    "accessTokenPublicKeyFilename": "accessTokenPublic.pem",
+    "refreshTokenPrivateKeyFilename": "refreshTokenPrivate.pem",
+    "refreshTokenPublicKeyFilename": "refreshTokenPublic.pem"
+  },
+  "test": {
+    "chiefLibrarianSsn": "",
+    "chiefLibrarianPassword": "",
+    "checkOutStaffSsn": "",
+    "checkOutStaffPassword": ""
+  }
+}

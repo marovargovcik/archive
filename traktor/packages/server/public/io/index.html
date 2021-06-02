@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket IO server</title>
+</head>
+<body>
+<script src="https://www.unpkg.com/socket.io-client@3.0.4/dist/socket.io.min.js"></script>
+<script>
+  const socket = io();
+  window.socket = socket;
+
+  socket.on('roomCreated', (room) => console.log('Event: roomCreated', room));
+  socket.on('roomStarted', (room) => console.log('Event: roomStarted', room));
+  socket.on('roomDisbanded', (message) => console.log('Event: roomDisbanded', message));
+  socket.on('userJoined', (room) => console.log('Event: userJoined', room));
+  socket.on('userLeft', (room) => console.log('Event: userLeft', room));
+  socket.on('error', (message) => console.log('Event: error', message));
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/styles.css"],"names":[],"mappings":"AAAA,EACE,aAAc,CACd,yBACF,CAEA,WACE,WAAY,CACZ,UACF","file":"main.4adb4a2d.chunk.css","sourcesContent":["a {\n  color: #f50057;\n  text-decoration: underline;\n}\n\n.joypixels {\n  height: 16px;\n  width: 16px;\n}\n"]}
