@@ -4,6 +4,11 @@ school project for class "security for developers" in 2nd semester of top-up pro
 ## description
 project demostrates discovered and patched security vulnerabilities in popular node library generating jws by using both latest (secure) version 4.0 (22.11.2021 at the time of writing) and (unsafe) version 2.0 that is now deprecated. first vulnerability origins from using alg header parameter from token instead which can be easily modified by the attacker. second vulnerability origins from the fact that alg can be changed from asymmetric algorithm like rs256 to symmetric one like hs256. since public key is often easily accessible (hence the name) attacker can forge tokens that alters header parameter to alg: hs256 and such token will be considered valid. issue is well described here: https://auth0.com/blog/critical-vulnerabilities-in-json-web-token-libraries/. 
 
+### security fix
+see how was the issue patched: 
+- fix: https://github.com/auth0/node-jws/commit/585d0e1e97b6747c10cf5b7689ccc5618a89b299
+- changelog: https://github.com/auth0/node-jws/blob/master/CHANGELOG.md
+
 ### setup
 1. npm install
 2. use npm start to watch files, transpile them to javascript on detected file change and spin web server on port 3000
