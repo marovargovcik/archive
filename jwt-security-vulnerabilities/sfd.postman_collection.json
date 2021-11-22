@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "ba72238a-9db4-445e-a990-b21cd8192a7d",
+		"name": "sfd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"password\",\r\n    \"username\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify safe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJwYXNzd29yZCI6InBhc3N3b3JkIiwidXNlcm5hbWUiOiJhZG1pbiJ9.Zgl3PR_haCrMgSuL6jHLj7efV3iEHleqM_JgMQIs918",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/verify/safe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"verify",
+						"safe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify unsafe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJwYXNzd29yZCI6InBhc3N3b3JkIiwidXNlcm5hbWUiOiJhZG1pbiJ9.Zgl3PR_haCrMgSuL6jHLj7efV3iEHleqM_JgMQIs918",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/verify/unsafe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"verify",
+						"unsafe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "key",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzd29yZCI6InBhc3N3b3JkIiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTYzNzUyMjA4MywiZXhwIjoxNjM3NTIzMjgzfQ.Ffn_MAi9L1QGfXqyXomiIQLsNKwbZlmA2jB5JgxfRpNNj_Y0e-ggflhiwKcN5UAjvNhSh_QNmNc8wmFfBhKzvH0JT-X-brpU0C-WBurVOzgah8Z6Heqv9uFod2cjn6Cgqd-DemYTqb7rmLlzp2-YdSCtNAD679sT7Bj4XJzzhDS42VV-tYbf0wjQjucXP6rgP-sfwkeQTxDt5acgq4YroY4nCpvur4uR-fFMOju0iuawpmAvx1zcPLa6ZRIyFh-8_u-kvETY26WeScpG7dllIf-PQw6qIw6WLBMy4c3KvhOacZlxaluea2h5UkHyuDBRf5Y_fEXV4KQ5iqlYp8FQljJUIRPyKcYCCRBKXJRRjcTb2TgsmOerk-lm2_8HXLJMlmqJ8Cuqg6ilduWoLeyuffp1WLs4ae9a63SOjXKYsBRg3bQqqazrpk-GncTrIUMEl6RRB3qnD5lbr7qiOdlTK3QQBXz878pVVHHHWZEPttNsm9YKu14vbgfgWw96HhlPUdDC1coRM2bdfKX_XWmSnrx_rfubVRxm0nVqVpxVfYBFhc6H8lAAxoJw4-HYH7uQm_pApY6bWYPZmTeVQmFhE2vEvpUROSEhJBYxVaiP_9L4bRjmIvYhCCQlGQ0ko7iWepIKXQsmiFsqFZWazDh3d0jNIRSykxIt4Lr2Hvfb9DI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/key",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"key"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "header",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzd29yZCI6InBhc3N3b3JkIiwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTYzNzUyMjA4MywiZXhwIjoxNjM3NTIzMjgzfQ.Ffn_MAi9L1QGfXqyXomiIQLsNKwbZlmA2jB5JgxfRpNNj_Y0e-ggflhiwKcN5UAjvNhSh_QNmNc8wmFfBhKzvH0JT-X-brpU0C-WBurVOzgah8Z6Heqv9uFod2cjn6Cgqd-DemYTqb7rmLlzp2-YdSCtNAD679sT7Bj4XJzzhDS42VV-tYbf0wjQjucXP6rgP-sfwkeQTxDt5acgq4YroY4nCpvur4uR-fFMOju0iuawpmAvx1zcPLa6ZRIyFh-8_u-kvETY26WeScpG7dllIf-PQw6qIw6WLBMy4c3KvhOacZlxaluea2h5UkHyuDBRf5Y_fEXV4KQ5iqlYp8FQljJUIRPyKcYCCRBKXJRRjcTb2TgsmOerk-lm2_8HXLJMlmqJ8Cuqg6ilduWoLeyuffp1WLs4ae9a63SOjXKYsBRg3bQqqazrpk-GncTrIUMEl6RRB3qnD5lbr7qiOdlTK3QQBXz878pVVHHHWZEPttNsm9YKu14vbgfgWw96HhlPUdDC1coRM2bdfKX_XWmSnrx_rfubVRxm0nVqVpxVfYBFhc6H8lAAxoJw4-HYH7uQm_pApY6bWYPZmTeVQmFhE2vEvpUROSEhJBYxVaiP_9L4bRjmIvYhCCQlGQ0ko7iWepIKXQsmiFsqFZWazDh3d0jNIRSykxIt4Lr2Hvfb9DI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/hacker/base64EncodedHeaderWithAlgNone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"hacker",
+						"base64EncodedHeaderWithAlgNone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token from public key",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/hacker/tokenFromPublicKey",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"hacker",
+						"tokenFromPublicKey"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
