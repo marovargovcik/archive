@@ -1,0 +1,75 @@
+{
+  "dependencies": {
+    "-redis": "npm:redis@^4.0.0",
+    "amqplib": "^0.8.0",
+    "http-errors": "^1.8.1",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.8.2",
+    "@types/eslint": "8.2.1",
+    "@types/http-errors": "^1.8.1",
+    "@types/node": "16.11.12",
+    "@typescript-eslint/eslint-plugin": "5.6.0",
+    "@typescript-eslint/parser": "5.6.0",
+    "eslint": "8.4.1",
+    "eslint-config-canonical": "^32.46.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "tsc-alias": "^1.4.2",
+    "typescript": "4.5.3"
+  },
+  "engines": {
+    "node": ">=14.15.4"
+  },
+  "exports": {
+    "./createError": "./dist/createError.js",
+    "./createResponse": "./dist/createResponse.js",
+    "./generateRandomId": "./dist/generateRandomId.js",
+    "./handleError": "./dist/handleError.js",
+    "./mysql": "./dist/mysql.js",
+    "./rabbitmq": "./dist/rabbitmq.js",
+    "./redis": "./dist/redis.js",
+    "./types": "./dist/types.js",
+    "./withRetry": "./dist/withRetry.js"
+  },
+  "name": "parkingad-helpers",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf dist/* && tsc && tsc-alias --silent",
+    "start": "nodemon --watch src --ext ts --exec \"tsc && tsc-alias --silent && node dist/server.js\""
+  },
+  "typesVersions": {
+    "*": {
+      "createError": [
+        "./dist/createError.d.ts"
+      ],
+      "createResponse": [
+        "./dist/createResponse.d.ts"
+      ],
+      "handleError": [
+        "./dist/handleError.d.ts"
+      ],
+      "generateRandomId": [
+        "./dist/generateRandomId.d.ts"
+      ],
+      "mysql": [
+        "./dist/mysql.d.ts"
+      ],
+      "rabbitmq": [
+        "./dist/rabbitmq.d.ts"
+      ],
+      "redis": [
+        "./dist/redis.d.ts"
+      ],
+      "types": [
+        "./dist/types.d.ts"
+      ],
+      "withRetry": [
+        "./dist/withRetry.d.ts"
+      ]
+    }
+  },
+  "version": "0.1.1"
+}

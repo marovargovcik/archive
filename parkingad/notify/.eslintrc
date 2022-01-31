@@ -1,0 +1,43 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "canonical",
+    "canonical/node",
+    "canonical/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "project": [
+      "./tsconfig.json"
+    ]
+  },
+  "rules": {
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/return-await": "off",
+    "canonical/id-match": "off",
+    "import/no-mutable-exports": "off",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "caseInsensitive": true,
+          "order": "asc"
+        },
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "pattern": "src/**",
+            "group": "internal"
+          }
+        ]
+      }
+    ],
+    "node/callback-return": "off",
+    "node/no-process-env": "off"
+  }
+}

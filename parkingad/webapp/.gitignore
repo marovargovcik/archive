@@ -1,0 +1,12 @@
+node_modules
+
+# misc
+.DS_Store
+*:Zone.Identifier
+
+# output
+dist
+
+# IDE files
+.idea
+.vscode

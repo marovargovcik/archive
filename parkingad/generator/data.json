@@ -1,0 +1,371 @@
+[
+  {
+    "address": "Fay Valley 95682 Lizeth Station",
+    "categories": [
+      "Seafood",
+      "No delivery",
+      "Dine-in"
+    ],
+    "name": "Sipes, Lynch and Fadel",
+    "openingHours": [
+      "08:00 - 20:00"
+    ],
+    "rating": 1,
+    "type": [
+      "bar",
+      "accomodation",
+      "pub"
+    ]
+  },
+  {
+    "address": "Elenora Loop 09826 Candelario Fords",
+    "categories": [
+      "Seafood",
+      "Dine-in",
+      "Beer taps",
+      "No takeaway",
+      "No delivery",
+      "Fried food",
+      "International"
+    ],
+    "name": "Moen - Mraz",
+    "openingHours": [
+      "11:00 - 20:00"
+    ],
+    "rating": 5,
+    "type": [
+      "bar",
+      "accomodation"
+    ]
+  },
+  {
+    "address": "Owen Drives 838 Gleichner Oval",
+    "categories": [
+      "Seafood",
+      "Fried food",
+      "No delivery",
+      "International",
+      "Dine-in",
+      "Beer taps",
+      "No takeaway"
+    ],
+    "name": "Bartell - Johnston",
+    "openingHours": [
+      "10:00 - 22:00"
+    ],
+    "rating": 5,
+    "type": [
+      "pub",
+      "accomodation",
+      "bar",
+      "restaurant"
+    ]
+  },
+  {
+    "address": "Sipes Stream 7149 Delpha Tunnel",
+    "categories": [
+      "No delivery",
+      "Seafood",
+      "No takeaway",
+      "International"
+    ],
+    "name": "Kunze Group",
+    "openingHours": [
+      "10:00 - 22:00"
+    ],
+    "rating": 3,
+    "type": [
+      "restaurant",
+      "accomodation",
+      "bar"
+    ]
+  },
+  {
+    "address": "Stanton Ferry 2277 Wiley Mountain",
+    "categories": [
+      "No takeaway",
+      "Dine-in",
+      "International"
+    ],
+    "name": "Goodwin - O'Keefe",
+    "openingHours": [
+      "11:00 - 20:00"
+    ],
+    "rating": 2,
+    "type": [
+      "bar"
+    ]
+  },
+  {
+    "address": "Mortimer Village 62444 Schuster Cliffs",
+    "categories": [
+      "No takeaway",
+      "International",
+      "No delivery",
+      "Fried food"
+    ],
+    "name": "Dare Inc",
+    "openingHours": [
+      "11:00 - 20:00"
+    ],
+    "rating": 1,
+    "type": [
+      "pub"
+    ]
+  },
+  {
+    "address": "Enrico Run 3974 Donnelly Trace",
+    "categories": [
+      "No takeaway",
+      "Fried food",
+      "Seafood",
+      "No delivery",
+      "International"
+    ],
+    "name": "Hegmann - Davis",
+    "openingHours": [
+      "08:00 - 20:00"
+    ],
+    "rating": 3,
+    "type": [
+      "pub",
+      "bar"
+    ]
+  },
+  {
+    "address": "Joaquin Ports 74845 Romaguera Row",
+    "categories": [
+      "No takeaway",
+      "No delivery",
+      "Dine-in",
+      "International"
+    ],
+    "name": "Hagenes Group",
+    "openingHours": [
+      "00:00 - 23:59"
+    ],
+    "rating": 2,
+    "type": [
+      "pub"
+    ]
+  },
+  {
+    "address": "Blanca Stream 014 Kuhlman Knoll",
+    "categories": [
+      "Beer taps"
+    ],
+    "name": "Watsica Inc",
+    "openingHours": [
+      "11:00 - 21:00"
+    ],
+    "rating": 1,
+    "type": [
+      "accomodation",
+      "pub",
+      "bar",
+      "restaurant"
+    ]
+  },
+  {
+    "address": "Ullrich Walk 38678 Aurelia Plains",
+    "categories": [
+      "Fried food"
+    ],
+    "name": "Mills - Erdman",
+    "openingHours": [
+      "08:00 - 20:00"
+    ],
+    "rating": 1,
+    "type": [
+      "pub",
+      "accomodation",
+      "restaurant"
+    ]
+  },
+  {
+    "address": "Grady Fort 8089 Gleason Harbors",
+    "categories": [
+      "No delivery",
+      "International",
+      "Beer taps",
+      "No takeaway"
+    ],
+    "name": "Grady and Sons",
+    "openingHours": [
+      "00:00 - 23:59"
+    ],
+    "rating": 4,
+    "type": [
+      "bar",
+      "accomodation",
+      "restaurant"
+    ]
+  },
+  {
+    "address": "Wisoky Lodge 41156 Cole Garden",
+    "categories": [
+      "Dine-in",
+      "Beer taps",
+      "Seafood"
+    ],
+    "name": "Lang, Block and Toy",
+    "openingHours": [
+      "00:00 - 23:59"
+    ],
+    "rating": 2,
+    "type": [
+      "pub",
+      "restaurant",
+      "bar"
+    ]
+  },
+  {
+    "address": "Keebler Common 979 Bria Cliffs",
+    "categories": [
+      "International",
+      "No takeaway",
+      "Fried food",
+      "Dine-in",
+      "Beer taps"
+    ],
+    "name": "McGlynn Inc",
+    "openingHours": [
+      "10:00 - 22:00"
+    ],
+    "rating": 3,
+    "type": [
+      "restaurant"
+    ]
+  },
+  {
+    "address": "Friesen Points 79848 Cynthia Walks",
+    "categories": [
+      "Seafood"
+    ],
+    "name": "Bailey, Kiehn and Waelchi",
+    "openingHours": [
+      "11:00 - 20:00"
+    ],
+    "rating": 2,
+    "type": [
+      "restaurant"
+    ]
+  },
+  {
+    "address": "Jacobson Mill 8724 Clarissa Oval",
+    "categories": [
+      "Fried food"
+    ],
+    "name": "Effertz - Koepp",
+    "openingHours": [
+      "08:00 - 22:00"
+    ],
+    "rating": 1,
+    "type": [
+      "bar",
+      "accomodation",
+      "restaurant",
+      "pub"
+    ]
+  },
+  {
+    "address": "Enos Drive 600 Abbie Landing",
+    "categories": [
+      "No takeaway",
+      "Seafood",
+      "Fried food",
+      "Beer taps",
+      "No delivery"
+    ],
+    "name": "Hickle, Casper and Dibbert",
+    "openingHours": [
+      "11:00 - 20:00"
+    ],
+    "rating": 5,
+    "type": [
+      "bar",
+      "restaurant",
+      "accomodation",
+      "pub"
+    ]
+  },
+  {
+    "address": "Ellis Roads 240 Leopoldo Crescent",
+    "categories": [
+      "No takeaway",
+      "Dine-in",
+      "No delivery",
+      "International"
+    ],
+    "name": "Rath LLC",
+    "openingHours": [
+      "08:00 - 22:00"
+    ],
+    "rating": 3,
+    "type": [
+      "accomodation",
+      "bar",
+      "restaurant",
+      "pub"
+    ]
+  },
+  {
+    "address": "Marjolaine Ridges 426 McLaughlin Estates",
+    "categories": [
+      "No delivery",
+      "Seafood",
+      "Dine-in",
+      "No takeaway"
+    ],
+    "name": "Kovacek and Sons",
+    "openingHours": [
+      "10:00 - 22:00"
+    ],
+    "rating": 3,
+    "type": [
+      "restaurant",
+      "bar",
+      "accomodation",
+      "pub"
+    ]
+  },
+  {
+    "address": "Frederic Squares 73858 Citlalli Pines",
+    "categories": [
+      "Seafood",
+      "International",
+      "Dine-in",
+      "Fried food",
+      "Beer taps",
+      "No delivery"
+    ],
+    "name": "Littel - Funk",
+    "openingHours": [
+      "08:00 - 20:00"
+    ],
+    "rating": 1,
+    "type": [
+      "bar"
+    ]
+  },
+  {
+    "address": "Grady Estates 512 Jayden Forge",
+    "categories": [
+      "International",
+      "No takeaway",
+      "Fried food",
+      "No delivery",
+      "Beer taps",
+      "Dine-in"
+    ],
+    "name": "Bruen, Blick and Buckridge",
+    "openingHours": [
+      "10:00 - 22:00"
+    ],
+    "rating": 1,
+    "type": [
+      "restaurant",
+      "pub"
+    ]
+  }
+]

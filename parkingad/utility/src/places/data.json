@@ -1,0 +1,4732 @@
+{
+  "Budolfi Plads": [
+    {
+      "address": "Anderson Lodge 23021 Stiedemann Inlet",
+      "categories": [
+        "Beer taps",
+        "Seafood",
+        "Dine-in",
+        "International",
+        "No takeaway",
+        "No delivery"
+      ],
+      "name": "Boehm - Effertz",
+      "openingHours": "11:00 - 20:00",
+      "rating": 3,
+      "type": [
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Rubie Loop 164 Schamberger Parkways",
+      "categories": [
+        "No takeaway",
+        "Fried food",
+        "International",
+        "Seafood",
+        "No delivery",
+        "Dine-in",
+        "Beer taps"
+      ],
+      "name": "Stanton, Hayes and Hand",
+      "openingHours": "08:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "bar",
+        "restaurant",
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Abigayle Run 312 Funk Field",
+      "categories": [
+        "Dine-in",
+        "International",
+        "Seafood",
+        "Beer taps",
+        "No delivery",
+        "Fried food",
+        "No takeaway"
+      ],
+      "name": "Weber, West and Herzog",
+      "openingHours": "11:00 - 20:00",
+      "rating": 3,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Stoltenberg Greens 199 Duane Spur",
+      "categories": [
+        "No takeaway",
+        "No delivery"
+      ],
+      "name": "Yost Inc",
+      "openingHours": "11:00 - 20:00",
+      "rating": 4,
+      "type": [
+        "restaurant",
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Stewart Fall 357 O'Kon Avenue",
+      "categories": [
+        "International",
+        "No delivery",
+        "Seafood",
+        "No takeaway",
+        "Fried food"
+      ],
+      "name": "Hansen - Champlin",
+      "openingHours": "11:00 - 21:00",
+      "rating": 1,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Marge Mountains 737 Scottie Spur",
+      "categories": [
+        "Dine-in",
+        "Seafood"
+      ],
+      "name": "Walker, Flatley and Pacocha",
+      "openingHours": "08:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Farrell Springs 0779 Everardo Mission",
+      "categories": [
+        "International",
+        "Dine-in",
+        "Beer taps",
+        "No delivery",
+        "No takeaway"
+      ],
+      "name": "Hilll, Vandervort and Jacobi",
+      "openingHours": "00:00 - 23:59",
+      "rating": 1,
+      "type": [
+        "accomodation",
+        "restaurant",
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Rey Pine 9798 Eulah River",
+      "categories": [
+        "Fried food",
+        "No delivery",
+        "International",
+        "No takeaway",
+        "Beer taps"
+      ],
+      "name": "Dibbert, Legros and Lindgren",
+      "openingHours": "08:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "restaurant",
+        "bar"
+      ]
+    },
+    {
+      "address": "O'Conner Ville 1309 Vergie Parkway",
+      "categories": [
+        "Fried food",
+        "Beer taps",
+        "International",
+        "Seafood",
+        "Dine-in",
+        "No takeaway"
+      ],
+      "name": "Upton Group",
+      "openingHours": "00:00 - 23:59",
+      "rating": 4,
+      "type": [
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Irwin Forge 9370 Murphy Bridge",
+      "categories": [
+        "No takeaway",
+        "Beer taps",
+        "Seafood",
+        "Fried food",
+        "Dine-in"
+      ],
+      "name": "Barrows - Toy",
+      "openingHours": "11:00 - 21:00",
+      "rating": 3,
+      "type": [
+        "pub",
+        "bar"
+      ]
+    },
+    {
+      "address": "Deon Fort 94795 Smith Circles",
+      "categories": [
+        "Seafood"
+      ],
+      "name": "Okuneva, Hamill and Ruecker",
+      "openingHours": "08:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Reinger Gateway 58216 Mills Ports",
+      "categories": [
+        "Fried food",
+        "Beer taps",
+        "Seafood",
+        "Dine-in",
+        "No delivery"
+      ],
+      "name": "Vandervort and Sons",
+      "openingHours": "08:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Ofelia Oval 8841 Schroeder Summit",
+      "categories": [
+        "No takeaway",
+        "Fried food",
+        "No delivery",
+        "Beer taps"
+      ],
+      "name": "Krajcik and Sons",
+      "openingHours": "08:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Lenora Neck 7380 Brain Points",
+      "categories": [
+        "No delivery",
+        "No takeaway",
+        "Seafood",
+        "Beer taps",
+        "Dine-in",
+        "Fried food"
+      ],
+      "name": "Mills - Gottlieb",
+      "openingHours": "08:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Gleason Mountain 746 Sherwood Manor",
+      "categories": [
+        "International",
+        "Beer taps",
+        "Dine-in"
+      ],
+      "name": "Hettinger - Luettgen",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Bosco Circle 75019 Wunsch Plaza",
+      "categories": [
+        "No takeaway",
+        "Seafood",
+        "No delivery",
+        "Dine-in",
+        "International",
+        "Fried food",
+        "Beer taps"
+      ],
+      "name": "Boyer - Nikolaus",
+      "openingHours": "11:00 - 20:00",
+      "rating": 5,
+      "type": [
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Bernier Divide 0998 Mya Lakes",
+      "categories": [
+        "No delivery",
+        "International",
+        "Fried food",
+        "No takeaway",
+        "Beer taps",
+        "Seafood"
+      ],
+      "name": "Bradtke - Gottlieb",
+      "openingHours": "10:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Brooks Burgs 74735 Grace Freeway",
+      "categories": [
+        "International"
+      ],
+      "name": "Glover - Bosco",
+      "openingHours": "11:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Tiffany Track 115 MacGyver Brooks",
+      "categories": [
+        "Seafood",
+        "No delivery",
+        "Dine-in",
+        "No takeaway",
+        "International"
+      ],
+      "name": "Upton Inc",
+      "openingHours": "10:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "restaurant",
+        "bar"
+      ]
+    },
+    {
+      "address": "Keeling Street 93502 O'Reilly Freeway",
+      "categories": [
+        "Beer taps",
+        "No delivery",
+        "International"
+      ],
+      "name": "Cartwright - Simonis",
+      "openingHours": "08:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "pub",
+        "restaurant",
+        "accomodation",
+        "bar"
+      ]
+    }
+  ],
+  "C. W. Obel": [
+    {
+      "address": "Quinten Summit 219 Abbie Villages",
+      "categories": [
+        "No takeaway",
+        "Beer taps",
+        "No delivery",
+        "Dine-in"
+      ],
+      "name": "Jacobson, Emmerich and Jacobi",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "bar",
+        "pub",
+        "restaurant",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Donavon Squares 530 Daugherty Wells",
+      "categories": [
+        "No takeaway",
+        "Fried food",
+        "Dine-in",
+        "No delivery",
+        "Beer taps",
+        "Seafood"
+      ],
+      "name": "Boyle - Predovic",
+      "openingHours": "10:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "bar",
+        "pub",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Stamm Drive 5543 Quitzon Causeway",
+      "categories": [
+        "Fried food",
+        "Dine-in",
+        "No delivery",
+        "Seafood",
+        "International",
+        "Beer taps",
+        "No takeaway"
+      ],
+      "name": "Langworth - Schaefer",
+      "openingHours": "10:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Kunde Tunnel 66074 Elisa Cove",
+      "categories": [
+        "Seafood",
+        "Beer taps",
+        "International",
+        "Fried food"
+      ],
+      "name": "Walker and Sons",
+      "openingHours": "10:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Rosa Brooks 4560 Cicero Cove",
+      "categories": [
+        "Fried food",
+        "No takeaway",
+        "Seafood",
+        "Beer taps",
+        "International",
+        "No delivery"
+      ],
+      "name": "VonRueden, Howell and Kuhn",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "accomodation",
+        "restaurant",
+        "bar"
+      ]
+    },
+    {
+      "address": "Wolff Dale 04648 Jazlyn Inlet",
+      "categories": [
+        "Fried food",
+        "No delivery",
+        "Seafood",
+        "Beer taps",
+        "International"
+      ],
+      "name": "Runolfsson and Sons",
+      "openingHours": "08:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "pub",
+        "restaurant",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Amos Ridge 90291 Vinnie Overpass",
+      "categories": [
+        "Fried food",
+        "No delivery",
+        "Seafood",
+        "International",
+        "Dine-in"
+      ],
+      "name": "Effertz Inc",
+      "openingHours": "11:00 - 20:00",
+      "rating": 4,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Sabina Ford 8665 Garrett Roads",
+      "categories": [
+        "Seafood",
+        "Beer taps",
+        "International",
+        "Dine-in",
+        "No takeaway",
+        "Fried food",
+        "No delivery"
+      ],
+      "name": "Sawayn and Sons",
+      "openingHours": "10:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "restaurant",
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Greenholt Cliff 447 Candida Estate",
+      "categories": [
+        "No takeaway",
+        "Seafood",
+        "No delivery",
+        "Dine-in",
+        "International",
+        "Fried food"
+      ],
+      "name": "Prohaska and Sons",
+      "openingHours": "11:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Rice Trafficway 65760 Earlene Skyway",
+      "categories": [
+        "Beer taps",
+        "Seafood",
+        "Dine-in",
+        "Fried food"
+      ],
+      "name": "Mraz, Runolfsson and Rempel",
+      "openingHours": "10:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "accomodation",
+        "pub",
+        "bar"
+      ]
+    },
+    {
+      "address": "Kozey Drives 8147 Schultz Flats",
+      "categories": [
+        "Dine-in"
+      ],
+      "name": "Kozey LLC",
+      "openingHours": "11:00 - 21:00",
+      "rating": 3,
+      "type": [
+        "bar",
+        "pub",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Muller Springs 8869 Lehner Crest",
+      "categories": [
+        "Seafood",
+        "No takeaway",
+        "Dine-in"
+      ],
+      "name": "Ernser Group",
+      "openingHours": "10:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "bar",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Waldo Courts 7617 Hamill Crescent",
+      "categories": [
+        "No delivery",
+        "No takeaway",
+        "Beer taps"
+      ],
+      "name": "O'Connell LLC",
+      "openingHours": "08:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Gaston Spring 416 Padberg Grove",
+      "categories": [
+        "International",
+        "No delivery",
+        "Fried food",
+        "Beer taps"
+      ],
+      "name": "Ebert - Grant",
+      "openingHours": "08:00 - 20:00",
+      "rating": 2,
+      "type": [
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Ramiro Fields 0494 Susanna Crescent",
+      "categories": [
+        "Dine-in",
+        "Fried food",
+        "International",
+        "No delivery",
+        "No takeaway"
+      ],
+      "name": "Bahringer and Sons",
+      "openingHours": "11:00 - 20:00",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Marquardt Light 72748 Marlen Ports",
+      "categories": [
+        "International",
+        "Fried food",
+        "Seafood",
+        "Dine-in",
+        "No takeaway",
+        "No delivery"
+      ],
+      "name": "Wiza - Streich",
+      "openingHours": "00:00 - 23:59",
+      "rating": 1,
+      "type": [
+        "bar",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Jaylon Underpass 69895 Wiza Islands",
+      "categories": [
+        "No takeaway",
+        "No delivery",
+        "Dine-in",
+        "International",
+        "Seafood",
+        "Beer taps"
+      ],
+      "name": "Herman Inc",
+      "openingHours": "10:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "pub",
+        "accomodation",
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Monroe Vista 559 Sanford Harbors",
+      "categories": [
+        "Fried food",
+        "Dine-in",
+        "No delivery",
+        "No takeaway",
+        "Beer taps",
+        "International"
+      ],
+      "name": "Lubowitz LLC",
+      "openingHours": "00:00 - 23:59",
+      "rating": 1,
+      "type": [
+        "accomodation",
+        "bar",
+        "pub",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Raoul Underpass 126 Waelchi Crossroad",
+      "categories": [
+        "Fried food",
+        "No delivery",
+        "Beer taps",
+        "No takeaway",
+        "International",
+        "Seafood",
+        "Dine-in"
+      ],
+      "name": "Leffler Group",
+      "openingHours": "00:00 - 23:59",
+      "rating": 3,
+      "type": [
+        "pub",
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Gilda Branch 2085 Chad Station",
+      "categories": [
+        "International",
+        "Seafood",
+        "Beer taps",
+        "Fried food",
+        "No takeaway"
+      ],
+      "name": "Schuppe - Abernathy",
+      "openingHours": "08:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "pub",
+        "restaurant"
+      ]
+    }
+  ],
+  "Føtex": [
+    {
+      "address": "Koss Gateway 980 Afton Squares",
+      "categories": [
+        "No takeaway",
+        "Dine-in",
+        "Seafood"
+      ],
+      "name": "McCullough - Hansen",
+      "openingHours": "08:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "pub",
+        "accomodation",
+        "restaurant",
+        "bar"
+      ]
+    },
+    {
+      "address": "Trenton Oval 7490 Denesik Divide",
+      "categories": [
+        "Beer taps",
+        "Dine-in",
+        "No takeaway"
+      ],
+      "name": "Wunsch and Sons",
+      "openingHours": "08:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "bar",
+        "pub",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Corwin Key 5419 Jennings Terrace",
+      "categories": [
+        "Beer taps",
+        "Dine-in",
+        "International",
+        "Seafood"
+      ],
+      "name": "Strosin LLC",
+      "openingHours": "08:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "restaurant",
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Kamron Lodge 264 Heidi Oval",
+      "categories": [
+        "No takeaway",
+        "Fried food",
+        "International",
+        "Dine-in"
+      ],
+      "name": "Casper - Walker",
+      "openingHours": "00:00 - 23:59",
+      "rating": 2,
+      "type": [
+        "restaurant",
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Samanta Way 4898 Ellie Rapids",
+      "categories": [
+        "Fried food",
+        "No takeaway",
+        "Beer taps",
+        "Seafood",
+        "No delivery",
+        "Dine-in"
+      ],
+      "name": "Moen Inc",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Swaniawski Islands 01599 Dickens Fall",
+      "categories": [
+        "No takeaway",
+        "International",
+        "Seafood"
+      ],
+      "name": "Wilderman - Vandervort",
+      "openingHours": "11:00 - 21:00",
+      "rating": 4,
+      "type": [
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Rachael Pike 52889 Alvera Loaf",
+      "categories": [
+        "Beer taps",
+        "Seafood",
+        "No delivery",
+        "International",
+        "No takeaway",
+        "Dine-in",
+        "Fried food"
+      ],
+      "name": "Dibbert, Batz and Johns",
+      "openingHours": "08:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "bar",
+        "accomodation",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Denesik Run 6052 Yoshiko Oval",
+      "categories": [
+        "Dine-in",
+        "International",
+        "Beer taps",
+        "No delivery"
+      ],
+      "name": "Rath Inc",
+      "openingHours": "10:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Walsh Manor 579 Era Curve",
+      "categories": [
+        "Beer taps",
+        "Fried food"
+      ],
+      "name": "Jakubowski LLC",
+      "openingHours": "08:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Stehr Junctions 908 Missouri Springs",
+      "categories": [
+        "Dine-in",
+        "International",
+        "Seafood",
+        "No takeaway",
+        "Beer taps",
+        "Fried food"
+      ],
+      "name": "Borer, Bergnaum and Durgan",
+      "openingHours": "10:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Schaefer Mall 30682 Lubowitz Corners",
+      "categories": [
+        "No delivery",
+        "Seafood",
+        "Dine-in",
+        "No takeaway"
+      ],
+      "name": "Reichel, Nienow and Rodriguez",
+      "openingHours": "08:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Gerardo Crossing 308 Caterina Canyon",
+      "categories": [
+        "Beer taps",
+        "Fried food",
+        "Seafood",
+        "No takeaway",
+        "International",
+        "No delivery"
+      ],
+      "name": "Littel, Bauch and Pfannerstill",
+      "openingHours": "08:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "restaurant",
+        "bar",
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Jones Ways 702 Amber Club",
+      "categories": [
+        "Beer taps",
+        "Seafood",
+        "No takeaway",
+        "Fried food",
+        "Dine-in",
+        "International",
+        "No delivery"
+      ],
+      "name": "Goldner - Bernhard",
+      "openingHours": "00:00 - 23:59",
+      "rating": 3,
+      "type": [
+        "bar",
+        "accomodation",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Rippin Turnpike 77178 Williamson Common",
+      "categories": [
+        "Dine-in",
+        "International",
+        "Beer taps",
+        "No delivery"
+      ],
+      "name": "Braun - Becker",
+      "openingHours": "00:00 - 23:59",
+      "rating": 2,
+      "type": [
+        "accomodation",
+        "pub",
+        "bar"
+      ]
+    },
+    {
+      "address": "Senger Islands 18385 Kunze Ways",
+      "categories": [
+        "Dine-in",
+        "International",
+        "Fried food",
+        "Beer taps",
+        "Seafood"
+      ],
+      "name": "O'Keefe - Schroeder",
+      "openingHours": "11:00 - 21:00",
+      "rating": 2,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Jayson Islands 94479 Agnes Underpass",
+      "categories": [
+        "Fried food",
+        "Seafood",
+        "No delivery",
+        "Beer taps",
+        "Dine-in"
+      ],
+      "name": "Brekke Group",
+      "openingHours": "11:00 - 21:00",
+      "rating": 1,
+      "type": [
+        "accomodation",
+        "restaurant",
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Cole Square 9793 Christian Vista",
+      "categories": [
+        "Fried food"
+      ],
+      "name": "Pouros - Rutherford",
+      "openingHours": "08:00 - 20:00",
+      "rating": 5,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Saige Valley 8614 Kaela Mountains",
+      "categories": [
+        "International",
+        "No takeaway",
+        "Dine-in",
+        "Fried food",
+        "Seafood",
+        "Beer taps"
+      ],
+      "name": "Hills Inc",
+      "openingHours": "10:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "bar",
+        "accomodation",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Tremblay Stream 30796 DuBuque Plaza",
+      "categories": [
+        "International",
+        "Beer taps"
+      ],
+      "name": "Schiller - Grimes",
+      "openingHours": "11:00 - 20:00",
+      "rating": 5,
+      "type": [
+        "bar",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Lynch Shores 209 Bode Pike",
+      "categories": [
+        "Seafood",
+        "No delivery",
+        "Fried food",
+        "Beer taps",
+        "No takeaway",
+        "Dine-in",
+        "International"
+      ],
+      "name": "Kshlerin, Gerhold and Raynor",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "bar",
+        "restaurant",
+        "accomodation",
+        "pub"
+      ]
+    }
+  ],
+  "Friis": [
+    {
+      "address": "Alena Mews 309 Cassin Wall",
+      "categories": [
+        "No takeaway",
+        "No delivery",
+        "Seafood"
+      ],
+      "name": "Wiegand, Bayer and Olson",
+      "openingHours": "11:00 - 21:00",
+      "rating": 2,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Amiya Trace 32772 Brown Junctions",
+      "categories": [
+        "Dine-in",
+        "International",
+        "Fried food",
+        "Beer taps",
+        "No delivery",
+        "No takeaway"
+      ],
+      "name": "Kilback - Smith",
+      "openingHours": "08:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "pub",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Hoppe Station 316 Tessie Shore",
+      "categories": [
+        "Fried food",
+        "No delivery",
+        "Seafood",
+        "No takeaway",
+        "Beer taps",
+        "Dine-in",
+        "International"
+      ],
+      "name": "Halvorson - Borer",
+      "openingHours": "11:00 - 21:00",
+      "rating": 4,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Emard Unions 44630 Heidenreich Greens",
+      "categories": [
+        "No takeaway",
+        "Beer taps"
+      ],
+      "name": "Mayert - Heathcote",
+      "openingHours": "10:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "pub",
+        "restaurant",
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Tremaine Club 12331 Isai Fork",
+      "categories": [
+        "No takeaway",
+        "Dine-in",
+        "No delivery"
+      ],
+      "name": "Bartell, Davis and Rosenbaum",
+      "openingHours": "08:00 - 20:00",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Deckow Via 90248 O'Hara Road",
+      "categories": [
+        "No takeaway",
+        "International",
+        "Dine-in",
+        "Beer taps",
+        "No delivery"
+      ],
+      "name": "Franecki - Rempel",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Justus Shore 269 Runolfsdottir Road",
+      "categories": [
+        "Seafood"
+      ],
+      "name": "Kilback Group",
+      "openingHours": "08:00 - 20:00",
+      "rating": 4,
+      "type": [
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Gwendolyn Heights 2056 Lang Parkways",
+      "categories": [
+        "Seafood",
+        "Fried food",
+        "No delivery",
+        "International",
+        "No takeaway",
+        "Dine-in",
+        "Beer taps"
+      ],
+      "name": "Collier - Nikolaus",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Torp Lake 39573 Thiel Springs",
+      "categories": [
+        "No takeaway"
+      ],
+      "name": "Treutel, Herman and Deckow",
+      "openingHours": "10:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "restaurant",
+        "bar",
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Nicola Plains 0690 Spencer Ports",
+      "categories": [
+        "International",
+        "Fried food",
+        "No delivery",
+        "No takeaway",
+        "Dine-in",
+        "Seafood",
+        "Beer taps"
+      ],
+      "name": "Armstrong and Sons",
+      "openingHours": "08:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Vicky Trail 965 Lisa Flat",
+      "categories": [
+        "No takeaway",
+        "Fried food",
+        "Seafood",
+        "International",
+        "Beer taps",
+        "No delivery"
+      ],
+      "name": "Gerhold and Sons",
+      "openingHours": "11:00 - 21:00",
+      "rating": 1,
+      "type": [
+        "pub",
+        "restaurant",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Garnett Canyon 310 Kassulke Creek",
+      "categories": [
+        "No delivery",
+        "Dine-in"
+      ],
+      "name": "Crist, Doyle and Littel",
+      "openingHours": "10:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "accomodation",
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Ferry Rapid 307 Beahan View",
+      "categories": [
+        "No takeaway",
+        "International",
+        "Fried food"
+      ],
+      "name": "Prosacco Inc",
+      "openingHours": "11:00 - 20:00",
+      "rating": 4,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Arvilla Lodge 2320 Destany Locks",
+      "categories": [
+        "Fried food",
+        "Dine-in",
+        "Beer taps"
+      ],
+      "name": "Sipes, Hackett and Batz",
+      "openingHours": "11:00 - 21:00",
+      "rating": 4,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Walsh Run 91761 Darrel Rapids",
+      "categories": [
+        "No delivery",
+        "Beer taps",
+        "Dine-in",
+        "Seafood",
+        "International",
+        "No takeaway",
+        "Fried food"
+      ],
+      "name": "MacGyver and Sons",
+      "openingHours": "00:00 - 23:59",
+      "rating": 1,
+      "type": [
+        "pub",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Reynolds Keys 73006 Strosin Drives",
+      "categories": [
+        "Seafood",
+        "No takeaway",
+        "Dine-in",
+        "Fried food",
+        "No delivery"
+      ],
+      "name": "Schowalter, Pfeffer and Flatley",
+      "openingHours": "11:00 - 21:00",
+      "rating": 5,
+      "type": [
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Marlin Summit 434 Ron Squares",
+      "categories": [
+        "Fried food",
+        "Beer taps"
+      ],
+      "name": "Wisozk - Grady",
+      "openingHours": "10:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "accomodation"
+      ]
+    },
+    {
+      "address": "McDermott Crescent 10368 Glover Camp",
+      "categories": [
+        "Seafood",
+        "No takeaway",
+        "No delivery",
+        "International",
+        "Dine-in"
+      ],
+      "name": "Simonis - Cronin",
+      "openingHours": "10:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "bar",
+        "restaurant",
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Schaefer Roads 2091 Jenifer Shoals",
+      "categories": [
+        "International",
+        "No delivery",
+        "No takeaway",
+        "Dine-in",
+        "Seafood",
+        "Fried food",
+        "Beer taps"
+      ],
+      "name": "Kertzmann LLC",
+      "openingHours": "10:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Johnston Trail 981 Cremin Forks",
+      "categories": [
+        "No takeaway",
+        "Dine-in",
+        "No delivery",
+        "Fried food",
+        "Seafood"
+      ],
+      "name": "Feest, Gerlach and Cole",
+      "openingHours": "11:00 - 21:00",
+      "rating": 4,
+      "type": [
+        "pub",
+        "bar",
+        "accomodation",
+        "restaurant"
+      ]
+    }
+  ],
+  "Gåsepigen": [
+    {
+      "address": "Botsford Springs 227 Dee Streets",
+      "categories": [
+        "No takeaway",
+        "Beer taps",
+        "Seafood",
+        "Fried food",
+        "Dine-in"
+      ],
+      "name": "Wyman, Kris and Weber",
+      "openingHours": "11:00 - 21:00",
+      "rating": 2,
+      "type": [
+        "accomodation",
+        "restaurant",
+        "bar"
+      ]
+    },
+    {
+      "address": "Borer Path 29891 Christiansen Tunnel",
+      "categories": [
+        "No takeaway",
+        "Seafood",
+        "Beer taps"
+      ],
+      "name": "Oberbrunner and Sons",
+      "openingHours": "11:00 - 21:00",
+      "rating": 4,
+      "type": [
+        "pub",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Carolyne Rapid 3027 Schumm Expressway",
+      "categories": [
+        "No takeaway",
+        "International",
+        "Beer taps",
+        "Seafood",
+        "Dine-in",
+        "No delivery"
+      ],
+      "name": "Dare - Trantow",
+      "openingHours": "00:00 - 23:59",
+      "rating": 3,
+      "type": [
+        "bar",
+        "accomodation",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Novella Crossroad 57514 Kutch Meadow",
+      "categories": [
+        "Seafood",
+        "No takeaway",
+        "International",
+        "Beer taps",
+        "Fried food",
+        "Dine-in"
+      ],
+      "name": "Stanton LLC",
+      "openingHours": "00:00 - 23:59",
+      "rating": 2,
+      "type": [
+        "pub",
+        "restaurant",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Juanita Mission 1621 Derrick Crescent",
+      "categories": [
+        "No delivery"
+      ],
+      "name": "Gutkowski, Gleason and Bartell",
+      "openingHours": "08:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Will Mission 860 Misty Roads",
+      "categories": [
+        "No takeaway",
+        "Seafood",
+        "Beer taps",
+        "Fried food",
+        "Dine-in",
+        "No delivery",
+        "International"
+      ],
+      "name": "Keeling, Welch and Dickens",
+      "openingHours": "00:00 - 23:59",
+      "rating": 3,
+      "type": [
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Blick Harbor 5056 Roberts Springs",
+      "categories": [
+        "Seafood",
+        "International",
+        "Fried food"
+      ],
+      "name": "Schiller - Bosco",
+      "openingHours": "11:00 - 21:00",
+      "rating": 4,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Jacobson Point 0098 Hamill Gardens",
+      "categories": [
+        "Seafood",
+        "No delivery",
+        "International",
+        "Dine-in",
+        "No takeaway",
+        "Fried food",
+        "Beer taps"
+      ],
+      "name": "Yost - Bergstrom",
+      "openingHours": "10:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "bar",
+        "pub",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Eloisa Keys 953 Wolf Orchard",
+      "categories": [
+        "International",
+        "Beer taps",
+        "Fried food",
+        "No takeaway",
+        "Dine-in"
+      ],
+      "name": "Walsh - Welch",
+      "openingHours": "11:00 - 21:00",
+      "rating": 1,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Kiehn Oval 980 Mosciski Forges",
+      "categories": [
+        "Fried food"
+      ],
+      "name": "Hickle - Marvin",
+      "openingHours": "08:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Kory Crossing 34630 Johnston Extension",
+      "categories": [
+        "Dine-in",
+        "Beer taps",
+        "Seafood",
+        "Fried food",
+        "No takeaway"
+      ],
+      "name": "Murphy and Sons",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "pub",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Halvorson Island 991 Schuster Alley",
+      "categories": [
+        "Beer taps",
+        "No delivery"
+      ],
+      "name": "Steuber, Morissette and Jones",
+      "openingHours": "11:00 - 21:00",
+      "rating": 4,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Abdiel Junction 07645 Jones Dam",
+      "categories": [
+        "No takeaway",
+        "Seafood"
+      ],
+      "name": "Lemke - Wilkinson",
+      "openingHours": "11:00 - 21:00",
+      "rating": 5,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Reichel Radial 01034 Amani Stravenue",
+      "categories": [
+        "Beer taps",
+        "International",
+        "Seafood",
+        "Fried food",
+        "No takeaway",
+        "Dine-in"
+      ],
+      "name": "Lockman Inc",
+      "openingHours": "08:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "restaurant",
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Nitzsche Gateway 608 Dave River",
+      "categories": [
+        "Beer taps",
+        "No takeaway",
+        "International",
+        "Dine-in",
+        "Seafood"
+      ],
+      "name": "Ryan, Stehr and Wiza",
+      "openingHours": "11:00 - 20:00",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Beier Knoll 994 Kautzer Parkway",
+      "categories": [
+        "Beer taps",
+        "Fried food",
+        "Dine-in",
+        "No delivery",
+        "International",
+        "No takeaway"
+      ],
+      "name": "Weissnat - Beer",
+      "openingHours": "08:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "accomodation",
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Morar Shore 33889 Kozey Camp",
+      "categories": [
+        "Beer taps",
+        "No delivery"
+      ],
+      "name": "Gaylord and Sons",
+      "openingHours": "08:00 - 20:00",
+      "rating": 3,
+      "type": [
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Darrel Wells 01254 Ward Station",
+      "categories": [
+        "International"
+      ],
+      "name": "Wilkinson - Gorczany",
+      "openingHours": "11:00 - 20:00",
+      "rating": 4,
+      "type": [
+        "pub",
+        "accomodation",
+        "restaurant",
+        "bar"
+      ]
+    },
+    {
+      "address": "Steuber Pike 809 Jacklyn Bypass",
+      "categories": [
+        "Seafood",
+        "Beer taps",
+        "Dine-in",
+        "No takeaway",
+        "Fried food",
+        "International"
+      ],
+      "name": "Funk - Lind",
+      "openingHours": "11:00 - 21:00",
+      "rating": 3,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Michale Walks 740 Orpha Shoal",
+      "categories": [
+        "Dine-in",
+        "No delivery",
+        "No takeaway"
+      ],
+      "name": "Stracke - Daniel",
+      "openingHours": "10:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "accomodation"
+      ]
+    }
+  ],
+  "Kennedy Arkaden": [
+    {
+      "address": "Bogan Ways 0521 Cathrine Forge",
+      "categories": [
+        "Dine-in",
+        "Seafood",
+        "No takeaway",
+        "International",
+        "No delivery",
+        "Beer taps"
+      ],
+      "name": "Nitzsche and Sons",
+      "openingHours": "08:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Crist Extensions 010 Brakus Prairie",
+      "categories": [
+        "Seafood"
+      ],
+      "name": "Renner Inc",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Kerluke Road 918 Marley Valley",
+      "categories": [
+        "Dine-in",
+        "Fried food",
+        "Beer taps",
+        "International",
+        "No takeaway",
+        "Seafood",
+        "No delivery"
+      ],
+      "name": "Skiles LLC",
+      "openingHours": "00:00 - 23:59",
+      "rating": 2,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Rau Fork 525 Swaniawski Meadow",
+      "categories": [
+        "Beer taps",
+        "Dine-in",
+        "No delivery",
+        "Fried food",
+        "No takeaway",
+        "International"
+      ],
+      "name": "Nienow Inc",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Fredrick Shore 638 Emmerich Creek",
+      "categories": [
+        "Beer taps"
+      ],
+      "name": "Trantow - Lindgren",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Volkman Turnpike 886 Kristina Summit",
+      "categories": [
+        "Dine-in"
+      ],
+      "name": "Blanda, Trantow and Bauch",
+      "openingHours": "10:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "McDermott Run 985 Demario Ramp",
+      "categories": [
+        "No takeaway",
+        "Beer taps"
+      ],
+      "name": "Weimann - Doyle",
+      "openingHours": "10:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Tyrel Radial 2223 Torphy Knolls",
+      "categories": [
+        "No takeaway"
+      ],
+      "name": "Stokes, Heathcote and Morar",
+      "openingHours": "11:00 - 21:00",
+      "rating": 5,
+      "type": [
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Jarret Drives 22922 Manuela Manor",
+      "categories": [
+        "No takeaway",
+        "Seafood"
+      ],
+      "name": "Grant - Marks",
+      "openingHours": "08:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Treutel Highway 6775 Tyrel Grove",
+      "categories": [
+        "Beer taps",
+        "International"
+      ],
+      "name": "Grady Group",
+      "openingHours": "08:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "pub",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Kuhlman Turnpike 9693 Berge Green",
+      "categories": [
+        "Fried food",
+        "International",
+        "Seafood",
+        "No takeaway",
+        "Dine-in",
+        "No delivery",
+        "Beer taps"
+      ],
+      "name": "Wisozk, Bogan and Koch",
+      "openingHours": "11:00 - 21:00",
+      "rating": 5,
+      "type": [
+        "bar",
+        "pub",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Rempel Village 78151 Burley Viaduct",
+      "categories": [
+        "No delivery",
+        "Dine-in"
+      ],
+      "name": "Swaniawski, Gutmann and Kihn",
+      "openingHours": "11:00 - 21:00",
+      "rating": 1,
+      "type": [
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Jalon Fords 114 Schmeler Roads",
+      "categories": [
+        "International",
+        "Seafood",
+        "No takeaway",
+        "Beer taps",
+        "Fried food"
+      ],
+      "name": "Emard - Mueller",
+      "openingHours": "11:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "pub",
+        "bar",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Lisette Summit 606 Faustino Ferry",
+      "categories": [
+        "International",
+        "No delivery",
+        "Seafood",
+        "Dine-in",
+        "Beer taps",
+        "No takeaway",
+        "Fried food"
+      ],
+      "name": "Schowalter, Fahey and Stroman",
+      "openingHours": "08:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "accomodation",
+        "restaurant",
+        "bar"
+      ]
+    },
+    {
+      "address": "Botsford Overpass 87883 Robel Hill",
+      "categories": [
+        "No takeaway",
+        "Seafood",
+        "Beer taps",
+        "Dine-in"
+      ],
+      "name": "Wehner, Sporer and Ratke",
+      "openingHours": "08:00 - 20:00",
+      "rating": 4,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Kevin Lane 2514 Huel Field",
+      "categories": [
+        "Fried food"
+      ],
+      "name": "Shields - Morissette",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Blanca Summit 107 Halvorson Forks",
+      "categories": [
+        "International",
+        "Beer taps",
+        "No takeaway",
+        "Dine-in"
+      ],
+      "name": "Morissette - Towne",
+      "openingHours": "11:00 - 20:00",
+      "rating": 5,
+      "type": [
+        "bar",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Glover Forest 65492 Breitenberg Passage",
+      "categories": [
+        "No delivery"
+      ],
+      "name": "Wilkinson - Ruecker",
+      "openingHours": "10:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Kemmer Parkways 5516 Ratke Rest",
+      "categories": [
+        "International",
+        "Seafood",
+        "Dine-in"
+      ],
+      "name": "Kihn - Dickens",
+      "openingHours": "11:00 - 21:00",
+      "rating": 2,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "pub",
+        "bar"
+      ]
+    },
+    {
+      "address": "Kunde Squares 57723 Marks Bridge",
+      "categories": [
+        "No takeaway",
+        "Dine-in",
+        "Fried food"
+      ],
+      "name": "Schneider Inc",
+      "openingHours": "10:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "accomodation",
+        "restaurant",
+        "bar"
+      ]
+    }
+  ],
+  "Kongrescenter": [
+    {
+      "address": "Miller Shores 583 Camron Manors",
+      "categories": [
+        "No delivery",
+        "Fried food",
+        "International",
+        "Dine-in",
+        "Seafood"
+      ],
+      "name": "Greenholt, Gibson and Ryan",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Torphy Plain 271 Pollich Junction",
+      "categories": [
+        "Beer taps",
+        "Seafood",
+        "International",
+        "Fried food"
+      ],
+      "name": "Nicolas and Sons",
+      "openingHours": "08:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "accomodation",
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Brown Roads 34759 Walsh Knolls",
+      "categories": [
+        "Seafood",
+        "Dine-in",
+        "No takeaway"
+      ],
+      "name": "Dietrich Group",
+      "openingHours": "11:00 - 21:00",
+      "rating": 2,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Fisher Oval 76828 Roberts Garden",
+      "categories": [
+        "Seafood",
+        "International",
+        "Beer taps"
+      ],
+      "name": "Stiedemann, Sanford and Jenkins",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "pub",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Kutch Centers 2421 Gregory Bridge",
+      "categories": [
+        "Seafood",
+        "Dine-in",
+        "Fried food",
+        "Beer taps",
+        "No takeaway",
+        "International",
+        "No delivery"
+      ],
+      "name": "Auer Group",
+      "openingHours": "08:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Rau Vista 6791 Ortiz Lodge",
+      "categories": [
+        "Seafood",
+        "No takeaway",
+        "No delivery",
+        "International",
+        "Fried food"
+      ],
+      "name": "Hickle - Johns",
+      "openingHours": "11:00 - 20:00",
+      "rating": 5,
+      "type": [
+        "accomodation",
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Borer Circles 00553 Stokes Union",
+      "categories": [
+        "Dine-in",
+        "Fried food",
+        "Beer taps",
+        "International",
+        "No delivery",
+        "Seafood",
+        "No takeaway"
+      ],
+      "name": "Durgan, Will and Ankunding",
+      "openingHours": "08:00 - 20:00",
+      "rating": 2,
+      "type": [
+        "restaurant",
+        "bar",
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Halvorson Radial 68422 Jamar Harbor",
+      "categories": [
+        "No delivery",
+        "Beer taps",
+        "International",
+        "No takeaway",
+        "Seafood",
+        "Fried food",
+        "Dine-in"
+      ],
+      "name": "O'Keefe, Sawayn and Purdy",
+      "openingHours": "11:00 - 21:00",
+      "rating": 1,
+      "type": [
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Samanta Plaza 563 Margret Fords",
+      "categories": [
+        "Fried food",
+        "No delivery"
+      ],
+      "name": "Lueilwitz - Bergnaum",
+      "openingHours": "08:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Tillman Centers 47694 Dedric Road",
+      "categories": [
+        "Seafood"
+      ],
+      "name": "Hagenes Inc",
+      "openingHours": "10:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Sherman Via 68956 Hackett Groves",
+      "categories": [
+        "Seafood"
+      ],
+      "name": "Greenholt - Dickinson",
+      "openingHours": "10:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "bar",
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "McDermott Shore 3183 O'Connell Pike",
+      "categories": [
+        "Fried food",
+        "Beer taps",
+        "Dine-in",
+        "No delivery",
+        "No takeaway",
+        "International",
+        "Seafood"
+      ],
+      "name": "Monahan Group",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "accomodation",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Cary Extensions 767 Nina Lodge",
+      "categories": [
+        "Dine-in",
+        "Fried food",
+        "No delivery",
+        "No takeaway",
+        "International"
+      ],
+      "name": "Kreiger, Thompson and Rosenbaum",
+      "openingHours": "11:00 - 21:00",
+      "rating": 4,
+      "type": [
+        "accomodation",
+        "pub",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Quigley Highway 230 Jazmin Divide",
+      "categories": [
+        "Seafood",
+        "Dine-in",
+        "International"
+      ],
+      "name": "Williamson Group",
+      "openingHours": "11:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "restaurant",
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Shaylee Fork 0732 Schroeder Crossroad",
+      "categories": [
+        "Dine-in",
+        "Seafood",
+        "Fried food",
+        "International",
+        "No delivery",
+        "No takeaway",
+        "Beer taps"
+      ],
+      "name": "Feeney and Sons",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Gertrude Field 23446 Sporer Locks",
+      "categories": [
+        "Dine-in",
+        "Seafood",
+        "Beer taps",
+        "Fried food",
+        "No takeaway",
+        "No delivery",
+        "International"
+      ],
+      "name": "Heller, Bode and Larkin",
+      "openingHours": "08:00 - 20:00",
+      "rating": 3,
+      "type": [
+        "pub",
+        "bar"
+      ]
+    },
+    {
+      "address": "Dell Crescent 3127 Kemmer Coves",
+      "categories": [
+        "No takeaway",
+        "Beer taps"
+      ],
+      "name": "Ortiz - Kertzmann",
+      "openingHours": "10:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Jayne Lock 2886 Herzog Highway",
+      "categories": [
+        "No takeaway",
+        "No delivery",
+        "Seafood",
+        "Beer taps",
+        "Dine-in",
+        "Fried food",
+        "International"
+      ],
+      "name": "Bayer, Rosenbaum and O'Keefe",
+      "openingHours": "10:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "accomodation",
+        "bar",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Rippin Route 575 Marvin Fork",
+      "categories": [
+        "No delivery",
+        "International",
+        "No takeaway",
+        "Fried food",
+        "Seafood"
+      ],
+      "name": "Wuckert - Borer",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "pub",
+        "restaurant",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Stroman Run 561 Dayana Keys",
+      "categories": [
+        "No takeaway",
+        "International",
+        "Fried food",
+        "Dine-in"
+      ],
+      "name": "Monahan Group",
+      "openingHours": "00:00 - 23:59",
+      "rating": 3,
+      "type": [
+        "restaurant"
+      ]
+    }
+  ],
+  "Musikkens Hus": [
+    {
+      "address": "Rohan Hills 3790 Frida Fork",
+      "categories": [
+        "Fried food",
+        "No takeaway"
+      ],
+      "name": "Ernser, Lynch and Nicolas",
+      "openingHours": "08:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Erdman Junctions 7055 Hintz Knoll",
+      "categories": [
+        "Dine-in"
+      ],
+      "name": "Ledner, Sauer and Emard",
+      "openingHours": "10:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Mohr Cliffs 92490 Elisha Park",
+      "categories": [
+        "No delivery",
+        "No takeaway",
+        "Beer taps",
+        "Fried food",
+        "International",
+        "Dine-in",
+        "Seafood"
+      ],
+      "name": "Gutmann LLC",
+      "openingHours": "08:00 - 20:00",
+      "rating": 4,
+      "type": [
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Boyer Ports 1506 Purdy Mountain",
+      "categories": [
+        "International",
+        "No takeaway",
+        "Beer taps"
+      ],
+      "name": "Bechtelar - Lubowitz",
+      "openingHours": "11:00 - 20:00",
+      "rating": 4,
+      "type": [
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Marisol Cliff 5560 Bednar Flat",
+      "categories": [
+        "No delivery",
+        "No takeaway",
+        "Seafood",
+        "International",
+        "Fried food",
+        "Dine-in"
+      ],
+      "name": "Thiel - Weissnat",
+      "openingHours": "11:00 - 20:00",
+      "rating": 2,
+      "type": [
+        "pub",
+        "accomodation",
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Von Pine 413 Blair Motorway",
+      "categories": [
+        "Dine-in",
+        "Seafood",
+        "Fried food",
+        "No takeaway",
+        "Beer taps"
+      ],
+      "name": "O'Conner and Sons",
+      "openingHours": "10:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Romaguera Trafficway 89331 Pfannerstill Track",
+      "categories": [
+        "International",
+        "Fried food",
+        "Beer taps",
+        "Seafood",
+        "No delivery",
+        "No takeaway"
+      ],
+      "name": "Leffler, Thompson and Jacobson",
+      "openingHours": "10:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Kulas Lodge 908 Hegmann Mission",
+      "categories": [
+        "Seafood",
+        "No delivery",
+        "No takeaway",
+        "International",
+        "Fried food",
+        "Dine-in"
+      ],
+      "name": "Reynolds Inc",
+      "openingHours": "10:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "McGlynn Junctions 86431 Metz Parks",
+      "categories": [
+        "No takeaway",
+        "Seafood",
+        "No delivery",
+        "Dine-in",
+        "Fried food",
+        "International",
+        "Beer taps"
+      ],
+      "name": "Cronin - Boyer",
+      "openingHours": "00:00 - 23:59",
+      "rating": 1,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Andrew Flat 2340 Madilyn Common",
+      "categories": [
+        "Seafood",
+        "Fried food",
+        "Dine-in"
+      ],
+      "name": "Gleichner Group",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Dickinson Turnpike 6159 Miller Knolls",
+      "categories": [
+        "Dine-in",
+        "No delivery",
+        "International"
+      ],
+      "name": "Hermann and Sons",
+      "openingHours": "08:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Bahringer Mountain 1027 Predovic Shores",
+      "categories": [
+        "Beer taps",
+        "Fried food",
+        "International",
+        "Dine-in"
+      ],
+      "name": "Hettinger, Bogisich and Nicolas",
+      "openingHours": "11:00 - 20:00",
+      "rating": 3,
+      "type": [
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Tromp Lakes 973 Judd Squares",
+      "categories": [
+        "Seafood",
+        "Beer taps",
+        "Dine-in",
+        "International"
+      ],
+      "name": "Schinner, Hilpert and Hane",
+      "openingHours": "08:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "restaurant",
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Luis Light 4675 MacGyver Manor",
+      "categories": [
+        "Beer taps",
+        "Seafood",
+        "No takeaway",
+        "Fried food",
+        "No delivery",
+        "International",
+        "Dine-in"
+      ],
+      "name": "Rempel Inc",
+      "openingHours": "10:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "restaurant",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Emmerich Keys 2018 Flatley Prairie",
+      "categories": [
+        "International",
+        "No delivery",
+        "Beer taps",
+        "Fried food",
+        "Dine-in"
+      ],
+      "name": "O'Conner Inc",
+      "openingHours": "08:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "pub",
+        "restaurant",
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Fay Canyon 30412 Larson Extensions",
+      "categories": [
+        "No delivery",
+        "Seafood"
+      ],
+      "name": "Lemke LLC",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Tiffany Spring 35847 Lee Street",
+      "categories": [
+        "No takeaway",
+        "International",
+        "Fried food",
+        "Dine-in",
+        "Seafood",
+        "Beer taps"
+      ],
+      "name": "Gerhold and Sons",
+      "openingHours": "08:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "accomodation",
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Odessa Spurs 2232 Leonard Divide",
+      "categories": [
+        "International",
+        "Seafood",
+        "Dine-in",
+        "Beer taps"
+      ],
+      "name": "Rice, Block and Cremin",
+      "openingHours": "11:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Lyric Trail 34486 Kessler Landing",
+      "categories": [
+        "No takeaway",
+        "Dine-in",
+        "No delivery",
+        "Beer taps",
+        "Fried food",
+        "International"
+      ],
+      "name": "Graham, Stracke and Oberbrunner",
+      "openingHours": "08:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "bar",
+        "restaurant",
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Antonio Plaza 73288 White Plain",
+      "categories": [
+        "Dine-in",
+        "International",
+        "No takeaway"
+      ],
+      "name": "Ankunding LLC",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "accomodation",
+        "restaurant"
+      ]
+    }
+  ],
+  "Palads": [
+    {
+      "address": "Jeramy Manor 852 Keaton Underpass",
+      "categories": [
+        "Beer taps",
+        "No delivery",
+        "Seafood",
+        "International"
+      ],
+      "name": "Kulas - Weimann",
+      "openingHours": "00:00 - 23:59",
+      "rating": 4,
+      "type": [
+        "bar",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Troy Mountains 87870 Rae Locks",
+      "categories": [
+        "No takeaway",
+        "Beer taps",
+        "Dine-in",
+        "No delivery",
+        "International"
+      ],
+      "name": "Senger, Smith and Ruecker",
+      "openingHours": "11:00 - 20:00",
+      "rating": 2,
+      "type": [
+        "bar",
+        "accomodation",
+        "pub",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Rosenbaum Canyon 474 Stehr Lane",
+      "categories": [
+        "Seafood"
+      ],
+      "name": "Littel - Abernathy",
+      "openingHours": "11:00 - 20:00",
+      "rating": 2,
+      "type": [
+        "restaurant",
+        "bar",
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Bayer Park 6342 Camylle Ramp",
+      "categories": [
+        "Fried food",
+        "Beer taps",
+        "No delivery",
+        "No takeaway"
+      ],
+      "name": "Renner, Dickinson and Windler",
+      "openingHours": "10:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "accomodation",
+        "bar",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Schumm Locks 3793 Jamil Pike",
+      "categories": [
+        "Fried food",
+        "No takeaway",
+        "Beer taps",
+        "International",
+        "Dine-in"
+      ],
+      "name": "Swift, Beahan and Simonis",
+      "openingHours": "11:00 - 21:00",
+      "rating": 4,
+      "type": [
+        "restaurant",
+        "pub",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Rodriguez Loaf 790 Garfield Locks",
+      "categories": [
+        "No takeaway",
+        "No delivery",
+        "Fried food",
+        "Dine-in",
+        "Beer taps",
+        "Seafood"
+      ],
+      "name": "Stehr LLC",
+      "openingHours": "11:00 - 20:00",
+      "rating": 2,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Dillon Villages 5033 Lauretta Ford",
+      "categories": [
+        "Fried food",
+        "Seafood",
+        "No delivery",
+        "Dine-in",
+        "No takeaway"
+      ],
+      "name": "Kautzer and Sons",
+      "openingHours": "08:00 - 20:00",
+      "rating": 2,
+      "type": [
+        "restaurant",
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Alta Underpass 444 Pfannerstill Lakes",
+      "categories": [
+        "No takeaway"
+      ],
+      "name": "Emard, Collier and Runolfsson",
+      "openingHours": "11:00 - 20:00",
+      "rating": 4,
+      "type": [
+        "bar",
+        "pub",
+        "restaurant",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Waldo Haven 714 Morgan Divide",
+      "categories": [
+        "International",
+        "No delivery",
+        "Dine-in",
+        "Seafood",
+        "Beer taps"
+      ],
+      "name": "Hane and Sons",
+      "openingHours": "10:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "accomodation",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Georgianna Crossroad 634 Ritchie Spring",
+      "categories": [
+        "No takeaway",
+        "No delivery",
+        "International"
+      ],
+      "name": "Rogahn - Gerlach",
+      "openingHours": "11:00 - 20:00",
+      "rating": 5,
+      "type": [
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Jacobs Ville 6181 Matilda Station",
+      "categories": [
+        "International",
+        "Dine-in",
+        "Beer taps",
+        "No takeaway"
+      ],
+      "name": "Powlowski - Krajcik",
+      "openingHours": "00:00 - 23:59",
+      "rating": 3,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Cassin Shoals 896 Turner Dam",
+      "categories": [
+        "Dine-in",
+        "Seafood",
+        "International"
+      ],
+      "name": "Cole - D'Amore",
+      "openingHours": "08:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Adrianna Flat 9203 Runolfsdottir Throughway",
+      "categories": [
+        "Beer taps",
+        "International",
+        "Seafood",
+        "No takeaway"
+      ],
+      "name": "Corkery, Mitchell and Russel",
+      "openingHours": "11:00 - 20:00",
+      "rating": 5,
+      "type": [
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Miller Street 851 Daniel Estate",
+      "categories": [
+        "No takeaway",
+        "International",
+        "Dine-in",
+        "No delivery",
+        "Fried food",
+        "Seafood",
+        "Beer taps"
+      ],
+      "name": "Maggio, Borer and O'Conner",
+      "openingHours": "08:00 - 20:00",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Viola Rue 6158 Feil Well",
+      "categories": [
+        "Fried food",
+        "No takeaway",
+        "No delivery"
+      ],
+      "name": "Grimes Inc",
+      "openingHours": "00:00 - 23:59",
+      "rating": 1,
+      "type": [
+        "bar",
+        "restaurant",
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Breana Union 408 Greta Lodge",
+      "categories": [
+        "Dine-in",
+        "Beer taps",
+        "No takeaway"
+      ],
+      "name": "Mosciski Group",
+      "openingHours": "00:00 - 23:59",
+      "rating": 3,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Howell Village 240 Maxine Summit",
+      "categories": [
+        "No takeaway",
+        "No delivery",
+        "Dine-in",
+        "Beer taps",
+        "Seafood",
+        "International",
+        "Fried food"
+      ],
+      "name": "Cassin and Sons",
+      "openingHours": "08:00 - 20:00",
+      "rating": 4,
+      "type": [
+        "accomodation",
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Melyna Street 104 Doyle Pines",
+      "categories": [
+        "No delivery",
+        "Beer taps"
+      ],
+      "name": "Roberts, Dach and Bins",
+      "openingHours": "00:00 - 23:59",
+      "rating": 1,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Jamey Road 5886 Langworth Mountain",
+      "categories": [
+        "No takeaway",
+        "Seafood"
+      ],
+      "name": "Hauck - Kovacek",
+      "openingHours": "11:00 - 20:00",
+      "rating": 3,
+      "type": [
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Grimes Meadow 18632 Dibbert Dale",
+      "categories": [
+        "Dine-in",
+        "International",
+        "Seafood",
+        "Fried food",
+        "Beer taps"
+      ],
+      "name": "Stehr - Macejkovic",
+      "openingHours": "11:00 - 21:00",
+      "rating": 5,
+      "type": [
+        "restaurant"
+      ]
+    }
+  ],
+  "Plaza P-Hus Nord": [
+    {
+      "address": "Edna Parks 9149 Gleason Stream",
+      "categories": [
+        "Beer taps"
+      ],
+      "name": "Wuckert - Schmeler",
+      "openingHours": "08:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "pub",
+        "bar",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Goyette Summit 288 Kristian Squares",
+      "categories": [
+        "No takeaway"
+      ],
+      "name": "Fisher - Rohan",
+      "openingHours": "11:00 - 21:00",
+      "rating": 4,
+      "type": [
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Clare Bridge 9382 Tiara Ports",
+      "categories": [
+        "Fried food",
+        "No delivery",
+        "Seafood",
+        "No takeaway"
+      ],
+      "name": "Johnston, Treutel and Little",
+      "openingHours": "11:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Benedict Park 73112 Bria Locks",
+      "categories": [
+        "Dine-in",
+        "Beer taps",
+        "Fried food",
+        "Seafood"
+      ],
+      "name": "Romaguera Group",
+      "openingHours": "08:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "pub",
+        "bar"
+      ]
+    },
+    {
+      "address": "Aric Plains 8612 Moshe Square",
+      "categories": [
+        "International",
+        "Dine-in"
+      ],
+      "name": "Flatley - King",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "accomodation",
+        "bar",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Schiller Circle 77348 Wisozk Brook",
+      "categories": [
+        "No delivery",
+        "International",
+        "Fried food",
+        "Beer taps",
+        "Dine-in",
+        "Seafood",
+        "No takeaway"
+      ],
+      "name": "Parker Group",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "bar",
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Von Cape 9513 Afton Land",
+      "categories": [
+        "Dine-in",
+        "International",
+        "Seafood"
+      ],
+      "name": "Baumbach, Schultz and Rogahn",
+      "openingHours": "11:00 - 21:00",
+      "rating": 2,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Cole Shores 53533 Howell Lodge",
+      "categories": [
+        "Fried food",
+        "International"
+      ],
+      "name": "Champlin, Kunze and Kertzmann",
+      "openingHours": "10:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Stark Causeway 3632 Hyatt Mountains",
+      "categories": [
+        "Fried food",
+        "Seafood",
+        "No delivery",
+        "International",
+        "No takeaway",
+        "Beer taps"
+      ],
+      "name": "Langosh LLC",
+      "openingHours": "08:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "pub",
+        "accomodation",
+        "restaurant",
+        "bar"
+      ]
+    },
+    {
+      "address": "Francesco Spring 68606 Kuhic Corners",
+      "categories": [
+        "No delivery",
+        "International",
+        "Dine-in",
+        "Seafood",
+        "Fried food",
+        "No takeaway"
+      ],
+      "name": "Barton - Torp",
+      "openingHours": "08:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "bar",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Zemlak Plaza 607 Maia Ville",
+      "categories": [
+        "Beer taps",
+        "No takeaway",
+        "International",
+        "Seafood",
+        "No delivery",
+        "Fried food"
+      ],
+      "name": "Kilback, Considine and Bechtelar",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Harris Expressway 01831 Ocie Hollow",
+      "categories": [
+        "No delivery",
+        "Seafood",
+        "Beer taps"
+      ],
+      "name": "Reilly, Powlowski and Bartoletti",
+      "openingHours": "11:00 - 21:00",
+      "rating": 2,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Corkery Neck 380 Collier Circle",
+      "categories": [
+        "No takeaway",
+        "No delivery",
+        "Fried food"
+      ],
+      "name": "Conroy - Prohaska",
+      "openingHours": "11:00 - 21:00",
+      "rating": 4,
+      "type": [
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Lilian Burg 9668 Brandy Road",
+      "categories": [
+        "Seafood",
+        "No delivery",
+        "International",
+        "No takeaway",
+        "Fried food"
+      ],
+      "name": "Barton and Sons",
+      "openingHours": "00:00 - 23:59",
+      "rating": 1,
+      "type": [
+        "restaurant",
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Allen Fort 3772 Nyasia Mission",
+      "categories": [
+        "Beer taps",
+        "No delivery",
+        "Seafood"
+      ],
+      "name": "Graham - Bauch",
+      "openingHours": "10:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Ankunding Knoll 606 Wolff Bridge",
+      "categories": [
+        "No delivery",
+        "Fried food",
+        "Dine-in",
+        "Seafood",
+        "International",
+        "Beer taps"
+      ],
+      "name": "Bartell Group",
+      "openingHours": "11:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Jacobson Brook 5579 Brandt Hollow",
+      "categories": [
+        "Seafood",
+        "No delivery",
+        "Beer taps",
+        "International",
+        "Fried food"
+      ],
+      "name": "Dietrich, Leannon and Fritsch",
+      "openingHours": "08:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "pub",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Reinger Keys 557 Renner Square",
+      "categories": [
+        "International",
+        "No takeaway",
+        "Seafood"
+      ],
+      "name": "Grimes - Runolfsson",
+      "openingHours": "08:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Lamont Manor 33522 Bradtke Ferry",
+      "categories": [
+        "Fried food",
+        "No delivery",
+        "Seafood",
+        "No takeaway",
+        "Dine-in",
+        "Beer taps"
+      ],
+      "name": "Fritsch and Sons",
+      "openingHours": "08:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "restaurant",
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Grady Fork 1648 Hills Cape",
+      "categories": [
+        "No takeaway",
+        "Seafood",
+        "International",
+        "No delivery",
+        "Fried food",
+        "Beer taps",
+        "Dine-in"
+      ],
+      "name": "Bechtelar Group",
+      "openingHours": "10:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "pub",
+        "restaurant"
+      ]
+    }
+  ],
+  "Plaza P-Hus Syd": [
+    {
+      "address": "Greenholt Pass 725 Theodore Ferry",
+      "categories": [
+        "Seafood",
+        "Fried food",
+        "No delivery"
+      ],
+      "name": "Carroll - Ortiz",
+      "openingHours": "11:00 - 20:00",
+      "rating": 2,
+      "type": [
+        "accomodation",
+        "restaurant",
+        "bar"
+      ]
+    },
+    {
+      "address": "Murphy Crossroad 607 Vita Road",
+      "categories": [
+        "International",
+        "Beer taps"
+      ],
+      "name": "Raynor, Gaylord and Emard",
+      "openingHours": "10:00 - 22:00",
+      "rating": 3,
+      "type": [
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Dennis Isle 7524 Janelle Fall",
+      "categories": [
+        "No takeaway",
+        "Dine-in",
+        "Seafood",
+        "No delivery",
+        "Beer taps"
+      ],
+      "name": "Renner LLC",
+      "openingHours": "08:00 - 20:00",
+      "rating": 4,
+      "type": [
+        "pub",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Rowe Canyon 000 Ritchie Park",
+      "categories": [
+        "International",
+        "No delivery"
+      ],
+      "name": "Witting - Braun",
+      "openingHours": "08:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Toni Branch 108 Mertie Motorway",
+      "categories": [
+        "No takeaway",
+        "Seafood",
+        "Beer taps",
+        "Fried food"
+      ],
+      "name": "Hauck Group",
+      "openingHours": "00:00 - 23:59",
+      "rating": 1,
+      "type": [
+        "pub",
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Aidan Trail 1662 Kuhic Motorway",
+      "categories": [
+        "Fried food"
+      ],
+      "name": "Cronin - Crist",
+      "openingHours": "08:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "pub",
+        "restaurant",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Kuhn Village 0059 Germaine Alley",
+      "categories": [
+        "No takeaway",
+        "Beer taps",
+        "No delivery"
+      ],
+      "name": "Herzog - Langosh",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "pub",
+        "restaurant",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Walter Street 230 Kerluke Hills",
+      "categories": [
+        "Fried food",
+        "Beer taps",
+        "No delivery"
+      ],
+      "name": "Conroy - Dooley",
+      "openingHours": "10:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "bar",
+        "pub",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Gudrun Mills 422 Tad Ways",
+      "categories": [
+        "No takeaway",
+        "International",
+        "Seafood",
+        "No delivery",
+        "Dine-in",
+        "Fried food",
+        "Beer taps"
+      ],
+      "name": "Schinner - Terry",
+      "openingHours": "11:00 - 21:00",
+      "rating": 4,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Audreanne Rue 7748 Rohan Divide",
+      "categories": [
+        "Fried food",
+        "No takeaway",
+        "International",
+        "Beer taps",
+        "No delivery",
+        "Dine-in",
+        "Seafood"
+      ],
+      "name": "Gottlieb Inc",
+      "openingHours": "08:00 - 20:00",
+      "rating": 5,
+      "type": [
+        "bar",
+        "restaurant",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Kaylah Stravenue 9290 Kianna Common",
+      "categories": [
+        "No delivery",
+        "Dine-in",
+        "Seafood",
+        "Fried food",
+        "International",
+        "Beer taps"
+      ],
+      "name": "Lockman, Bashirian and Sanford",
+      "openingHours": "11:00 - 21:00",
+      "rating": 3,
+      "type": [
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Raynor Hollow 371 Beier Road",
+      "categories": [
+        "Fried food"
+      ],
+      "name": "Bins - Huels",
+      "openingHours": "08:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Mckenna Fields 0202 Mueller Loop",
+      "categories": [
+        "Dine-in",
+        "No takeaway",
+        "No delivery",
+        "Beer taps",
+        "Seafood",
+        "Fried food",
+        "International"
+      ],
+      "name": "Beatty - Durgan",
+      "openingHours": "00:00 - 23:59",
+      "rating": 4,
+      "type": [
+        "bar",
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Zieme Ramp 35489 Santa Extensions",
+      "categories": [
+        "Dine-in",
+        "No takeaway",
+        "International",
+        "Seafood",
+        "No delivery"
+      ],
+      "name": "Aufderhar - Bernier",
+      "openingHours": "11:00 - 21:00",
+      "rating": 3,
+      "type": [
+        "bar",
+        "restaurant",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Dare Drive 455 Derek Plain",
+      "categories": [
+        "Dine-in",
+        "No delivery",
+        "No takeaway",
+        "International"
+      ],
+      "name": "Leffler - Pfeffer",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "bar",
+        "accomodation",
+        "pub",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Mozelle Summit 854 Tromp Forge",
+      "categories": [
+        "No delivery"
+      ],
+      "name": "Zboncak, Hessel and Gusikowski",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "accomodation",
+        "pub",
+        "bar"
+      ]
+    },
+    {
+      "address": "Harber Mission 46653 Kade Stream",
+      "categories": [
+        "Seafood",
+        "Beer taps",
+        "International"
+      ],
+      "name": "Brakus, Crona and Hyatt",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "pub",
+        "bar"
+      ]
+    },
+    {
+      "address": "Jovani Crossroad 5975 Keeley Mount",
+      "categories": [
+        "No delivery",
+        "No takeaway"
+      ],
+      "name": "Kilback - Heller",
+      "openingHours": "08:00 - 20:00",
+      "rating": 5,
+      "type": [
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Jayden Shoal 40475 Elijah Dam",
+      "categories": [
+        "Dine-in",
+        "Fried food",
+        "International"
+      ],
+      "name": "O'Hara - Ziemann",
+      "openingHours": "11:00 - 21:00",
+      "rating": 2,
+      "type": [
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Leonard Knolls 87078 Charlotte Turnpike",
+      "categories": [
+        "Fried food",
+        "Dine-in",
+        "Seafood",
+        "No delivery",
+        "International",
+        "Beer taps"
+      ],
+      "name": "Hodkiewicz - Abernathy",
+      "openingHours": "10:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "bar",
+        "restaurant",
+        "accomodation"
+      ]
+    }
+  ],
+  "Salling": [
+    {
+      "address": "Fay Valley 95682 Lizeth Station",
+      "categories": [
+        "Seafood",
+        "No delivery",
+        "Dine-in"
+      ],
+      "name": "Sipes, Lynch and Fadel",
+      "openingHours": [
+        "08:00 - 20:00"
+      ],
+      "rating": 1,
+      "type": [
+        "bar",
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Elenora Loop 09826 Candelario Fords",
+      "categories": [
+        "Seafood",
+        "Dine-in",
+        "Beer taps",
+        "No takeaway",
+        "No delivery",
+        "Fried food",
+        "International"
+      ],
+      "name": "Moen - Mraz",
+      "openingHours": [
+        "11:00 - 20:00"
+      ],
+      "rating": 5,
+      "type": [
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Owen Drives 838 Gleichner Oval",
+      "categories": [
+        "Seafood",
+        "Fried food",
+        "No delivery",
+        "International",
+        "Dine-in",
+        "Beer taps",
+        "No takeaway"
+      ],
+      "name": "Bartell - Johnston",
+      "openingHours": [
+        "10:00 - 22:00"
+      ],
+      "rating": 5,
+      "type": [
+        "pub",
+        "accomodation",
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Sipes Stream 7149 Delpha Tunnel",
+      "categories": [
+        "No delivery",
+        "Seafood",
+        "No takeaway",
+        "International"
+      ],
+      "name": "Kunze Group",
+      "openingHours": [
+        "10:00 - 22:00"
+      ],
+      "rating": 3,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Stanton Ferry 2277 Wiley Mountain",
+      "categories": [
+        "No takeaway",
+        "Dine-in",
+        "International"
+      ],
+      "name": "Goodwin - O'Keefe",
+      "openingHours": [
+        "11:00 - 20:00"
+      ],
+      "rating": 2,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Mortimer Village 62444 Schuster Cliffs",
+      "categories": [
+        "No takeaway",
+        "International",
+        "No delivery",
+        "Fried food"
+      ],
+      "name": "Dare Inc",
+      "openingHours": [
+        "11:00 - 20:00"
+      ],
+      "rating": 1,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Enrico Run 3974 Donnelly Trace",
+      "categories": [
+        "No takeaway",
+        "Fried food",
+        "Seafood",
+        "No delivery",
+        "International"
+      ],
+      "name": "Hegmann - Davis",
+      "openingHours": [
+        "08:00 - 20:00"
+      ],
+      "rating": 3,
+      "type": [
+        "pub",
+        "bar"
+      ]
+    },
+    {
+      "address": "Joaquin Ports 74845 Romaguera Row",
+      "categories": [
+        "No takeaway",
+        "No delivery",
+        "Dine-in",
+        "International"
+      ],
+      "name": "Hagenes Group",
+      "openingHours": [
+        "00:00 - 23:59"
+      ],
+      "rating": 2,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Blanca Stream 014 Kuhlman Knoll",
+      "categories": [
+        "Beer taps"
+      ],
+      "name": "Watsica Inc",
+      "openingHours": [
+        "11:00 - 21:00"
+      ],
+      "rating": 1,
+      "type": [
+        "accomodation",
+        "pub",
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Ullrich Walk 38678 Aurelia Plains",
+      "categories": [
+        "Fried food"
+      ],
+      "name": "Mills - Erdman",
+      "openingHours": [
+        "08:00 - 20:00"
+      ],
+      "rating": 1,
+      "type": [
+        "pub",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Grady Fort 8089 Gleason Harbors",
+      "categories": [
+        "No delivery",
+        "International",
+        "Beer taps",
+        "No takeaway"
+      ],
+      "name": "Grady and Sons",
+      "openingHours": [
+        "00:00 - 23:59"
+      ],
+      "rating": 4,
+      "type": [
+        "bar",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Wisoky Lodge 41156 Cole Garden",
+      "categories": [
+        "Dine-in",
+        "Beer taps",
+        "Seafood"
+      ],
+      "name": "Lang, Block and Toy",
+      "openingHours": [
+        "00:00 - 23:59"
+      ],
+      "rating": 2,
+      "type": [
+        "pub",
+        "restaurant",
+        "bar"
+      ]
+    },
+    {
+      "address": "Keebler Common 979 Bria Cliffs",
+      "categories": [
+        "International",
+        "No takeaway",
+        "Fried food",
+        "Dine-in",
+        "Beer taps"
+      ],
+      "name": "McGlynn Inc",
+      "openingHours": [
+        "10:00 - 22:00"
+      ],
+      "rating": 3,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Friesen Points 79848 Cynthia Walks",
+      "categories": [
+        "Seafood"
+      ],
+      "name": "Bailey, Kiehn and Waelchi",
+      "openingHours": [
+        "11:00 - 20:00"
+      ],
+      "rating": 2,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Jacobson Mill 8724 Clarissa Oval",
+      "categories": [
+        "Fried food"
+      ],
+      "name": "Effertz - Koepp",
+      "openingHours": [
+        "08:00 - 22:00"
+      ],
+      "rating": 1,
+      "type": [
+        "bar",
+        "accomodation",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Enos Drive 600 Abbie Landing",
+      "categories": [
+        "No takeaway",
+        "Seafood",
+        "Fried food",
+        "Beer taps",
+        "No delivery"
+      ],
+      "name": "Hickle, Casper and Dibbert",
+      "openingHours": [
+        "11:00 - 20:00"
+      ],
+      "rating": 5,
+      "type": [
+        "bar",
+        "restaurant",
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Ellis Roads 240 Leopoldo Crescent",
+      "categories": [
+        "No takeaway",
+        "Dine-in",
+        "No delivery",
+        "International"
+      ],
+      "name": "Rath LLC",
+      "openingHours": [
+        "08:00 - 22:00"
+      ],
+      "rating": 3,
+      "type": [
+        "accomodation",
+        "bar",
+        "restaurant",
+        "pub"
+      ]
+    },
+    {
+      "address": "Marjolaine Ridges 426 McLaughlin Estates",
+      "categories": [
+        "No delivery",
+        "Seafood",
+        "Dine-in",
+        "No takeaway"
+      ],
+      "name": "Kovacek and Sons",
+      "openingHours": [
+        "10:00 - 22:00"
+      ],
+      "rating": 3,
+      "type": [
+        "restaurant",
+        "bar",
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Frederic Squares 73858 Citlalli Pines",
+      "categories": [
+        "Seafood",
+        "International",
+        "Dine-in",
+        "Fried food",
+        "Beer taps",
+        "No delivery"
+      ],
+      "name": "Littel - Funk",
+      "openingHours": [
+        "08:00 - 20:00"
+      ],
+      "rating": 1,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Grady Estates 512 Jayden Forge",
+      "categories": [
+        "International",
+        "No takeaway",
+        "Fried food",
+        "No delivery",
+        "Beer taps",
+        "Dine-in"
+      ],
+      "name": "Bruen, Blick and Buckridge",
+      "openingHours": [
+        "10:00 - 22:00"
+      ],
+      "rating": 1,
+      "type": [
+        "restaurant",
+        "pub"
+      ]
+    }
+  ],
+  "Sauers Plads": [
+    {
+      "address": "Olson Divide 641 Schimmel Summit",
+      "categories": [
+        "No takeaway",
+        "International",
+        "Dine-in",
+        "No delivery"
+      ],
+      "name": "Veum, Kilback and Schmidt",
+      "openingHours": "11:00 - 21:00",
+      "rating": 1,
+      "type": [
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Terry Plaza 936 Zoe Springs",
+      "categories": [
+        "Beer taps",
+        "Seafood",
+        "Fried food",
+        "No delivery",
+        "No takeaway",
+        "International"
+      ],
+      "name": "Torp - Durgan",
+      "openingHours": "00:00 - 23:59",
+      "rating": 2,
+      "type": [
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Noel Crescent 14741 Abbott Lights",
+      "categories": [
+        "Dine-in"
+      ],
+      "name": "Hegmann, Ziemann and Kunze",
+      "openingHours": "11:00 - 20:00",
+      "rating": 2,
+      "type": [
+        "pub",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Darrel Roads 666 Paucek Fields",
+      "categories": [
+        "Seafood"
+      ],
+      "name": "Bogisich - Reynolds",
+      "openingHours": "00:00 - 23:59",
+      "rating": 3,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Kristian Lock 5571 Patrick Villages",
+      "categories": [
+        "No delivery",
+        "International",
+        "Fried food",
+        "Dine-in"
+      ],
+      "name": "Harber Group",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "bar",
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "O'Kon Rapid 83972 Toney Roads",
+      "categories": [
+        "Seafood",
+        "No takeaway",
+        "Fried food",
+        "No delivery",
+        "International",
+        "Dine-in"
+      ],
+      "name": "Greenfelder, Kshlerin and Jacobson",
+      "openingHours": "08:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Franz Well 9150 Ryley Parkways",
+      "categories": [
+        "Seafood",
+        "Fried food",
+        "Dine-in",
+        "No delivery",
+        "International"
+      ],
+      "name": "Kris - Kovacek",
+      "openingHours": "08:00 - 20:00",
+      "rating": 2,
+      "type": [
+        "pub",
+        "bar",
+        "restaurant",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Schulist Manors 902 Doyle Field",
+      "categories": [
+        "Dine-in",
+        "No delivery"
+      ],
+      "name": "Trantow, Waters and Lindgren",
+      "openingHours": "08:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "accomodation",
+        "pub",
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Demarcus Mill 1290 O'Reilly Dale",
+      "categories": [
+        "Seafood"
+      ],
+      "name": "Ziemann, Greenholt and Kub",
+      "openingHours": "11:00 - 21:00",
+      "rating": 4,
+      "type": [
+        "accomodation",
+        "bar",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Lina Summit 15112 Virginia Orchard",
+      "categories": [
+        "Beer taps",
+        "No delivery",
+        "Seafood"
+      ],
+      "name": "Simonis - Bartell",
+      "openingHours": "10:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "bar"
+      ]
+    },
+    {
+      "address": "Bianka Coves 53700 Zieme Track",
+      "categories": [
+        "No takeaway",
+        "Seafood",
+        "Beer taps",
+        "No delivery",
+        "International"
+      ],
+      "name": "Ruecker LLC",
+      "openingHours": "08:00 - 20:00",
+      "rating": 3,
+      "type": [
+        "bar",
+        "pub",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Prohaska Wall 69534 Fletcher Prairie",
+      "categories": [
+        "No takeaway"
+      ],
+      "name": "Miller Inc",
+      "openingHours": "08:00 - 20:00",
+      "rating": 2,
+      "type": [
+        "restaurant",
+        "pub",
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Vicenta Land 8230 Kunde Summit",
+      "categories": [
+        "International",
+        "Beer taps",
+        "No delivery",
+        "Dine-in",
+        "No takeaway",
+        "Seafood",
+        "Fried food"
+      ],
+      "name": "Bailey, Lakin and Wiegand",
+      "openingHours": "00:00 - 23:59",
+      "rating": 1,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Otto Expressway 044 Towne Corner",
+      "categories": [
+        "International",
+        "Dine-in",
+        "Seafood",
+        "No delivery",
+        "Beer taps"
+      ],
+      "name": "Goldner - Langosh",
+      "openingHours": "08:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "pub"
+      ]
+    },
+    {
+      "address": "Audra Common 3020 Rempel Harbors",
+      "categories": [
+        "Fried food",
+        "No delivery",
+        "Seafood"
+      ],
+      "name": "Shanahan - Sipes",
+      "openingHours": "08:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "bar",
+        "restaurant",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Hackett Course 5057 Mante Skyway",
+      "categories": [
+        "Beer taps",
+        "Fried food",
+        "No takeaway",
+        "International",
+        "Dine-in",
+        "Seafood",
+        "No delivery"
+      ],
+      "name": "Hintz - Glover",
+      "openingHours": "00:00 - 23:59",
+      "rating": 1,
+      "type": [
+        "pub",
+        "restaurant",
+        "bar"
+      ]
+    },
+    {
+      "address": "Brando Lakes 22296 Blanche Stravenue",
+      "categories": [
+        "No delivery",
+        "Seafood",
+        "Dine-in"
+      ],
+      "name": "Nader, Harber and Lebsack",
+      "openingHours": "08:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Chaz Terrace 596 Hammes Shoal",
+      "categories": [
+        "Fried food",
+        "No delivery"
+      ],
+      "name": "Robel Group",
+      "openingHours": "00:00 - 23:59",
+      "rating": 1,
+      "type": [
+        "pub",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Isaiah Shores 325 Manley Valley",
+      "categories": [
+        "International",
+        "Seafood",
+        "No takeaway"
+      ],
+      "name": "McGlynn - Ondricka",
+      "openingHours": "08:00 - 20:00",
+      "rating": 3,
+      "type": [
+        "pub",
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Cassin Isle 829 Schoen Lakes",
+      "categories": [
+        "No takeaway",
+        "No delivery",
+        "Beer taps"
+      ],
+      "name": "Effertz, Funk and Dicki",
+      "openingHours": "08:00 - 20:00",
+      "rating": 3,
+      "type": [
+        "bar",
+        "restaurant"
+      ]
+    }
+  ],
+  "Sømandshjemmet": [
+    {
+      "address": "Feeney Curve 2317 Hane Lodge",
+      "categories": [
+        "Fried food",
+        "International",
+        "No takeaway",
+        "Beer taps",
+        "No delivery",
+        "Seafood"
+      ],
+      "name": "Effertz - Beier",
+      "openingHours": "08:00 - 22:00",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Reba Terrace 705 Alivia Mall",
+      "categories": [
+        "Seafood",
+        "No takeaway",
+        "Fried food",
+        "International",
+        "No delivery"
+      ],
+      "name": "Cormier - Stoltenberg",
+      "openingHours": "10:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "pub",
+        "bar"
+      ]
+    },
+    {
+      "address": "Zemlak Camp 6239 Stracke Burg",
+      "categories": [
+        "Fried food",
+        "No delivery",
+        "No takeaway",
+        "Beer taps",
+        "International",
+        "Seafood",
+        "Dine-in"
+      ],
+      "name": "Kunze, Simonis and Kirlin",
+      "openingHours": "00:00 - 23:59",
+      "rating": 3,
+      "type": [
+        "restaurant",
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Georgianna Manors 00639 Berge Roads",
+      "categories": [
+        "Beer taps",
+        "Fried food",
+        "International",
+        "Seafood",
+        "Dine-in",
+        "No takeaway"
+      ],
+      "name": "Pfannerstill Group",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Sipes Fall 82716 Cassin Well",
+      "categories": [
+        "Fried food",
+        "No takeaway"
+      ],
+      "name": "Rodriguez - Marvin",
+      "openingHours": "08:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "pub",
+        "bar"
+      ]
+    },
+    {
+      "address": "Leonel Key 108 Graham Hill",
+      "categories": [
+        "Dine-in",
+        "No delivery",
+        "International",
+        "No takeaway"
+      ],
+      "name": "Schoen LLC",
+      "openingHours": "11:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "pub",
+        "accomodation",
+        "restaurant",
+        "bar"
+      ]
+    },
+    {
+      "address": "Esteban Walk 70649 Johnston Green",
+      "categories": [
+        "No delivery",
+        "No takeaway",
+        "Seafood",
+        "Fried food",
+        "Beer taps",
+        "Dine-in",
+        "International"
+      ],
+      "name": "Dach LLC",
+      "openingHours": "08:00 - 20:00",
+      "rating": 2,
+      "type": [
+        "pub",
+        "restaurant",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Melany Light 299 Quigley Divide",
+      "categories": [
+        "Dine-in",
+        "Fried food",
+        "No delivery",
+        "Seafood",
+        "International"
+      ],
+      "name": "Schowalter, Schuster and Nitzsche",
+      "openingHours": "10:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Ryan Underpass 8340 Emiliano Divide",
+      "categories": [
+        "Beer taps",
+        "International",
+        "Seafood",
+        "No delivery",
+        "Dine-in"
+      ],
+      "name": "Emmerich and Sons",
+      "openingHours": "00:00 - 23:59",
+      "rating": 5,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Conroy Spur 203 Dean Shoals",
+      "categories": [
+        "Fried food",
+        "No delivery"
+      ],
+      "name": "Lind, Boyle and Fay",
+      "openingHours": "08:00 - 22:00",
+      "rating": 2,
+      "type": [
+        "accomodation",
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Lolita Parkway 918 Stroman Divide",
+      "categories": [
+        "Dine-in",
+        "No delivery",
+        "Seafood",
+        "No takeaway"
+      ],
+      "name": "Rutherford Group",
+      "openingHours": "11:00 - 21:00",
+      "rating": 5,
+      "type": [
+        "pub",
+        "restaurant",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Niko Meadow 6799 Lebsack Radial",
+      "categories": [
+        "International",
+        "Dine-in",
+        "Beer taps",
+        "Seafood",
+        "No delivery"
+      ],
+      "name": "O'Reilly Group",
+      "openingHours": "11:00 - 20:00",
+      "rating": 2,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Abagail Junction 0080 Margarete Village",
+      "categories": [
+        "Fried food",
+        "International",
+        "No delivery",
+        "Dine-in",
+        "Seafood",
+        "Beer taps",
+        "No takeaway"
+      ],
+      "name": "Waters, Turner and Bruen",
+      "openingHours": "00:00 - 23:59",
+      "rating": 1,
+      "type": [
+        "pub"
+      ]
+    },
+    {
+      "address": "Kessler Inlet 23514 Wanda Forges",
+      "categories": [
+        "Seafood",
+        "Dine-in",
+        "No delivery",
+        "Fried food",
+        "Beer taps",
+        "No takeaway",
+        "International"
+      ],
+      "name": "Walker - Bechtelar",
+      "openingHours": "10:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "restaurant"
+      ]
+    },
+    {
+      "address": "Imogene Harbors 776 Donna Course",
+      "categories": [
+        "Dine-in",
+        "No takeaway",
+        "No delivery",
+        "Fried food",
+        "International",
+        "Beer taps"
+      ],
+      "name": "Lubowitz LLC",
+      "openingHours": "11:00 - 21:00",
+      "rating": 2,
+      "type": [
+        "restaurant",
+        "bar",
+        "accomodation"
+      ]
+    },
+    {
+      "address": "Nikolaus Lights 570 Koss Track",
+      "categories": [
+        "International",
+        "Seafood",
+        "Beer taps",
+        "Fried food"
+      ],
+      "name": "Harris, Kris and Goodwin",
+      "openingHours": "11:00 - 20:00",
+      "rating": 1,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "bar"
+      ]
+    },
+    {
+      "address": "Von Station 247 Layne Road",
+      "categories": [
+        "Beer taps"
+      ],
+      "name": "Kiehn Group",
+      "openingHours": "08:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "pub",
+        "bar"
+      ]
+    },
+    {
+      "address": "Raleigh Walk 3750 Evangeline Light",
+      "categories": [
+        "Seafood"
+      ],
+      "name": "Torp and Sons",
+      "openingHours": "08:00 - 22:00",
+      "rating": 1,
+      "type": [
+        "bar"
+      ]
+    },
+    {
+      "address": "Wade Way 37671 Metz Circle",
+      "categories": [
+        "Dine-in",
+        "International",
+        "Seafood",
+        "Fried food",
+        "No takeaway",
+        "No delivery"
+      ],
+      "name": "O'Hara LLC",
+      "openingHours": "08:00 - 22:00",
+      "rating": 4,
+      "type": [
+        "bar",
+        "pub"
+      ]
+    },
+    {
+      "address": "Frami Fork 641 Feeney Locks",
+      "categories": [
+        "Seafood",
+        "No takeaway",
+        "Fried food",
+        "Beer taps",
+        "No delivery",
+        "International"
+      ],
+      "name": "Carter, Bartoletti and O'Keefe",
+      "openingHours": "08:00 - 20:00",
+      "rating": 3,
+      "type": [
+        "restaurant",
+        "accomodation",
+        "bar",
+        "pub"
+      ]
+    }
+  ]
+}

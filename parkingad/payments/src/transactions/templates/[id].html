@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+  <title>__id__ | Parkingad Payments</title>
+  <style>
+    button, input {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Transaction __id__</h1>
+  <h2>Details</h1>
+  <ul>
+    <li>Name: __firstName__, __lastName__</li>
+    <li>Email: __email__</li>
+    <li>Amount: __amount__</li>
+    <li>Currency: __currency__</li>
+    <li>Item: __item__</li>
+  </ul>
+  <form action='/transactions/__id__/payment' method='POST'>
+    <input name='cardNumber' required type='text' >
+    <input name='fullName' required type='text' >
+    <input name='expiration' placeholder='MM/YYYY' required type='text' >
+    <input name='cvv' required type='text' >
+    <button type='submit'>Submit</button>
+  </form>
+</body>
