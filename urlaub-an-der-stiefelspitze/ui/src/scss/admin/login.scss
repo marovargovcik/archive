@@ -1,0 +1,32 @@
+.login {
+    @extend .container-fluid;
+
+    &__row {
+        @extend .row;
+        min-height: 100vh;
+    }
+
+    &__showcase {
+        @extend .col, .d-none, .d-md-flex, .bg-primary;
+        align-items: center;
+        justify-content: center;
+
+        &-logo {
+        }
+    }
+
+    &__action {
+        @extend .col-12, .col-md-4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-title {
+            margin-bottom: 1.5rem;
+        }
+
+        &-form {
+            width: 100%;
+        }
+    }
+}

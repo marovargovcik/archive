@@ -1,0 +1,30 @@
+body[data-branch="admin"] {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    .block-shell {
+        @extend .border-bottom;
+        padding: 1rem 0;
+
+        &__controls {
+            @extend .container;
+            text-align: right;
+        }
+
+        &__body {
+        }
+
+        .block {
+            padding: 0;
+        }
+    }
+
+    // Imports
+    @import "components/button";
+    @import "components/card";
+    @import "components/modal";
+    @import "layout";
+    @import "login";
+    @import "tabulator";
+}

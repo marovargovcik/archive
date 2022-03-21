@@ -1,0 +1,8 @@
+{% block app %}
+  We could not find translation for this page but we have it available in these languages:
+  {% for page_translation in page_translations %}
+    <a href="{{ page_translation.get_url }}">{{ page_translation.language|upper }}</a>{% if not forloop.last %},{% endif %}
+  {% endfor %}
+  <br>
+  <a href="/">Continue to homepage</a>
+{% endblock %}

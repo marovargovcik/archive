@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+  {% include 'admin/sidebar.html' %}
+
+  <div class="app">
+
+    <main class="page">
+
+      {% include 'admin/header.html' %}
+
+      <section class="page__content">
+
+        {% block breadcrumbs %}{% endblock %}
+
+        <div class="page__content-body">
+          {% block app %}{% endblock %}
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" tabindex="-1" data-backdrop="static">
+
+    <form method="POST" class="modal__dialog" data-form>
+      {% csrf_token %}
+
+      <div class="modal__content">
+
+        <div class="modal__header">
+          <h5 class="modal__title" data-title></h5>
+        </div>
+
+        <div class="modal__body">
+          <div class="modal__spinner-layout" data-spinner>
+            <div class="modal__spinner"></div>
+          </div>
+          <div data-load-target></div>
+        </div>
+
+        <div class="modal__footer">
+          <button type="button" class="button button--red" data-dismiss="modal">Close</button>
+          <button type="submit" class="button button--blue">Confirm</button>
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+{% endblock %}

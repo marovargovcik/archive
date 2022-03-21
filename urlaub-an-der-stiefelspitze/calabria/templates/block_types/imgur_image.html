@@ -1,0 +1,23 @@
+{% load calabria %}
+
+{% with b.get_image as image %}
+
+  {% if not image %}
+
+    We could not load image. Check if the link {{ b.url }} is valid Imgur image link.
+
+  {% else %}
+    
+    <img
+      src="{{ image.link|get_imgur_thumbnail }}"
+      srcset="{{ image.link|get_imgur_thumbnail:'t' }} 160w,
+              {{ image.link|get_imgur_thumbnail:'m' }} 320w,
+              {{ image.link|get_imgur_thumbnail:'l' }} 640w,
+              {{ image.link|get_imgur_thumbnail:'h' }} 1024w,
+              {{ image.link|get_imgur_thumbnail|get_resize_url:'width=1280' }} 1280w"
+      alt="imgur-image.jpg"
+      class="block__image">
+
+  {% endif %}
+
+{% endwith %}

@@ -1,0 +1,30 @@
+@import "../variables";
+
+.navbar {
+    &-brand {
+        color: $web-dark-gray;
+
+        &:hover {
+            color: $web-orange;
+        }
+    }
+
+    &-toggler {
+    }
+    &-collapse {
+    }
+    &-nav {
+        & .nav {
+            &-item {
+            }
+
+            &-link {
+                color: $web-dark-gray;
+
+                &:hover {
+                    color: $web-orange;
+                }
+            }
+        }
+    }
+}

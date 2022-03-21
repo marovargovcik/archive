@@ -1,0 +1,105 @@
+@import "../variables";
+
+.hero {
+    background: no-repeat center;
+    background-size: cover;
+    height: 768px;
+    position: relative;
+
+    &:after {
+        background: $web-bg-gradient;
+        bottom: 0;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    &__image {
+        object-fit: cover;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &__content {
+        align-items: center;
+        bottom: 0;
+        content: "";
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        left: 0;
+        padding: 1rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__title {
+        color: $web-white;
+        font-size: 8rem;
+        text-align: center;
+        text-shadow: $web-text-shadow;
+        width: 100%;
+        word-break: break-word;
+    }
+
+    &__action {
+        border: 1px solid $web-white;
+        color: $web-white !important;
+        padding: 0.5rem;
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .hero {
+        &__title {
+            font-size: 7rem;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .hero {
+        height: 512px;
+
+        &__title {
+            font-size: 6rem;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .hero {
+        &__title {
+            font-size: 5rem;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .hero {
+        height: 384px;
+
+        &__title {
+            font-size: 4rem;
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .hero {
+        &__title {
+            font-size: 2.5rem;
+        }
+    }
+}

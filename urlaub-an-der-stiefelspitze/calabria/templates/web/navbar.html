@@ -1,0 +1,55 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light container py-4">
+
+  {# Logo #}
+  <a class="navbar-brand" href="{% url 'web_index' %}">
+    <img alt="logo" src='{% static 'assets/images/logo.png' %}' style="height: 92px; width: 92px; ">
+  </a>
+
+  {# Navigation toggle #}
+  <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#menu">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  {# Navigation #}
+  <div id="menu" class="collapse navbar-collapse">
+
+    {# Navigation list #}
+    <ul class="navbar-nav pt-3 pt-md-0 ml-auto text-center">
+
+      {# Navigation list items #}
+      {% for page in top_menu_pages %}
+        {% with page.get_translation as page_translation %}
+          {% if page_translation %}
+            <li class="nav-item">
+            <a
+              href="{{ page_translation.get_url }}"
+              class="nav-link">{{ page_translation.name }}
+            </a>
+          </li>
+          {% endif %}
+        {% endwith %}
+      {% endfor %}
+
+      {# Language switcher #}
+      <li class="nav-item d-flex align-items-center">
+        <form action="{% url "helpers_set_language" %}" method="POST" class="w-100">
+          {% csrf_token %}
+
+          <input name="next" type="hidden" value="{% url 'helpers_redirect_to_translation' page_translation.page.pk %}"/>
+
+          {% if LANGUAGE_CODE == 'de' %}
+            <button type="submit" name="language" value="en" class="btn">EN</button>
+          {% else %}
+            <button type="submit" name="language" value="de" class="btn">DE</button>
+          {% endif %}
+
+        </form>
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>

@@ -1,0 +1,1 @@
+INSERT INTO calabria.auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES (1, 'pbkdf2_sha256$120000$DI541zVBHybf$kKsHw+ID8TDkRCfRo8NCBHWtMeTl/au2ttz0Lgzg+f0=', null, 1, 'admin', '', '', '', 1, 1, '2019-03-19 20:11:38.223971');

@@ -1,0 +1,51 @@
+{% load calabria %}
+
+{% with b.get_images as images %}
+
+  {% if not images %}
+
+    We could not load images. Check if the link {{ b.url }} is valid Imgur album link and if the album contains any images.
+
+  {% else %}
+
+    <div class="grid {% if images|length == 2 %}grid--size--duo{% endif %}">
+
+      {% for image in images %}
+
+        <a
+          href="{{ image.link|get_imgur_thumbnail }}"
+          data-fancybox="gallery"
+          data-srcset="{{ image.link|get_imgur_thumbnail:'m' }} 320w,
+                      {{ image.link|get_imgur_thumbnail:'l' }} 640w,
+                      {{ image.link|get_imgur_thumbnail:'h' }} 1024w,
+                      {{ image.link|get_imgur_thumbnail|get_resize_url:'width=1280' }} 1280w,
+                      {{ image.link|get_imgur_thumbnail|get_resize_url:'width=1440' }} 1440w,
+                      {{ image.link|get_imgur_thumbnail|get_resize_url:'width=1920' }} 1920w"
+          {% if image.description %}data-caption="{{ image.description }}"{% endif %}
+          class="grid__item">
+
+          <img
+            srcset="{{ image.link|get_imgur_thumbnail:'m' }} 320w,
+                    {{ image.link|get_imgur_thumbnail:'l' }} 640w"
+            sizes="(min-width: 576px) 262w,
+                  (min-width: 768px) 352w,
+                  (min-width: 992px) 472w,
+                  (min-width: 1200px) 369w,
+                  100wv"
+            src="{{ image.link|get_imgur_thumbnail }}"
+            alt="imgur-image.jpg"
+            class="grid__item-image">
+
+          <div class="grid__item-content grid__item-content--with-icon">
+            <i class="fas fa-search"></i>
+          </div>
+
+        </a>
+
+      {% endfor %}
+
+    </div>
+
+  {% endif %}
+
+{% endwith %}

@@ -1,0 +1,115 @@
+{% extends 'admin/admin.html' %}
+{% load calabria %}
+{% load crispy_forms_filters %}
+
+{% block app %}
+
+  <div id="pagesTable" class="card">
+
+    <div class="card__header">
+      <div class="card__header-start" data-table-controls></div>
+      <div class="card__header-end">
+        <a
+          href="{% url 'admin_pages_add' %}"
+          data-toggle="modal"
+          data-target="#modal"
+          data-title="New page"
+          class="button button--blue">
+          New page
+        </a>
+      </div>
+    </div>
+
+    <div class="card__body card__body--no-padding">
+      <table class="table table-bordered" data-table></table>
+    </div>
+
+  </div>
+
+{% endblock %}
+
+{% block js %}
+  <script>
+    window.tables = [
+      {
+        selector: 'pagesTable',
+        type: 'pages',
+        data: [
+          {% for page in pages %}
+            {
+              'name': '{{ page.name }}',
+              'position': {{ page.position }},
+              'translations': {
+                {% for code in LANGUAGE_CODES %}
+                  '{{ code|upper }}': {
+                    {% if page|translation_exists:code %}
+                      exists: true,
+                      {% with page|get_translation:code as translation %}
+                        urls: {
+                          show: '{{ translation.get_url }}',
+                          edit: '{{ translation.get_edit_url }}',
+                        },
+                      {% endwith %}
+                    {% else %}
+                      exists: false,
+                      urls: {
+                        add: '{% url 'admin_page_translations_add' page.pk code %}',
+                      },
+                    {% endif %}
+                  },
+                {% endfor %}
+              },
+            },
+          {% endfor %}
+        ],
+      },
+    ];
+  </script>
+{% endblock %}
+
+{#<div class="table-responsive">#}
+{#  <table class="table table-striped">#}
+{#    <thead>#}
+{#    <tr>#}
+{#      <th>Description</th>#}
+{#      <th>Position</th>#}
+{#      <th>Post type</th>#}
+{#      <th>Parent page</th>#}
+{#      {% for code in LANGUAGE_CODES %}#}
+{#        <th>{{ code|upper }}</th>#}
+{#      {% endfor %}#}
+{#      <th>Actions</th>#}
+{#    </tr>#}
+{#    </thead>#}
+{#    <tbody>#}
+{#    {% for page in pages %}#}
+{#      <tr>#}
+{#        <td>{{ page.description }}</td>#}
+{#        <td>{{ page.position }}</td>#}
+{#        <td>{{ page.post_type }}</td>#}
+{#        <td>{{ page.parent_page.description }}</td>#}
+{#        {% for code in LANGUAGE_CODES %}#}
+{#          <td>#}
+{#            {% if page|translation_exists:code  %}#}
+{#              {% with page|get_translation:code as translation %}#}
+{#                <a href="{{ translation.get_edit_url }}" class="button button--blue">#}
+{#                  <i class="fas fa-edit"></i>#}
+{#                </a>#}
+{#              {% endwith %}#}
+{#            {% else %}#}
+{#              <a href="{% url 'admin_page_translations_add' page.pk code %}" class="button button--blue">#}
+{#                <i class="fas fa-plus"></i>#}
+{#              </a>#}
+{#            {% endif %}#}
+{#          </td>#}
+{#        {% endfor %}#}
+{#        <td>#}
+{#          <a href="{% url 'admin_pages_edit' page.pk %}" class="button button--blue">#}
+{#            <i class="fas fa-edit"></i>#}
+{#          </a>#}
+{#        </td>#}
+{#      </tr>#}
+{#    {% endfor %}#}
+{#    </tbody>#}
+{#  </table>#}
+{#</div>#}

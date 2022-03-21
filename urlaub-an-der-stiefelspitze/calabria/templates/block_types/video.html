@@ -1,0 +1,17 @@
+{% with b.get_embed_url as url %}
+
+  {% if not url %}
+
+  Could not load video. Provide Check if link {{ b.url }} is valid Youtube or Vimeo link.
+
+  {% else %}
+
+    <iframe
+      src="{{ b.get_embed_url }}"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+  {% endif %}
+
+{% endwith %}

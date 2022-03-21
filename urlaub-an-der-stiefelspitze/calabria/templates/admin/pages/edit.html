@@ -1,0 +1,141 @@
+{% extends 'admin/admin.html' %}
+{% load crispy_forms_filters %}
+{% load calabria %}
+
+{% block app %}
+
+  <div class="row">
+
+    <div class="col-9">
+
+      <div class="card">
+
+        <div class="card__header">
+          <div class="card__header-start">
+            <a href="{{ page_translation.get_url }}" target="_blank" class="button button--blue">Show</a>
+          </div>
+          <div class="card__header-end">
+            {% for block_type in block_types %}
+              <a
+                href="{% url 'admin_page_translation_blocks_add' page_translation.page.pk page_translation.language block_type.slug %}"
+                data-toggle="modal"
+                data-target="#modal"
+                data-title="New {{ block_type.name|lower }} block"
+                class="button button--blue">
+                {{ block_type.name|lower }}
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="card__body">
+
+          {% for b in page_translation.block_set.all %}
+
+            {% with b.load as b %}
+
+              <div class="block-shell">
+
+                <div class="block-shell__controls">
+                  <a
+                    href="{{ b.get_delete_url }}"
+                    data-toggle="modal"
+                    data-target="#modal"
+                    data-title="Delete {{ b.name|lower }} block"
+                    class="button button--red">
+                    Delete
+                  </a>
+                  <a
+                    href="{{ b.get_edit_url }}"
+                    data-toggle="modal"
+                    data-target="#modal"
+                    data-title="New {{ block_type.name|lower }} block"
+                    class="button button--blue">
+                    Edit
+                  </a>
+                </div>
+
+                <section class="block-shell__body block block--{{ b.type.slug }}">
+                  <h1 class="block__title">{{ b.title }}</h1>
+                  {% include b.get_template with b=b %}
+                </section>
+
+              </div>
+
+            {% endwith %}
+
+          {% endfor %}
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-3">
+
+      <form
+        action="{{ page_translation.page.get_edit_url }}"
+        method="POST"
+        class="card">
+
+        {% csrf_token %}
+
+        <div class="card__header">
+          <div class="card__header-start">Page settings</div>
+          <div class="card__header-end"></div>
+        </div>
+
+        <div class="card__body">
+          {{ edit_page_form|crispy }}
+        </div>
+
+        <div class="card__footer">
+          <a
+            href="{{ page_translation.page.get_delete_url }}"
+            data-toggle="modal"
+            data-target="#modal"
+            data-title="Delete page"
+            class="button button--red">
+            Delete
+          </a>
+          <button type="submit" class="button button--blue">Confirm</button>
+        </div>
+
+      </form>
+
+      <form
+        action="{{ page_translation.get_edit_url }}"
+        method="POST"
+        class="card mt-3">
+
+        {% csrf_token %}
+
+        <div class="card__header">
+          <div class="card__header-start">Translation settings</div>
+          <div class="card__header-end"></div>
+        </div>
+
+        <div class="card__body">
+          {{ edit_page_translation_form|crispy }}
+        </div>
+
+        <div class="card__footer">
+          <a
+            href="{{ page_translation.get_delete_url }}"
+            data-toggle="modal"
+            data-target="#modal"
+            data-title="Delete page translation"
+            class="button button--red">
+            Delete
+          </a>
+          <button type="submit" class="button button--blue">Confirm</button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% load i18n %}
+{% load static %}
+{% load calabria %}
+
+<!DOCTYPE html>
+<html lang='{{ LANGUAGE_CODE }}'>
+<head>
+
+  {# Meta tags #}
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  {# SEO #}
+  <title>{% if title %}{{ title }} | {% endif %}{% trans 'Apartments and holiday homes in Calabria' %}</title>
+  {% if page_translation.description %}
+    <meta name="description" content="{{ page_translation.description }}">
+  {% endif %}
+
+  {# OG SEO #}
+  <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{% trans 'Apartments and holiday homes in Calabria' %}"/>
+  {% if page_translation.description %}
+    <meta property="og:description" content="{{ page_translation.description }}"/>
+  {% endif %}
+  {% if page_translation.page.featured_image %}
+    <meta property="og:image" content="{{ page_translation.page.get_featured_image.link|get_imgur_thumbnail:'h'}}"/>
+  {% endif %}
+  <meta property="og:url" content="{{ request|get_absolute_url }}"/>
+  <meta property="og:type" content="website"/>
+
+  {# Favicon #}
+  <link rel='icon' href='{% static 'assets/images/favicon.ico' %}'>
+
+  {# Library styles #}
+  <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/summernote@0.8.11/dist/summernote-bs4.css">
+
+  {# Additional styles #}
+  {% block css %}{% endblock %}
+
+  {# Styles #}
+  <link rel='stylesheet' href='{% static 'assets/styles/styles.min.css' %}'>
+
+  {# Google Analytics #}
+  {% block g_analytics %}{% endblock %}
+
+</head>
+<body data-branch="{{ BRANCH }}">
+
+{# Main block for content #}
+{% include 'dev/toolbar.html' %}
+{% block body %}{% endblock %}
+
+{# Library scripts #}
+<script type="text/javascript" src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/bootstrap@4.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/summernote@0.8.11/dist/summernote-bs4.min.js"></script>
+
+{# Additional sripts #}
+{% block js %}{% endblock %}
+
+{# Scripts #}
+<script type="text/javascript">
+  window.languageCodes = [
+    {% for code in LANGUAGE_CODES %}
+      '{{ code|upper }}',
+    {% endfor %}
+  ];
+</script>
+<script type='text/javascript' src='{% static 'assets/scripts/bundle.min.js' %}'></script>
+</body>
+</html>

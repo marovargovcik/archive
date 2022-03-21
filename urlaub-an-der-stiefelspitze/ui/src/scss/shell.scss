@@ -1,0 +1,32 @@
+$fa-font-path: "../fonts";
+$grid-gutter-width: 1rem;
+@import "~tabulator-tables/src/scss/bootstrap/tabulator_bootstrap4";
+@import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+// Shared
+@import "block";
+@import "grid";
+@import "dev-toolbar";
+
+// Admin
+@import "admin/all";
+
+// Web
+@import "web/all";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f7f9;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}

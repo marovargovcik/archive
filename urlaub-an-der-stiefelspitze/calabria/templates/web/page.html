@@ -1,0 +1,58 @@
+{% extends 'web/web.html' %}
+{% load calabria %}
+
+{% block app %}
+
+  {# Hero image #}
+  {% if page_translation.page.featured_image %}
+    {% with page_translation.page.get_featured_image as image %}
+
+      <div class="hero">
+
+        <img
+          srcset="{{ image.link|get_imgur_thumbnail:'m' }} 320w,
+                  {{ image.link|get_imgur_thumbnail:'l' }} 640w,
+                  {{ image.link|get_imgur_thumbnail:'h' }} 1024w,
+                  {{ image.link|get_imgur_thumbnail|get_resize_url:'width=1280' }} 1280w,
+                  {{ image.link|get_imgur_thumbnail|get_resize_url:'width=1440' }} 1440w,
+                  {{ image.link|get_imgur_thumbnail|get_resize_url:'width=1920' }} 1920w"
+          src="{{ image.link|get_imgur_thumbnail }}"
+          alt="imgur-image.jpg"
+          class="hero__image"/>
+
+        <div class="hero__content">
+          <h1 class="hero__title">{{ page_translation.name }}</h1>
+          {% if page_translation.action_redirect and page_translation.action_title %}
+            <a class="hero__action" href="{{ page_translation.action_redirect.get_translation.get_url }}">
+              {{ page_translation.action_title }}
+            </a>
+          {% endif %}
+        </div>
+
+      </div>
+
+    {% endwith %}
+  {% endif %}
+
+  {# Iterate through page's block set #}
+  {% for b in page_translation.block_set.all %}
+
+    {# Load correct block #}
+    {% with b.load as b %}
+
+      {# Include correct block template #}
+
+      <section class="block block--type--{{ b.type.slug }}">
+        {% if b.title %}
+          <h1 class="block__title">{{ b.title }}</h1>
+        {% endif %}
+        <div class="block__content">
+          {% include b.get_template with b=b %}
+        </div>
+      </section>
+
+    {% endwith %}
+
+  {% endfor %}
+
+{% endblock %}

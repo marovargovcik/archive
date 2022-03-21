@@ -1,0 +1,11 @@
+.idea
+__pycache__/
+*.py[cod]
+env
+node_modules
+media
+!media/.gitkeep
+static
+!static/.gitkeep
+calabria/env.py
+.vscode

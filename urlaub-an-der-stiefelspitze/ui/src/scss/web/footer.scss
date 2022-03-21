@@ -1,0 +1,66 @@
+@import "../variables";
+
+.footer {
+    @extend .border-top;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+    &__container {
+        @extend .container;
+    }
+
+    &__layout {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0.5rem;
+        max-width: 384px;
+    }
+
+    &__title {
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        margin-bottom: 1.25rem;
+        text-transform: uppercase;
+    }
+
+    &__record {
+        &:not(:last-child) {
+            margin-bottom: 0.25rem;
+        }
+
+        &--social {
+            align-items: center;
+            display: flex;
+
+            & > :first-child {
+                width: 32px;
+            }
+
+            & > :last-child {
+                flex: 1;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .footer {
+        &__layout {
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 1.75rem;
+            }
+        }
+    }
+}

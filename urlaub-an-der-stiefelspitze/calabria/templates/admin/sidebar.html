@@ -1,0 +1,40 @@
+<aside class="sidebar" data-sidebar>
+
+  <div class="sidebar__header">
+
+    <div class="sidebar__header-logo">
+      <img src="" alt="" class="sidebar__header-logo-img">
+    </div>
+
+    <a href="#" data-toggle="sidebar" class="sidebar__header-trigger">
+      <i class="fas fa-bars"></i>
+    </a>
+
+  </div>
+
+  <ul class="sidebar__list">
+
+    {% for group in menu %}
+
+      <li class="sidebar__item sidebar__item--category">
+        <span class="sidebar__item-title">{{ group.category }}</span>
+      </li>
+
+      {% for item in group.items %}
+        <li class="sidebar__item">
+          <a href="{{ item.url }}" class="sidebar__item-link {% if item.active %}sidebar__item-link--active{% endif %}">
+              <span class="sidebar__item-icon">
+                <i class="{{ item.icon }}"></i>
+              </span>
+            <span class="sidebar__item-title">{{ item.name }}</span>
+          </a>
+        </li>
+      {% endfor %}
+
+      <li class="sidebar__item sidebar__item--divider"></li>
+
+    {% endfor %}
+
+  </ul>
+
+</aside>

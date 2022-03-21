@@ -1,0 +1,39 @@
+.modal {
+    @extend .fade;
+
+    &__dialog {
+        @extend .modal-dialog, .modal-dialog-centered, .modal-xl;
+    }
+
+    &__content {
+        @extend .modal-content;
+    }
+
+    &__header {
+        @extend .modal-header;
+    }
+
+    &__title {
+        @extend .modal-title;
+    }
+
+    &__body {
+        @extend .modal-body;
+    }
+
+    &__spinner {
+        @extend .spinner-border, .text-primary;
+
+        &-layout {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__content {
+    }
+
+    &__footer {
+        @extend .modal-footer;
+    }
+}

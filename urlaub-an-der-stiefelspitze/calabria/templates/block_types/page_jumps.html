@@ -1,0 +1,45 @@
+{% load calabria %}
+
+<div class="grid">
+
+  {% for page in b.get_pages %}
+
+    <a href="{{ page.get_translation.get_url }}" class="grid__item">
+
+      {% if page.featured_image %}
+        <img
+          srcset="{{ page.get_featured_image.link|get_imgur_thumbnail:'t' }} 160w,
+                  {{ page.get_featured_image.link|get_imgur_thumbnail:'m' }} 320w,
+                  {{ page.get_featured_image.link|get_imgur_thumbnail:'l' }} 640w"
+          sizes="(min-width: 576px) 262w,
+                 (min-width: 768px) 352w,
+                 (min-width: 992px) 472w,
+                 (min-width: 1200px) 369w,
+                 100wv"
+          src="{{ page.get_featured_image.link|get_imgur_thumbnail:'l' }}"
+          alt="imgur-image.jpg"
+          class="grid__item-image">
+      {% else %}
+        <img
+          srcset="https://via.placeholder.com/160 160w,
+                  https://via.placeholder.com/320 320w,
+                  https://via.placeholder.com/640 640w,"
+          sizes="(min-width: 576px) 262w,
+                 (min-width: 768px) 352w,
+                 (min-width: 992px) 472w,
+                 (min-width: 1200px) 369w,
+                 100wv"
+          src="https://via.placeholder.com/640"
+          alt="placeholder.net"
+          class="grid__item-image">
+      {% endif %}
+
+      <div class="grid__item-content grid__item-content--with-title">
+        <h3 class="grid__item-content-title">{{ page.get_translation.name }}</h3>
+      </div>
+
+    </a>
+
+  {% endfor %}
+
+</div>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+{% load calabria %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    {% for page_translation in page_translations %}
+        <url>
+
+            <loc>{{ request|get_absolute_url:page_translation.get_url }}</loc>
+            {% with page_translation.page.get_translations as translations %}
+                {% for translation in translations %}
+                    <xhtml:link
+                        rel="alternate"
+                        hreflang="{{ translation.language }}"
+                        href="{{ request|get_absolute_url:translation.get_url }}"/>
+                {% endfor %}
+            {% endwith %}
+        </url>
+    {% endfor %}
+</urlset>

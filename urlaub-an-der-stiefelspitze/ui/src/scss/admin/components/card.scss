@@ -1,0 +1,37 @@
+.card {
+    @extend .card, .rounded-0;
+
+    &__header {
+        @extend .card-header, .bg-white;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: bold;
+        justify-content: space-between;
+        padding: 0.75rem;
+
+        &-start {
+        }
+
+        &-end {
+            > *:not(:last-of-type) {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &__body {
+        @extend .card-body;
+        padding: 0.75rem;
+
+        &--no-padding {
+            padding: 0;
+        }
+    }
+
+    &__footer {
+        @extend .card-footer, .bg-white;
+        padding: 0.75rem;
+        text-align: right;
+    }
+}

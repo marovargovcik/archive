@@ -1,0 +1,36 @@
+{
+    "name": "ui",
+    "version": "0.0.1",
+    "scripts": {
+        "build": "export NODE_ENV=production && npx gulp4 production",
+        "start": "export NODE_ENV=development && npx gulp4 development"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/plugin-transform-runtime": "^7.2.0",
+        "@babel/preset-env": "^7.2.3",
+        "@babel/register": "^7.0.0",
+        "babel-eslint": "^10.0.1",
+        "babel-loader": "^8.0.5",
+        "del": "^3.0.0",
+        "eslint": "^5.16.0",
+        "gulp-flatten": "^0.4.0",
+        "gulp-if": "^2.0.2",
+        "gulp-plumber": "^1.2.1",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp4": "^4.0.2",
+        "node-sass-package-importer": "^5.3.0",
+        "webpack": "^4.29.0",
+        "webpack-stream": "^5.2.1"
+    },
+    "dependencies": {
+        "@babel/polyfill": "^7.2.5",
+        "@babel/runtime": "^7.2.0",
+        "@fortawesome/fontawesome-free": "^5.7.2",
+        "bootstrap": "^4.3.1",
+        "lit-html": "^1.0.0",
+        "tabulator-tables": "^4.2.5"
+    }
+}

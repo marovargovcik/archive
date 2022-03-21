@@ -1,0 +1,51 @@
+{% load i18n %}
+
+<footer class="footer">
+
+  <div class="footer__container">
+
+    <div class="footer__layout">
+
+      <div class="footer__item">
+
+        <h6 class="footer__title">SOCIAL</h6>
+
+        <a href="https://www.facebook.com/urlaubinkalabrien/" class="footer__record footer__record--social" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+          <span>Facebook</span>
+        </a>
+
+        <a href="https://www.instagram.com/urlaub_an_der_stiefelspitze/" class="footer__record footer__record--social" target="_blank">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+
+      </div>
+
+      <div class="footer__item">
+
+        <h6 class="footer__title">LINKS</h6>
+
+        {% for page in bottom_menu_pages %}
+          {% with page.get_translation as page_translation %}
+            {% if page_translation %}
+              <a href="{{ page_translation.get_url }}" class="footer__record">{{ page_translation.name }}</a>
+            {% endif %}
+          {% endwith %}
+        {% endfor %}
+
+      </div>
+
+      <div class="footer__item">
+        <h6 class="footer__title">{% trans 'GET IN TOUCH'%}</h6>
+        <div class="footer__record">Katrin Wosnitzka</div>
+        <div class="footer__record">Glümerstr. 32, 79102 Freiburg</div>
+        <a href="tel:+393401591777" class="footer__record">+39 340 1591777</a>
+        <a href="mailto:info@urlaub-an-der-stiefelspitze.com" class="footer__record">info@urlaub-an-der-stiefelspitze.com</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>

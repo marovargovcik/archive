@@ -1,0 +1,11 @@
+.button {
+    @extend .btn, .btn-sm;
+
+    &--blue {
+        @extend .btn-primary;
+    }
+
+    &--red {
+        @extend .btn-danger;
+    }
+}

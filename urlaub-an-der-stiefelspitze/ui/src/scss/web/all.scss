@@ -1,0 +1,41 @@
+// Ext. fonts
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans");
+
+// Partials
+@import "../variables";
+
+body[data-branch="web"] {
+    background-color: $web-white;
+    color: $web-dark-gray;
+    font-family: "Open Sans", sans-serif;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+    }
+
+    a {
+        color: $web-orange;
+        transition: 0.2s;
+
+        &:hover {
+            color: $web-dark-orange;
+            text-decoration: underline;
+        }
+    }
+
+    button {
+        color: $web-dark-gray;
+        font-style: inherit;
+    }
+
+    // Imports
+    @import "footer";
+    @import "hero";
+    @import "navbar";
+}
