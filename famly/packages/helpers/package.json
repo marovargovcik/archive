@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@repo/config": "*",
+    "@repo/helpers": "*",
+    "@repo/types": "*",
+    "eslint": "^8.10.0",
+    "fs-extra": "^10.0.1",
+    "glob": "^7.2.0",
+    "http-errors": "^2.0.0",
+    "i18next-scanner": "^3.1.0"
+  },
+  "name": "@repo/helpers",
+  "scripts": {
+    "lint": "eslint api",
+    "lint:fix": "eslint --fix api"
+  },
+  "version": "0.0.0"
+}

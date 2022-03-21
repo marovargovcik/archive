@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "4.17.3",
+    "helmet": "^5.0.2",
+    "http-errors": "^2.0.0",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "@repo/config": "*",
+    "@repo/helpers": "*",
+    "@repo/types": "*",
+    "@types/express": "^4.17.13",
+    "@types/http-errors": "^1.8.2",
+    "@types/node": "17.0.21",
+    "concurrently": "^7.0.0",
+    "esbuild": "^0.14.25",
+    "eslint": "^8.10.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "tsconfig-paths": "^3.13.0"
+  },
+  "name": "@repo/backend",
+  "scripts": {
+    "build": "rm -rf dist/* && esbuild src/server.ts --bundle --minify --legal-comments=none --platform=node --outfile=dist/server.js",
+    "dev": "nodemon --watch \"src/**\" --exec ts-node -r tsconfig-paths/register src/server.ts",
+    "test": "ts-node -r tsconfig-paths/register src/attendance/tests.ts",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src"
+  },
+  "version": "0.0.0"
+}

@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@repo/config": "*",
+    "@repo/helpers": "*",
+    "@repo/types": "*",
+    "eslint": "^8.10.0",
+    "http-errors": "^2.0.0"
+  },
+  "name": "@repo/types",
+  "scripts": {
+    "lint": "eslint api",
+    "lint:fix": "eslint --fix api"
+  },
+  "version": "0.0.0"
+}

@@ -1,0 +1,27 @@
+.controls {
+  margin-bottom: 6px;
+}
+
+.table {
+  table-layout: fixed;
+}
+
+.table th, .table td {
+  padding: 6px;
+}
+
+.table, .table th, .table td {
+  border: 1px solid black;
+}
+
+.pagination {
+  margin-top: 6px;
+}
+
+.pagination * {
+  display: inline-block;
+}
+
+.pagination *:not(:last-child) {
+  margin-right: 6px;
+}

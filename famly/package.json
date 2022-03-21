@@ -1,0 +1,34 @@
+{
+  "devDependencies": {
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=8.0.0"
+  },
+  "name": "@repo/monorepo",
+  "packageManager": "npm@8.1.2",
+  "scripts": {
+    "all:build": "turbo run build -parallel",
+    "all:dev": "turbo run dev --parallel",
+    "all:lint": "turbo run lint --parallel",
+    "all:lint:fix": "turbo run lint:fix --parallel",
+    "backend:build": "turbo run build --scope=\"@repo/backend\"",
+    "backend:dev": "turbo run dev --scope=\"@repo/backend\"",
+    "backend:lint": "turbo run lint --scope=\"@repo/backend\"",
+    "backend:lint:fix": "turbo run lint:fix --scope=\"@repo/backend\"",
+    "frontend:build": "turbo run build --scope=\"@repo/frontend\"",
+    "frontend:dev": "turbo run dev --scope=\"@repo/frontend\"",
+    "frontend:lint": "turbo run lint --scope=\"@repo/frontend\"",
+    "frontend:lint:fix": "turbo run lint:fix --scope=\"@repo/frontend\"",
+    "helpers:lint": "turbo run lint --scope=\"@repo/helpers\"",
+    "helpers:lint:fix": "turbo run lint:fix --scope=\"@repo/helpers\"",
+    "types:lint": "turbo run lint --scope=\"@repo/types\"",
+    "types:lint:fix": "turbo run lint:fix --scope=\"@repo/types\""
+  },
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
