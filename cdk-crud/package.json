@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "aws-cdk-lib": "^2.0.0",
+    "constructs": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "aws-cdk": "^2.20.0",
+    "esbuild": "^0.14.34",
+    "typescript": "~3.9.7"
+  },
+  "name": "cdk-crud",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "version": "1.0.0"
+}

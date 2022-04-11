@@ -1,0 +1,9 @@
+{
+  "app": "node index",
+  "watch": {
+    "include": [
+      "index.js",
+      "src/*.ts"
+    ]
+  }
+}
