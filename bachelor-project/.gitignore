@@ -1,0 +1,18 @@
+# os files
+.DS_Store
+*:Zone.Identifier
+# deps
+node_modules
+# turbo
+.turbo
+# ide
+.vscode
+# ts
+*.tsbuildinfo
+# sensitive
+.env
+# output dir
+dist
+# build artifacts (generated on first deploy)
+apps/api/dist/source
+apps/backend/dist/source

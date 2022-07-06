@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "@aws-cdk/aws-apigatewayv2-alpha": "2.26.0-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "2.26.0-alpha.0",
+    "aws-cdk-lib": "^2.24.1",
+    "constructs": "^10.1.12",
+    "source-map-support": "^0.5.21"
+  },
+  "devDependencies": {
+    "@broadlify/api": "*",
+    "@broadlify/backend": "*",
+    "@broadlify/config": "*",
+    "@broadlify/react": "*",
+    "@broadlify/remix": "*",
+    "@types/node": "^17.0.35",
+    "@types/source-map-support": "^0.5.4",
+    "ts-node": "^10.7.0",
+    "typescript": "~4.6.4"
+  },
+  "name": "@broadlify/cdk",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "cdk deploy --require-approval never",
+    "dev": "tsc --watch",
+    "lint": "eslint bin lib",
+    "lint:fix": "eslint --fix bin lib"
+  },
+  "version": "0.0.0"
+}

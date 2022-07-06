@@ -1,0 +1,43 @@
+{
+  "devDependencies": {
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": "^14 || ^16",
+    "npm": "^6 || ^8"
+  },
+  "name": "@broadlify/monorepo",
+  "packageManager": "npm@8.1.2",
+  "scripts": {
+    "api:build": "turbo run build --scope=\"@broadlify/api\"",
+    "api:dev": "turbo run dev --scope=\"@broadlify/api\"",
+    "api:lint": "turbo run lint --scope=\"@broadlify/api\"",
+    "api:lint:fix": "turbo run lint:fix --scope=\"@broadlify/api\"",
+    "backend:build": "turbo run build --scope=\"@broadlify/backend\"",
+    "backend:lint": "turbo run lint --scope=\"@broadlify/backend\"",
+    "backend:lint:fix": "turbo run lint:fix --scope=\"@broadlify/backend\"",
+    "backend:start": "turbo run start --scope=\"@broadlify/backend\"",
+    "cdk:build": "turbo run build --scope=\"@broadlify/cdk\"",
+    "cdk:deploy": "turbo run deploy",
+    "cdk:dev": "turbo run dev --scope=\"@broadlify/cdk\"",
+    "cdk:lint": "turbo run lint --scope=\"@broadlify/cdk\"",
+    "cdk:lint:fix": "turbo run lint:fix --scope=\"@broadlify/cdk\"",
+    "react:build": "turbo run build --scope=\"@broadlify/react\"",
+    "react:dev": "turbo run dev --scope=\"@broadlify/react\"",
+    "react:lint": "turbo run lint --scope=\"@broadlify/react\"",
+    "react:lint:fix": "turbo run lint:fix --scope=\"@broadlify/react\"",
+    "nextjs-client:build": "turbo run build --scope=\"@broadlify/nextjs-client\"",
+    "nextjs-client:dev": "turbo run dev --scope=\"@broadlify/nextjs-client\"",
+    "nextjs-client:lint": "turbo run lint --scope=\"@broadlify/nextjs-client\"",
+    "nextjs-client:lint:fix": "turbo run lint:fix --scope=\"@broadlify/nextjs-client\"",
+    "remix:build": "turbo run build --scope=\"@broadlify/remix\"",
+    "remix:dev": "turbo run dev --scope=\"@broadlify/remix\"",
+    "remix:lint": "turbo run lint --scope=\"@broadlify/remix\"",
+    "remix:lint:fix": "turbo run lint:fix --scope=\"@broadlify/remix\""
+  },
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
