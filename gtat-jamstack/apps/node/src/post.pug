@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(
+      name='viewport',
+      content='width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes'
+    )
+  body
+    img(src=coverImage, style={height: 'auto', 'max-height': '128px', 'max-width': '128px', width: '100%'})
+    h1= name
+    h3= description
+    h5= author
+    p !{content}

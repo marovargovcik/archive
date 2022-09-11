@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": "^14 || ^16",
+    "npm": "^6 || ^8"
+  },
+  "name": "@jamstack/monorepo",
+  "packageManager": "npm@8.10.0",
+  "scripts": {
+    "node:build": "turbo run build --scope=\"@jamstack/node\"",
+    "node:lint": "turbo run lint --scope=\"@jamstack/node\"",
+    "node:lint:fix": "turbo run lint:fix --scope=\"@jamstack/node\""
+  },
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

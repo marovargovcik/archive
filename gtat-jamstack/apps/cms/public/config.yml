@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: apps/cms/public/uploads
+public_folder: /uploads
+collections:
+  - name: post
+    label: Posts
+    create: true
+    folder: apps/cms/content/posts
+    format: json
+    identifier_field: name
+    fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      - label: Cover image
+        name: coverImage
+        widget: image
+      - label: Author
+        name: author
+        widget: string
+      - label: Content
+        name: content
+        widget: markdown

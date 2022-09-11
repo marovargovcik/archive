@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title My blog
+    meta(charset='utf-8')
+    meta(
+      name='viewport',
+      content='width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes'
+    )
+    script(src='https://identity.netlify.com/v1/netlify-identity-widget.js')
+  body
+    h1 Welcome to my blog!
+    ul
+      each post in posts
+        li
+          a(href=post.fileName + '.html')= post.name
+    script.
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin.html";
+            });
+          }
+        });
+      }
