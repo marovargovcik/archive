@@ -1,0 +1,14 @@
+extends ../base
+
+block append page
+  .container
+    form(action=`/objednavka`, method='POST')
+      input(type='hidden', name='_csrf', value=csrfToken)
+      .input__group
+        label(for='id') Číslo objednávky
+        input.input.input--fullwidth(type='text', id='id', name='id', value=id, autofocus=!id)
+      .input__group
+        label(for='pinCode') PIN kód k objednávke
+        input.input.input--fullwidth(type='text', id='pinCode', name='pinCode', autofocus=!!id)
+      .input__group
+        button.button(type='submit') PRIHLÁSIŤ SA

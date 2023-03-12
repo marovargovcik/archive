@@ -1,0 +1,47 @@
+extends ../base
+
+block append page
+  .container.contact
+    .contact__layout
+      div.contact__details
+        h1.title.title--highlight.title--cursive Kontaktné údaje
+        p.text
+          | Risepak s.r.o.
+          br
+          | IČO:  50347209
+          br
+          | DIČ:  212030809
+          br
+          | Pod Švabľovkou 26
+          br
+          | Sabinov, 083 01
+          br
+          | Slovensko
+          br
+          a.text(href='mailto:hana@hanacakes.sk') hana@hanacakes.sk
+          br
+          a.text(href='mailto:info@hanacakes.sk') info@hanacakes.sk
+          br
+          a.text(href='tel:+421949620504') 0949 620 504
+      form.contact__form(action='/kontakt', method='POST')
+        h1.title.title--highlight.title--cursive Kontaktný formulár
+        input(type='hidden', name='_csrf', value=csrfToken)
+        input(type='hidden', name='captchaId', value=captcha.id)
+        .input__group
+          label(for='name') Meno a priezvisko
+          input.input.input--fullwidth(type='text', id='name', name='name', required=true)
+        .input__group
+          label(for='email') Emailová adresa
+          input.input.input--fullwidth(type='email', id='email', name='email', required=true)
+        .input__group
+          label(for='subject') Predmet správy
+          input.input.input--fullwidth(type='text', id='subject', name='subject', required=true)
+        .input__group
+          label(for='message') Správa
+          textarea.input.input--fullwidth.input--textarea(id='message', name='message', required=true)
+        .input__group
+          label(for='captchaText') Opíšte kód zobrazený na obrázku
+          div!= captcha.svg
+          input.input.input--fullwidth(id='captchaText', name='captchaText', required=true)
+        .input__group
+          button.button(type='submit') ODOSLAŤ

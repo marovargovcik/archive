@@ -1,0 +1,18 @@
+extends ../base
+
+block append page
+  if !utils.isEmpty(showcases)
+    +renderShowcases(showcases)
+  .cta.cta--pink.container
+    .cta__col
+      h1.cta__title.title.title--highlight.title--cursive Prvý svadobný e-shop
+      p.cta__subtitle.text Objednajte si cez náš e-shop z pohodlia domova. Nikdy to nebolo ľahšie.
+      a.button(href='/eshop')
+        .button-content DO ESHOPU
+    .cta__col.cta__col--center
+      img.cta__image(src='/images/cakefactory.gif')
+
+block append scripts
+  if sendGAdConversion
+    script.
+      gtag_report_conversion()

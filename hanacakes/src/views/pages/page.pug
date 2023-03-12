@@ -1,0 +1,15 @@
+extends ../base
+
+block append page
+  .container.blog
+    .blog__post-detail
+      .blog__post-detail-content
+        if !utils.isEmpty(page.fields.configuration) && req.url.includes(page.fields.configuration.pageSlug) && !utils.isEmpty(page.fields.configuration.items)
+          .allergens
+            for allergen in page.fields.configuration.order
+              .allergens__item
+                .allergens__item-number= page.fields.configuration.items[allergen].number
+                .allergens__item-image
+                  img(src=`/images/${allergen}.png`, alt=allergen)
+                .allergens__item-name= page.fields.configuration.items[allergen].name
+        != utils.md.render(page.fields.content)

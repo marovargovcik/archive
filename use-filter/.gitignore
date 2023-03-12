@@ -1,0 +1,13 @@
+# os files
+.DS_Store
+*:Zone.Identifier
+# deps
+node_modules
+# ide
+.vscode
+# ts
+*.tsbuildinfo
+# sensitive
+.env
+# output dir
+dist

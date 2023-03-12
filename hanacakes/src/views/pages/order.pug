@@ -1,0 +1,71 @@
+extends ../base
+
+block append page
+  .container.cart
+    .cart__products
+      for product in products
+        if (order.fields.items.configurationById[product.sys.id])
+          for quantity, configuration in order.fields.items.configurationById[product.sys.id]
+            +renderCartProduct(product, quantity, configuration, true)
+        else
+          +renderCartProduct(product, order.fields.items.quantityById[product.sys.id], null, true)
+    .cart__summary
+      .title.title--highlight.title--cursive Údaje o obj. #{order.fields.id}
+      .title
+        span.title--cursive #{order.fields.price.toFixed(2)} €
+        span.title--small s DPH
+      .input__group
+        label Vytvorená
+        input.input.input--fullwidth(type='text', value=utils.formatDate(order.sys.createdAt), readonly=true)
+      .input__group
+        label Status
+        input.input.input--fullwidth(type='text', value=order.fields.status, readonly=true)
+      .input__group
+        label Meno
+        input.input.input--fullwidth(type='text', value=order.fields.firstName, readonly=true)
+      .input__group
+        label Priezvisko
+        input.input.input--fullwidth(type='text', value=order.fields.lastName, readonly=true)
+      .input__group
+        label Email
+        input.input.input--fullwidth(type='email', value=order.fields.email, readonly=true)
+      .input__group
+        label Telefónné číslo
+        input.input.input--fullwidth(type='text', value=order.fields.phoneNumber, readonly=true)
+      .input__group
+        label Dátum vyzdvihnutia
+        input.input.input--fullwidth(type='text', value=utils.formatDate(order.fields.pickupDate), readonly=true)
+      if order.fields.additionalInformation
+        each fieldValue, fieldName in order.fields.additionalInformation
+          .input__group
+            label= fieldName
+            input.input.input--fullwidth(type='text', value=fieldValue, readonly=true)
+      .input__group
+        label Kupón / Promo kód
+        input.input.input--fullwidth(type='text', value=order.fields.coupon, readonly=true)
+      .input__group
+        label Poznámka
+        textarea.input.input--fullwidth.input--textarea(readonly=true)= order.fields.note
+      if order.fields.attachments
+        .input__group
+          label Prílohy
+          a.input(href=order.fields.attachments, target='_blank')= order.fields.attachments
+      if pinCodeType === 'MASTER'
+        - const statusMap = ['Čaká na spracovanie', 'Prijatá', 'Zrušená']
+        .title.title--highlight.title--cursive Zmena stavu objednávky
+        form(action=`/objednavka/${order.fields.id}/zmenit-stav?returnTo=${req.url}`, method='POST')
+          input(type='hidden', name='_csrf', value=csrfToken)
+          .input__group
+            label(for='status') Stav objednávky
+            select.input.input--fullwidth(id='status', name='status')
+              option(value=statusMap[0], selected=statusMap[0] === order.fields.status) Čaká na spracovanie
+              option(value=statusMap[1], selected=statusMap[1] === order.fields.status) Prijatá
+              option(value=statusMap[2], selected=statusMap[2] === order.fields.status) Zrušená
+          .input__group
+            label(for='message') Správa
+            textarea.input.input--fullwidth.input--textarea(id='message', name='message')
+          .input__group
+            label(for='pinCode') PIN kód
+            input.input.input--fullwidth(type='text', id='pinCode', name='pinCode')
+          .cart__summary-button.input__group
+            button.button(type='submit') ZMENIŤ STAV

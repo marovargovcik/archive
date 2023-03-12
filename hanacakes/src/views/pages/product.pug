@@ -1,0 +1,53 @@
+extends ../base
+
+block append page
+  section.container.menu
+    .menu__nav
+      ul.menu__nav-list
+        li.menu__nav-list-item(class={ 'menu__nav-list-item--active': req.url === '/eshop' })
+          a.menu__nav-list-item-link(href=`/eshop`) Všetky produkty
+        +renderCategories(categories, product.fields.category.fields.slug)
+    .menu__product
+      .menu__product-image-wrap
+        - const fit = product.fields.image.fields.file.details.image.height > product.fields.image.fields.file.details.image.width ? 'pad' : 'fill';
+        img.image.image--with-border.image--responsive(id=product.sys.id, src=`${product.fields.image.fields.file.url}?w=756&h=567&fit=${fit}`, alt='product-image')
+        if product.fields.images.length > 1
+          .menu__product-image-carousel
+            for image in product.fields.images
+              - const fit = image.fields.file.details.image.height > image.fields.file.details.image.width ? 'pad' : 'fill';
+              div.menu__product-image-carousel-item
+                img(src=`${image.fields.file.url}?w=100&h=75&fit=thumb`, data-toggle='product-carousel-item', data-target=product.sys.id, data-src=`${image.fields.file.url}?w=756&h=567&fit=${fit}`)
+      .menu__product-detail
+        if product.fields.description
+          div.menu__product-description!= utils.md.render(product.fields.description)
+        form.menu__product-add(action=`/nakupny-kosik/pridat-produkt?returnTo=${req.url}`, method="POST")
+          if !utils.isEmpty(product.fields.configuration)
+            if (product.fields.configurationOrder && product.fields.configurationOrder["Poradie"])
+              each configuration in product.fields.configurationOrder["Poradie"]
+                .menu__product-configuration-item
+                  label.menu__product-configuration-item-label= configuration
+                  select.input.menu__product-configuration-item-select(name=configuration)
+                    each option in product.fields.configuration[configuration]
+                      option(value=option)= option
+            else
+              each options, configuration in product.fields.configuration
+                .menu__product-configuration-item
+                  label.menu__product-configuration-item-label= configuration
+                  select.input.menu__product-configuration-item-select(name=configuration)
+                    each option in options
+                      option(value=option)= option
+          .menu__product-price-wrap
+            if !product.fields.active
+              .title.title--cursive Nedostupné
+            else if product.fields.price
+              .title
+                span.title--cursive #{product.fields.price.toFixed(2)} €
+                span.title--small s DPH
+            else if !product.fields.price && product.fields.priceTooltip
+              .title.title--cursive= product.fields.priceTooltip
+          if product.fields.active
+            input(type='hidden', name='_csrf', value=csrfToken)
+            input(type='hidden', name='id', value=product.sys.id)
+            input.input.input--quantity(type='number', name='quantity', value=product.fields.minOrder || 1, min=product.fields.minOrder || 1, max=product.fields.maxOrder)
+            button.button(type='submit')
+              .button-content Do košíka

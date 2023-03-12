@@ -1,0 +1,7 @@
+if !utils.isEmpty(instagramPosts)
+  section.container.instagram
+    h1.title.title--highlight.title--cursive Instagram
+    p.text Sleduj nás aj na Instagrame.
+    .instagram__grid
+      for post in instagramPosts
+        a.instagram__picture(href=post.url, style=`background-image: url(${post.mediaUrl})`)

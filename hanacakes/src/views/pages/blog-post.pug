@@ -1,0 +1,14 @@
+extends ../base
+
+block append page
+  .container.blog
+    .blog__post-detail
+      .blog__post-detail-content!= utils.md.render(post.fields.content)
+        .fb-like(
+          data-href=utils.fullUrl,
+          data-width='',
+          data-layout='button_count',
+          data-action='like',
+          data-size='small',
+          data-share='true'
+        )

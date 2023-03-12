@@ -1,0 +1,12 @@
+extends ../base
+
+block append page
+  .container.blog
+    .blog__posts
+      for post in posts
+        a.blog__post(href=`/blog/${post.fields.slug}`)
+          img.blog__post-image(src=post.fields.image.fields.file.url)
+          .blog__post-footer
+            p.blog__post-footer-name= post.fields.name
+            p.blog__post-footer-date= utils.formatDate(post.sys.createdAt, true)
+            p.blog__post-footer-description= post.fields.seoDescription

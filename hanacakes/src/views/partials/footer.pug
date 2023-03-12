@@ -1,0 +1,23 @@
+footer.footer
+  img.footer__group.footer__logo(src='/images/hana_512.png', alt='hana.png')
+  .footer__group
+    h2.footer__title Informácie
+    p.text.text--white
+      a.text.footer__link(href=`/objednavka`) Tvoja objednávka
+      for page in pages
+        a.text.footer__link(href=`/stranky/${page.fields.slug}`)= page.fields.name
+
+  .footer__group
+    h2.footer__title Kontaktuj Hanu
+    p.text.text--white
+    a.text.footer__link(href='mailto:hana@hanacakes.sk') hana@hanacakes.sk
+    a.text.text--no-margin.footer__link(href='mailto:info@hanacakes.sk') info@hanacakes.SK
+    a.text.footer__link(href='tel:+421949620504') +421949620504
+  .footer__group
+    h2.footer__title Osobný odber
+    .text.text--white
+      | Pod Švabľovkou 26
+      br
+      | Sabinov, 083 01
+      br
+      | Slovensko

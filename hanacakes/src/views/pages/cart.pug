@@ -1,0 +1,65 @@
+extends ../base
+
+block append page
+  .container.cart
+    if utils.isEmpty(cart.products)
+      div Žiadne produkty v košíku.
+    else
+      .cart__products
+        for product in cart.products
+          if (cart.configurationById[product.sys.id])
+            for quantity, configuration in cart.configurationById[product.sys.id]
+              +renderCartProduct(product, quantity, configuration)
+          else
+              +renderCartProduct(product, cart.quantityById[product.sys.id])
+      .cart__summary
+        .title.title--highlight.title--cursive Pokladňa
+        .title
+          span.title--cursive #{cart.totalPrice.toFixed(2)} €
+          span.title--small s DPH
+        form(action=`nakupny-kosik/odoslat-objednavku?_csrf=${csrfToken}`, method='POST', enctype='multipart/form-data')
+          .input__group
+            label(for='firstName') Meno*
+            input.input.input--fullwidth(type='text', id='firstName', name='firstName', maxlength='255', required=true)
+          .input__group
+            label(for='lastName') Priezvisko*
+            input.input.input--fullwidth(type='text', id='lastName', name='lastName', maxlength='255', required=true)
+          .input__group
+            label(for='email') Email*
+            input.input.input--fullwidth(type='email', id='email', name='email', maxlength='255', required=true)
+          .input__group
+            label(for='phoneNumber') Telefónné číslo*
+            input.input.input--fullwidth(type='text', id='phoneNumber', name='phoneNumber', maxlength='255', required=true)
+          .input__group
+            label(for='pickupDate') Dátum vyzdvihnutia*
+            input.input.input--fullwidth(type='date', id='pickupDate', name='pickupDate', required=true)
+            div.input__help Toto je povinný údaj
+          if !utils.isEmpty(cartAdditionalFields)
+            for field in cartAdditionalFields
+              .input__group
+                label(for=field.name)= field.name + '*'
+                select.input.input--fullwidth(name=field.name, required=true)
+                  each value in field.values
+                    option(value=value)= value
+          .input__group
+            label(for='coupon') Kupón / Promo kód
+            input.input.input--fullwidth(type='text', id='coupon', name='coupon', maxlength='255')
+          .input__group
+            label(for='note') Poznámka
+            textarea.input.input--fullwidth.input--textarea(type='text', id='note', name='note', maxlength='255')
+          .input__group
+            label(for='attachments') Príloha
+            input(type='file', id='attachments', name='attachments', accept='image/*', multiple=true)
+            div.input__help Maximálne 3 prílohy každá do veľkosti 5mb
+          .input__group.input__group--inline
+            input(type='checkbox', id='agreement', name='agreement', required=true)
+            label(for='agreement')
+              | Súhlasím s
+              |
+              a(href='/stranky/obchodne-podmienky', style={ color: '#d73853' }, target='_blank', rel="noopener noreferrer") obchodnými podmienkami
+              |
+              | a spracovaním
+              |
+              a(href='/stranky/gdpr', style={ color: '#d73853' }, target='_blank', rel="noopener noreferrer") osobných údajov
+          .cart__summary-button.input__group
+            button.button(type='submit') OBJEDNAŤ

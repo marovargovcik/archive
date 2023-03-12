@@ -1,0 +1,21 @@
+header.header
+  .header__nav-trigger(data-trigger='nav')
+    i(data-feather='menu')
+  a.header__logo(href='/')
+    img.header__logo-image.image--responsive(src='/images/logo.png', alt='logo.png')
+  nav.header__nav(data-selector='nav')
+    ul.header__nav-list
+      li.header__nav-list-item(class={ 'header__nav-list-item--active': req.url.includes('/eshop') })
+        a.header__nav-list-item-link(href='/eshop') E-shop
+      li.header__nav-list-item(class={ 'header__nav-list-item--active': req.url.includes('/blog') })
+        a.header__nav-list-item-link(href='/blog') Blog
+      li.header__nav-list-item(class={ 'header__nav-list-item--active': req.url.includes('/caste-otazky') })
+        a.header__nav-list-item-link(href='/caste-otazky') Časté otázky
+      li.header__nav-list-item(class={ 'header__nav-list-item--active': req.url.includes('/kontakt') })
+        a.header__nav-list-item-link(href='/kontakt') Kontakt
+  .header__cart-button
+    a.button(href='/nakupny-kosik')
+      .button-content
+        .header__cart-price #{totalPriceOfProductsInCart.toFixed(2)} € (#{countOfProductsInCart})
+        i(data-feather='shopping-cart')
+

@@ -1,0 +1,6 @@
+if !utils.isEmpty(partners)
+  section.container.partners
+    .partners__layout
+      for partner in partners
+        a.partners__item(href=partner.fields.url || '#', target='_blank', rel='noopener noreferrer')
+          img.partners__item-logo(src=`${partner.fields.image.fields.file.url}?w=192`)

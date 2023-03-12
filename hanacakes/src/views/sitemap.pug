@@ -1,0 +1,9 @@
+doctype xml
+urlset(xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
+  for site in sitemap
+    url
+      loc= site.url
+      if site.lastModified
+        lastmod= site.lastModified
+      if site.frequency
+        changefreq= site.frequency

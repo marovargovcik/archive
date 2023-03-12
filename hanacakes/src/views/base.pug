@@ -1,0 +1,70 @@
+include mixins
+doctype html
+html(lang='sk')
+  head
+    script(async=true, src='https://www.googletagmanager.com/gtag/js?id=UA-105274166-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-105274166-1');
+      gtag('config', 'AW-709653252');
+      function gtag_report_conversion() {
+        gtag(
+          'event',
+          'conversion',
+          {
+            'send_to': 'AW-709653252/95wXCN6wnroBEITmsdIC',
+            'transaction_id': '#{sendGAdConversion}'
+          }
+        );
+        return false;
+      }
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes')
+    title= seo.title
+    link(rel='icon', sizes='16x16', href='/images/favicon.ico')
+    link(rel='icon', sizes='32x32', href='/images/favicon-32x32.png')
+    link(rel='canonical', href=utils.fullUrl)
+    meta(name='description', content=seo.description)
+    meta(property='og:site_name', content='Hana cakes')
+    meta(property='og:url', content=utils.fullUrl)
+    meta(property='og:locale', content='sk_SK')
+    if seo.price
+      meta(property='og:type', content='product')
+      meta(property='product:price:amount', content=seo.price)
+      meta(property='product:price:currency', content='EUR')
+    else
+      meta(property='og:type', content='website')
+    meta(property='og:title', content=seo.title)
+    meta(property='og:description', content=seo.description)
+    meta(property='og:image', content=seo.image || `${utils.baseUrl}/images/og_logo.png`)
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css')
+    link(rel='stylesheet', href='https://unpkg.com/flatpickr@4.6.3/dist/themes/airbnb.css')
+    link(rel='stylesheet', href='/stylesheets/styles.css')
+  body
+    div#fb-root
+    script(async = true, crossorigin='anonymous', src='https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0')
+    if messages
+      .message-container
+        for message, type in messages
+          .message(class=`message--${type}`)
+            .message__text= message
+            i.message__close(data-feather='x')
+    include partials/header
+    main.main
+      block page
+        if banner
+          h1.banner= banner
+      include partials/subscription
+      include partials/instagram
+      include partials/partners
+    include partials/footer
+    script(src='https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js')
+    script(src='https://unpkg.com/flatpickr@4.6.3/dist/flatpickr.min.js')
+    script(src='https://unpkg.com/flatpickr@4.6.3/dist/l10n/sk.js')
+    script(src='/javascripts/bundle.js')
+    block scripts
+

@@ -1,0 +1,11 @@
+section.container.subscription
+  .subscription__social
+    a.subscription__social-item(href='https://www.facebook.com/hanacakes.sk/', target='_blank')
+      i(data-feather='facebook')
+    a.subscription__social-item(href='https://www.instagram.com/hana.cakes/', target='_blank')
+      i(data-feather='instagram')
+  form.subscription__form(action=`/prihlasit-odber?returnTo=${req.url}`, method='POST')
+    input(type='hidden', name='_csrf', value=csrfToken)
+    input.input.subscription__form-input(type='email', name='email', placeholder='@', required)
+    button.subscription__form-button.button(type='submit')
+      .button-content ODOBERAŤ NEWSLETTER

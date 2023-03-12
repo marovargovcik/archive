@@ -1,0 +1,95 @@
+mixin renderShowcases(showcases)
+  .showcases
+    for showcase in showcases
+      +renderShowcase(showcase)
+
+mixin renderShowcase(showcase)
+  .showcases__item
+    img.showcases__item-image(src=`${showcase.fields.image.fields.file.url}?w=1920`)
+    .showcases__item-layout
+      h1.showcases__item-text.showcases__item-text--primary= showcase.fields.primaryText
+      if showcase.fields.secondaryText
+        p.showcases__item-text.showcases__item-text--secondary= showcase.fields.secondaryText
+
+mixin renderCategories(categories, activeSlug)
+  for category in categories
+    +renderCategory(category, activeSlug)
+
+mixin renderCategory(category, activeSlug)
+  li.menu__nav-list-item(class={ 'menu__nav-list-item--active': category.fields.slug === activeSlug || req.url.includes(category.fields.slug) })
+    a.menu__nav-list-item-link(href=`/eshop/${category.fields.slug}`)= category.fields.name
+
+mixin renderProducts(products)
+  each product in products
+    +renderProduct(product)
+  else
+    | V kategórií sme nenašli žiadne produkty.
+
+mixin renderProduct(product)
+  a.menu__catalogue-item(href=`/eshop/produkt/${product.fields.slug}`)
+    header.menu__catalogue-item-view
+      img.menu__catalogue-item-view-image(src=`${product.fields.image.fields.file.url}?w=512`, alt='product-image')
+    footer.menu__catalogue-item-footer
+      p.menu__catalogue-item-heading= product.fields.name
+      p.menu__catalogue-item-description= product.fields.seoDescription
+      if product.fields.price
+        p.menu__catalogue-item-price= Number(product.fields.price).toFixed(2) + '€'
+          span.title--small s DPH
+      else if !product.fields.price && product.fields.priceTooltip
+        p.menu__catalogue-item-price= product.fields.priceTooltip
+
+mixin renderCartProduct(product, quantity, configuration, raw)
+  .cart__product
+    .cart__product-image
+      img.image.image--with-border(src=`${product.fields.image.fields.file.url}?w=128`)
+    .cart__product-details
+      .cart__product-header
+        a.title.title--cursive.cart__product-header-name(href=`/eshop/produkt/${product.fields.slug}`)= product.fields.name
+        if !raw
+          .cart__product-header-delete
+            form(action=`/nakupny-kosik/zmazat-${quantity && configuration ? 'konfiguraciu' : 'produkt'}?returnTo=${req.url}`, method='POST')
+              input(type='hidden', name='_csrf', value=csrfToken)
+              input(type='hidden', name='id', value=product.sys.id)
+              if quantity && configuration
+                input(type='hidden', name='configuration', value=configuration)
+              button.button(type='submit')
+                .button-content
+                  | Odstrániť
+                  i(data-feather='x')
+      if configuration
+        .cart__product-configuration
+          for value, option in JSON.parse(configuration)
+            .cart__product-configuration-item #{option}: #{value}
+      if product.fields.price
+        .title
+          span.title--cursive #{product.fields.price.toFixed(2)} €
+          span.title--small s DPH
+      else if !product.fields.price && product.fields.priceTooltip
+        .title.title--cursive= product.fields.priceTooltip
+      .cart__product-quantity
+        if raw
+          input.input.input--quantity(type='text', value=`${quantity} ks`, readonly=true)
+        else
+          form(action=`nakupny-kosik/zmenit-pocet-kusov?returnTo=${req.url}`, method='POST')
+            input(type='hidden', name='_csrf', value=csrfToken)
+            input(type='hidden', name='id', value=product.sys.id)
+            if configuration
+              input(type='hidden', name='configuration', value=configuration, min=product.fields.minOrder || 1, max=product.fields.maxOrder)
+            .input__wrap
+              input.input.input--quantity(type='number', name='quantity', value=quantity, min=product.fields.minOrder || 1, max=product.fields.maxOrder)
+              button.button(type='submit')
+                .button-content
+                  | ZMENIŤ POČET
+                  i(data-feather='check')
+
+mixin renderOrderRecapProduct(product, quantity, configuration)
+  img(src=`${product.fields.image.fields.file.url}?w=128`)
+  br
+  a(href=`/ponuka/eshop/${product.fields.slug}`)= product.fields.name
+  if configuration
+    for value, option in JSON.parse(configuration)
+      div #{option}: #{value}
+  if product.fields.price
+    span #{product.fields.price.toFixed(2)} €
+    span s DPH
+  div #{quantity} kus/ov

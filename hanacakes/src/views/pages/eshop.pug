@@ -1,0 +1,12 @@
+extends ../base
+
+block append page
+  section.container.menu
+    .menu__nav
+      ul.menu__nav-list
+        li.menu__nav-list-item(class={'menu__nav-list-item--active': req.url === '/eshop'})
+          a.menu__nav-list-item-link(href=`/eshop`) Všetky produkty
+        +renderCategories(categories)
+    .menu__catalogue
+      +renderProducts(products)
+
