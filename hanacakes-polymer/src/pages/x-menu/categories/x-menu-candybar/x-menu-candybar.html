@@ -1,0 +1,210 @@
+<!-- Imports--><link rel="import" href="../../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../../../shared/component/hana-menu-gallery-v2/hana-menu-gallery-v2.html">
+<link rel="import" href="../../../../shared/component/monmar-modal/monmar-modal.html">
+
+<!-- Element -->
+<dom-module id="x-menu-candybar">
+  <template>
+
+    <!-- CSS -->
+    <style>
+
+      /* Element */
+      :host {
+        display: block;
+      }
+
+      .navigation {
+        border-bottom: 1px solid var(--primary-color);
+      }
+
+      .navigation .tab {
+        display: inline-block;
+        padding: 6px;
+      }
+
+      .navigation .tab:hover {
+        cursor: pointer;
+      }
+
+      .navigation .tab.selected {
+        background-color: var(--primary-color);
+        color: white;
+      }
+
+      /* Pages */
+      iron-pages {}
+
+      /* Selected item */
+      iron-pages .category {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+        margin-top: 24px;
+      }
+
+      iron-pages .category .pricing {
+        @apply(--layout-flex-6);
+        text-align: center;
+      }
+
+      iron-pages .category .pricing h1 {
+        color: inherit;
+        font-weight: 400;
+        font-size: 2.3em;
+      }
+
+      iron-pages .category .pricing h1 a {
+        color: inherit;
+        font-weight: bold;
+      }
+      iron-pages .category .pricing h1 a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Gallery */
+      iron-pages .category .gallery {
+        @apply(--layout-flex-5);
+        padding-left: 12px;
+      }
+
+      /* Gallery element */
+      iron-pages .category .gallery hana-menu-cake-gallery {}
+
+      @media screen and (max-width: 991px) {
+        iron-pages .category {
+          @apply(--layout-vertical);
+        }
+
+        iron-pages .category .gallery {
+          margin-top: 12px;
+          padding: 0;
+        }
+      }
+
+      /* Media queries */
+      @media screen and (max-width: 381px) {
+        .navigation .tab {
+          font-size: .9em;
+        }
+      }
+
+      /* Media queries */
+      @media screen and (max-width: 351px) {
+        .navigation .tab {
+          font-size: .8em;
+        }
+      }
+
+    </style>
+
+    <!-- Navigation -->
+    <div id="navigation" class="navigation">
+      <span class="tab" on-tap="_select" data-category="candybar">CANDYBAR</span>
+    </div>
+
+    <!-- Sizes -->
+    <iron-pages attr-for-selected="data-category" selected="[[category]]">
+
+      <!-- Cream -->
+      <div class="category" data-category="candybar">
+
+        <!-- Pricing -->
+        <div class="pricing">
+          <h1>Neustále meníme ponuku našich candybarov. Aktuálnu ponuku nájdeš v <a href$="[[pricingListUrl]]" target="_blank">cenníku</a>.</h1>
+          <img src="../../../../../images/menu/ico/heart.png" alt="heart.png">
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery">
+          <hana-menu-gallery-v2 images="[[gallery]]" on-open-modal="_openModal"></hana-menu-gallery-v2>
+        </div>
+
+      </div>
+
+    </iron-pages>
+
+    <!-- Modal -->
+    <monmar-modal id="modal"></monmar-modal>
+
+  </template>
+  <script>(function () {
+  'use strict';
+
+  Polymer({
+    /**
+     * Element configuration (is, behaviors, properties, observers).
+     */
+    is: 'x-menu-candybar',
+    behaviors: [],
+    properties: {
+      category: {
+        type: String,
+        value: 'candybar'
+      },
+      gallery: {
+        type: Object,
+        value: function () {
+          return [{
+            image: '../../../../images/menu/candybar/2.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/candybar/5.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/candybar/7.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/candybar/8.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/candybar/9.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/candybar/10.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/candybar/11.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/candybar/12.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/candybar/13.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/candybar/16.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/candybar/17.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/candybar/18.jpg',
+            name: ''
+          }];
+        }
+      },
+      pricingListUrl: {
+        type: String
+      }
+    },
+    listeners: {},
+    observers: ['_categoryChanged(category)'],
+    _categoryChanged: function (category) {
+      Polymer.dom(this.root).querySelectorAll('.tab').forEach(function (tab) {
+        if (tab.dataset.category === category) {
+          tab.classList.add('selected');
+        } else {
+          tab.classList.remove('selected');
+        }
+      });
+    },
+    _openModal: function (e) {
+      this.$.modal.open(e.detail.index, e.detail.images);
+    },
+    _select: function (e) {
+      this.category = event.target.dataset.category;
+    }
+  });
+})();</script>
+</dom-module>

@@ -1,0 +1,231 @@
+<!-- Imports --><link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="/bower_components/neon-animation/neon-animatable.html">
+<link rel="import" href="/bower_components/neon-animation/neon-animated-pages.html">
+<link rel="import" href="/bower_components/neon-animation/animations/slide-left-animation.html">
+<link rel="import" href="/bower_components/neon-animation/animations/slide-from-left-animation.html">
+<link rel="import" href="/bower_components/neon-animation/animations/slide-right-animation.html">
+<link rel="import" href="/bower_components/neon-animation/animations/slide-from-right-animation.html">
+
+<!-- Element -->
+<dom-module id="hana-menu-gallery-v2">
+  <template>
+
+    <!-- CSS -->
+    <style>
+
+      /* Element */
+      :host {
+        display: block;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      .container {
+        position: relative;
+      }
+
+      .container iron-icon {
+        -webkit-backface-visibility: hidden; /* Flickering fix */
+        bottom: 50%;
+        color: white;
+        height: 64px;
+        line-height: 64px;
+        position: absolute;
+        top: calc(50% - 32px);
+        transition: .2s ease-out;
+        width: 64px;
+        z-index: 1;
+      }
+
+      .container iron-icon:hover {
+        cursor: pointer;
+        width: 68px;
+      }
+
+      .container iron-icon.right {
+        right: 0;
+      }
+
+      .container iron-icon.left {
+        left: 0;
+      }
+
+      .container neon-animated-pages  {
+        overflow: hidden;
+      }
+
+      .container neon-animated-pages neon-animatable {}
+
+      .container neon-animated-pages neon-animatable img {
+        height: auto;
+        width: 100%;
+      }
+
+      .container neon-animated-pages neon-animatable span {
+        color: var(--primary-color);
+        font-weight: bold;
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        text-align: right;
+        width: 100%;
+      }
+
+      .container neon-animated-pages .iron-selected {
+        position: static;
+      }
+
+      /* Thumbnails */
+      .thumbnails {
+        @apply(--layout-horizontal);
+        @apply(--layout-wrap);
+      }
+
+      /* Thumbnail */
+      .thumbnails .thumbnail {
+        margin: 1px;
+        width: calc(25% - 2px);
+      }
+
+      .thumbnails .thumbnail:hover {
+        cursor: pointer;
+      }
+
+      .thumbnails .thumbnail img {
+        height: 100%;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 748px) {
+        iron-icon { width: 48px; }
+        iron-icon:hover { width: 54px; }
+      }
+
+    </style>
+
+    <!-- Pages -->
+    <div class="container">
+      <neon-animated-pages id="pages" attr-for-selected="data-image" entry-animation="slide-from-right-animation" exit-animation="slide-left-animation" selected="[[_selected]]">
+
+        <!-- Repeat template -->
+        <template is="dom-repeat" items="[[images]]">
+          <neon-animatable data-image="[[index]]">
+            <span hidden$="[[!naming]]">[[item.name]]</span>
+            <img src$="[[item.image]]" on-tap="_openModal">
+          </neon-animatable>
+        </template>
+
+      </neon-animated-pages>
+
+      <!-- Navigation -->
+      <iron-icon icon="icons:chevron-left" class="left" on-tap="_prev"></iron-icon>
+      <iron-icon icon="icons:chevron-right" class="right" on-tap="_next"></iron-icon>
+
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="thumbnails">
+      <template is="dom-repeat" items="[[images]]">
+        <div class="thumbnail">
+          <img on-tap="_moveTo" src$="[[item.image]]" data-image="[[index]]">
+        </div>
+      </template>
+    </div>
+
+  </template>
+  <script>Polymer({
+  /**
+   * Element configuration (is, behaviors, properties, observers).
+   */
+  is: 'hana-menu-gallery-v2',
+  properties: {
+    /**
+     * The number that determinate amount of time each image will be displayed.
+     */
+    duration: {
+      type: Number,
+      value: 10000
+    },
+
+    /**
+     * Array of images with source address to image and url to redirect user.
+     */
+    images: {
+      type: Array,
+      value: function () {
+        return [];
+      }
+    },
+    naming: {
+      type: Boolean,
+      value: false
+    },
+
+    /**
+     * Specifies which image is currently displayed.
+     */
+    _selected: {
+      type: Number,
+      value: 0
+    },
+
+    /**
+     * The number representing currently running timeout on background.
+     */
+    _timeout: {
+      type: Number,
+      readOnly: true
+    }
+  },
+  observers: ['_selectedChanged(_selected)'],
+  _moveTo: function (e) {
+    if (e.model.index < this._selected) {
+      this.$.pages.entryAnimation = 'slide-from-left-animation';
+      this.$.pages.exitAnimation = 'slide-right-animation';
+    } else {
+      this.$.pages.entryAnimation = 'slide-from-right-animation';
+      this.$.pages.exitAnimation = 'slide-left-animation';
+    }
+
+    this._selected = e.model.index;
+    this.$.pages.entryAnimation = 'slide-from-right-animation';
+    this.$.pages.exitAnimation = 'slide-left-animation';
+  },
+  _next: function () {
+    if (this._selected < this.images.length - 1) {
+      this._selected++;
+    } else {
+      this._selected = 0;
+    }
+  },
+  _openModal: function (e) {
+    this.fire('open-modal', {
+      images: this.images,
+      index: e.model.index
+    });
+  },
+  _prev: function () {
+    this.$.pages.entryAnimation = 'slide-from-left-animation';
+    this.$.pages.exitAnimation = 'slide-right-animation';
+
+    if (this._selected !== 0) {
+      this._selected--;
+    } else {
+      this._selected = this.images.length - 1;
+    }
+
+    this.$.pages.entryAnimation = 'slide-from-right-animation';
+    this.$.pages.exitAnimation = 'slide-left-animation';
+  },
+  _selectedChanged: function (selected) {
+    clearTimeout(this.timeout);
+    this.timeout = setTimeout(function () {
+      this.set('_selected', selected + 1 < this.images.length ? selected + 1 : 0);
+    }.bind(this), this.duration);
+  }
+});</script>
+</dom-module>

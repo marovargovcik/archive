@@ -1,0 +1,8 @@
+{
+  "name": "hana-cakes",
+  "short_name": "hana-cakes",
+  "description": "Website built with love and Polymer for cake lover Hana.",
+  "start_url": "/",
+  "display": "standalone"
+}
+w

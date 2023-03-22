@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head>
+
+  <!-- Meta settings -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <!-- Meta data -->
+  <title>Hana Cakes - Cukrárenská výroba Sabinov</title>
+  <meta name="description" content="Pečieme s láskou chutné pochúťky pre každú príležitosť.">
+  <meta name="keywords" content="torty, zákusky, candy bar, koláče, koláč, dezert, cheesecake, cukráreň, cukrárenská výroba, sabinov">
+
+  <!-- OG -->
+  <meta property="og:title" content="Hana Cakes - Cukrárenská výroba Sabinov">
+  <meta property="og:description" content="Pečieme s láskou chutné pochúťky pre každú príležitosť.">
+  <meta property="og:url" content="http://hanacakes.sk/">
+  <meta property="og:image" content="http://hanacakes.sk/images/logo.png">
+
+  <!-- See https://goo.gl/OOhYW5 -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- App initialization -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+  <script>// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyCmVtCgZCRStX0S6MkdedkFuu5V5ib987k",
+  authDomain: "hana-cakes.firebaseapp.com",
+  databaseURL: "https://hana-cakes.firebaseio.com",
+  projectId: "hana-cakes",
+  storageBucket: "",
+  messagingSenderId: "686834998286"
+};
+firebase.initializeApp(config); // Setup Polymer options
+
+window.Polymer = {
+  dom: 'shadow',
+  lazyRegister: true
+}; // Load webcomponentsjs polyfill if browser does not support native Web Components
+
+(function () {
+  'use strict'; // For native Imports, manually fire WebComponentsReady so user code
+  // can use the same code path for native and polyfill'd imports.
+
+  var onload = function () {
+    if (!window.HTMLImports) {
+      document.dispatchEvent(new CustomEvent('WebComponentsReady', {
+        bubbles: true
+      }));
+    }
+  }; // Load webcomponents polyfills
+
+
+  if (!('registerElement' in document && 'import' in document.createElement('link') && 'content' in document.createElement('template'))) {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = '/bower_components/webcomponentsjs/webcomponents-lite.min.js';
+    script.onload = onload;
+    document.head.appendChild(script);
+  } else {
+    onload();
+  }
+})();</script>
+
+  <!-- App element import -->
+  <link rel="import" href="/src/x-web.html">
+
+  <!-- Main CSS styling -->
+  <style>
+
+    /* Fonts */
+    @import url('https://fonts.googleapis.com/css?family=Alex+Brush|Clicker+Script|Ubuntu:400,700&subset=latin-ext');
+
+    body {
+      color: #46302c;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<!-- App -->
+<x-web id="shell"></x-web>
+
+<script>/**
+ * Listening to modal open event.
+ */
+document.getElementById('shell').addEventListener('disable-scrolling', function () {
+  this.parentNode.style.overflow = 'hidden';
+});
+/**
+ * Listening to modal close event.
+ */
+
+document.getElementById('shell').addEventListener('allow-scrolling', function () {
+  this.parentNode.style.overflow = '';
+});
+/**
+ * Global reference to Google Analytics.
+ *
+ * @type {Function}
+ */
+
+(function (i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r;
+  i[r] = i[r] || function () {
+    (i[r].q = i[r].q || []).push(arguments);
+  }, i[r].l = 1 * new Date();
+  a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+  a.async = 1;
+  a.src = g;
+  m.parentNode.insertBefore(a, m);
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+/**
+ * Creating connection with GA project.
+ */
+
+
+ga('create', 'UA-105274166-1', 'auto');
+/**
+ * Variable checking if page changed since last time.
+ */
+
+var lastPage;
+/**
+ * Listening to any metadata changes and send statistic of page views to GA.
+ */
+
+window.addEventListener('metadata-updated', function (e) {
+  if (location.pathname !== lastPage) {
+    ga('set', 'page', location.pathname);
+    ga('send', 'pageview');
+    lastPage = location.pathname;
+  }
+});</script>
+
+
+</body></html>

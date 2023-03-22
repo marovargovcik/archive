@@ -1,0 +1,232 @@
+<!-- Imports--><link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../shared/style/common-styles.html">
+
+<!-- Element -->
+<dom-module id="x-footer">
+  <template>
+
+    <!-- CSS -->
+    <style include="common-styles"></style>
+    <style>
+
+      /* Element */
+      :host {
+        display: block;
+      }
+
+      .subscribe {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+        @apply(--layout-around-justified);
+        background-color: #feffe9;
+        padding: 32px 0;
+      }
+
+      .subscribe .social {
+        @apply(--layout-horizontal);
+      }
+
+      .subscribe .social a {
+        @apply(--layout-vertical);
+        @apply(--layout-center-center);
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        height: 44px;
+        margin: 0 4px;
+        width: 44px;
+      }
+
+      .subscribe .social a:hover {
+        background-color: var(--hover-color);
+      }
+
+      .subscribe .social a img {
+        height: 28px;
+        width: auto;
+      }
+
+      .subscribe .input input {
+        border: none;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: .9em;
+        font-weight: 700;
+        height: 24px;
+        margin-right: 8px;
+        max-width: 154px;
+        outline: none !important;
+        padding: 8px 16px;
+      }
+
+      /* Footer */
+      footer {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+        @apply(--layout-center-justified);
+        background-color: var(--primary-color);
+        min-height: 256px;
+        overflow: hidden;
+      }
+
+      /* Footer - brand */
+      footer img {
+        bottom: -18px;
+        height: 256px;
+        margin-right: 16px;
+        position: relative;
+        width: auto;
+      }
+
+      /* Footer - Tell Hana */
+      footer div {
+        color: white;
+        margin: 0 16px;
+      }
+
+      /* Footer - Tell Hana - Heading */
+      footer div h3 {
+        margin: 0;
+      }
+
+      /* Footer - Tell Hana - Text */
+      footer div p {
+        line-height: 20px;
+        margin: 6px 0;
+      }
+
+      /* Footer - Tell Hana - Email address */
+      footer div a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1.3em;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      @media screen and (max-width: 751px) {
+
+        .subscribe {
+          @apply(--layout-vertical);
+          text-align: center;
+        }
+
+        .subscribe .social {
+          margin-bottom: 24px;
+        }
+
+        footer {
+          @apply(--layout-vertical);
+        }
+
+        footer div {
+          text-align: center;
+        }
+
+        footer .contact {
+          order: 1;
+          margin: 24px 0
+        }
+
+        footer .tell-hana {
+          order: 2;
+        }
+
+        footer img {
+          margin: 0;
+          height: 218px;
+          order: 3;
+        }
+
+      }
+
+    </style>
+
+    <!-- Subscribe -->
+    <div class="subscribe">
+
+      <!-- Social -->
+      <div class="social">
+        <a href="https://www.facebook.com/hanacakes.sk/" target="_blank">
+          <img src="../../images/ico/fb.png" alt="fb.png">
+        </a>
+        <a href="https://www.instagram.com/hana.cakes/" target="_blank">
+          <img src="../../images/ico/instagram.png" alt="instagram.png">
+        </a>
+      </div>
+
+      <!-- Subscribe input -->
+      <div class="input">
+        <input id="emailInput" type="email" placeholder="EMAIL">
+        <span class="hana-button" on-tap="_subscribe">ODOBERAJ NEWSLETTER</span>
+      </div>
+
+    </div>
+
+    <!-- Actual footer -->
+    <footer>
+
+      <!-- Brand -->
+      <img src="../../images/ico/hana.png" alt="hana.png">
+
+      <!-- Tell Hana -->
+      <div class="tell-hana">
+        <h3>POVEDZ TO HANE</h3>
+        <p>Máš pre Hanu otázku alebo sa <br>chceš podeliť o svoju skúsenosť?<br>
+          Napíš jej hneď na:</p>
+        <a href="mailto:hana@hanacakes.sk">hana@hanacakes.sk</a>
+      </div>
+
+      <!-- Contact -->
+      <div class="contact">
+        <h3>SABINOV</h3>
+        <p>083 01, Pod Švabľovkou 26<br>
+          Zavolaj alebo napíš hneď:</p>
+        <a href="mailto:info@hanacakes.sk">info@hanacakes.sk</a><br>
+        <a href="tel:0949620504">0949 620 504</a>
+      </div>
+
+    </footer>
+
+    <!-- Dialog -->
+    <paper-dialog id="dialog" modal="">
+      <h1>Tešíme sa, že máš záujem o náš newsletter!</h1>
+      <p>
+        Budeme ti zasielať novinky, recepty, zľavy. Máš sa na čo tešiť.<br>
+        Ak by si si to ale rozmyslel, stačí nám napísať a odoberieme tvoj mail z nášho listu.
+      </p>
+      <div class="buttons">
+        <paper-button dialog-confirm="" autofocus="">Super!</paper-button>
+      </div>
+    </paper-dialog>
+
+  </template>
+  <script>(function () {
+  'use strict';
+
+  Polymer({
+    /**
+     * Element configuration (is, behaviors, properties, observers).
+     */
+    is: 'x-footer',
+    behaviors: [],
+    properties: {},
+    listeners: {},
+    observers: [],
+    _subscribe: function () {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+      if (re.test(this.$.emailInput.value)) {
+        firebase.database().ref('emailAddresses').push({
+          email: this.$.emailInput.value
+        }).then(function () {
+          this.$.dialog.open();
+          this.$.emailInput.value = null;
+        }.bind(this));
+      } else {
+        alert('Neplatná emailová adresa.');
+      }
+    }
+  });
+})();</script>
+</dom-module>

@@ -1,0 +1,820 @@
+<!-- Imports--><link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../../bower_components/paper-radio-button/paper-radio-button.html">
+<link rel="import" href="../../../bower_components/paper-radio-group/paper-radio-group.html">
+<link rel="import" href="../../shared/component/hana-attachment-upload/hana-attachment-upload.html">
+<link rel="import" href="../../shared/component/moment/momentjs.html">
+<link rel="import" href="../../shared/style/common-styles.html">
+
+<!-- Element -->
+<dom-module id="x-order">
+  <template>
+
+    <!-- CSS -->
+    <style include="common-styles"></style>
+    <style>
+
+      /* Element */
+      :host {
+        display: block;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      /* Container adjustment */
+      .container {
+        padding-top: 48px;
+      }
+
+      .container h1 {
+        font-size: 2.6em;
+        font-weight: 400;
+        margin-top: 0;
+        text-align: center;
+      }
+
+      .container .type-of-order {
+        @apply(--layout-horizontal);
+        @apply(--layout-center-justified);
+      }
+
+      /* Item */
+      .container .type-of-order .item {
+        @apply(--layout-vertical);
+        @apply(--layout-center);
+        color: inherit;
+        margin: 0 24px;
+        text-decoration: none;
+      }
+
+      .container .type-of-order .item:hover {
+        cursor: pointer;
+      }
+
+      /* Svg default fill color */
+      .container .type-of-order .item svg path {
+        fill: var(--text-color);
+        transition: .3s;
+      }
+
+      /* Text color when hover/active */
+      .container .type-of-order .item:hover,
+      .container .type-of-order .item.active {
+        color: var(--primary-color);
+      }
+
+      /* Svg fill color when hover/active */
+      .container .type-of-order .item:hover svg path,
+      .container .type-of-order .item.active svg path {
+        fill: var(--primary-color);
+      }
+
+      /* Item - Img */
+      .container .type-of-order .item svg {
+        margin-bottom: 12px;
+        width: 128px;
+      }
+
+      /* Item - Name of link */
+      .container .type-of-order .item span {
+        transition: .1s;
+      }
+
+      /* Form */
+      .container .form {
+        @apply(--layout-horizontal);
+        @apply(--layout-wrap);
+        margin: 24px auto 0;
+        max-width: 512px;
+        width: 100%;
+      }
+
+      /* Label */
+      .container .form label {
+        color: var(--primary-color);
+        display: block;
+        font-weight: bold;
+        margin-bottom: 2px;
+        text-transform: uppercase;
+        width: 100%;
+      }
+
+      /* Input */
+      .container .form input {
+        border: 2px solid #d73853;
+        border-radius: 5px;
+        box-sizing: border-box;
+        display: block;
+        font-size: .9em;
+        height: 33px;
+        margin-bottom: 4px;
+        outline: none;
+        padding: 6px;
+        width: 100%;
+      }
+
+      .container .form input[type=date] {
+        -webkit-appearance: none;
+      }
+
+      .container .form .select-wrap {
+        box-sizing: border-box;
+        margin-bottom: 4px;
+        width: 50%;
+      }
+
+      .container .form .select-wrap.full-width {
+        padding-right: 0!important;
+        width: 100%;
+      }
+
+      .container .form .select-wrap:nth-of-type(even) {
+        padding-right: 3px;
+      }
+
+      /* Select container */
+      .container .form .styled-select {
+        background: url(../../../images/ico/dropdown.png) no-repeat 96% 0;
+        border: 2px solid var(--primary-color);
+        border-radius: 5px;
+        box-sizing: border-box;
+        height: 33px;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .container .form .select-wrap.full-width .styled-select {
+        background: url(../../../images/ico/dropdown.png) no-repeat 98% 0;
+      }
+
+      /* Select */
+      .container .form .styled-select select {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+        font-size: .9em;
+        height: 30px;
+        padding: 3px;
+        width: calc(100% + 28px);
+      }
+
+      /* Radio group */
+      .container .form paper-radio-group {}
+      .container .form paper-radio-group paper-radio-button {
+        padding: 6px 6px 6px 0;
+      }
+
+      /* Upload */
+      .container .form hana-attachment-upload {
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Textarea */
+      .container .form textarea {
+        border: 2px solid var(--primary-color);
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: .9em;
+        min-height: 72px;
+        outline: none;
+        padding: 6px;
+        resize: none;
+        width: 100%;
+      }
+
+      /* Send */
+      .container .form .hana-button {
+        display: block;
+        margin: auto;
+      }
+
+      /* Status */
+      .container #status {
+        margin-top: 12px;
+        padding: 0 12px;
+        text-align: center;
+      }
+
+      /* Tips */
+      .container .tips {
+        margin-top: 12px;
+        text-align: center;
+      }
+
+      /* P tag */
+      .container .tips p {
+        margin: 6px 0 0;
+      }
+
+      /*Media queries */
+      @media screen and (max-width: 767px) {
+        .container .type-of-order .item svg {
+          width: 88px;
+        }
+      }
+
+    </style>
+
+    <!-- Banner -->
+    <div class="banner">
+      <h1>Objednávka</h1>
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+
+      <!-- Heading -->
+      <h1>Chcem si objednať:</h1>
+
+      <!-- Type of order select -->
+      <div class="type-of-order">
+
+        <!-- Cake -->
+        <div id="cake" class="item" on-tap="_selectCake">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            <g>
+              <g>
+                <path d="M503.581,447.667h-28.396V349.17c0-22.047-17.936-39.983-39.983-39.983h-12.327V206.495
+                  c0-19.733-16.055-35.788-35.788-35.788h-99.762V88.151c0-4.649-3.769-8.419-8.418-8.419h-14.489V67.156
+                  c11.134-3.569,19.218-14.017,19.218-26.321c0-12.899-16.416-31.709-21.447-37.166c-1.594-1.73-3.838-2.713-6.189-2.713
+                  c-2.352,0-4.595,0.983-6.189,2.713c-5.031,5.457-21.447,24.267-21.447,37.166c0,12.303,8.084,22.751,19.218,26.321v12.577h-14.489
+                  c-4.649,0-8.419,3.769-8.419,8.419v82.556h-99.762c-19.733,0-35.788,16.055-35.788,35.788v74.069c0,4.649,3.769,8.419,8.418,8.419
+                  c4.649,0,8.419-3.769,8.419-8.419v-74.069c0-10.449,8.502-18.951,18.951-18.951h262.175c10.449,0,18.951,8.502,18.951,18.951
+                  v102.692H97.544H76.797c-22.048,0-39.983,17.936-39.983,39.983v69.082c0,4.649,3.769,8.419,8.418,8.419
+                  c4.649,0,8.419-3.769,8.419-8.419v-69.082c0-12.764,10.383-23.146,23.146-23.146h20.745h316.913h20.745
+                  c12.764,0,23.146,10.383,23.146,23.146v98.497H45.232H8.419c-4.649,0-8.419,3.769-8.419,8.419
+                  c0,30.303,24.654,54.957,54.957,54.957h402.086c30.303,0,54.957-24.654,54.957-54.957
+                  C512,451.436,508.231,447.667,503.581,447.667z M245.201,40.834c0-2.897,4.664-10.666,10.799-18.466
+                  c6.135,7.8,10.799,15.569,10.799,18.466c0,5.955-4.845,10.799-10.799,10.799C250.045,51.633,245.201,46.789,245.201,40.834z
+                   M270.488,170.707h-28.977V96.569h28.977V170.707z M457.043,494.206H54.957c-18.128,0-33.341-12.719-37.183-29.702h27.459h421.534
+                  h27.459C490.384,481.487,475.171,494.206,457.043,494.206z"></path>
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M377.719,212.133c-12.217-0.199-20.606,8.066-27.354,14.721c-6.11,6.024-10.159,9.661-14.526,9.543
+                  c-4.103-0.12-7.237-3.674-12.009-9.461c-5.593-6.783-12.556-15.224-24.498-15.574c-11.793-0.351-19.563,7.357-26.415,14.151
+                  c-6.339,6.286-10.567,10.102-15.818,10.108c-0.003,0-0.006,0-0.009,0c-5.18,0-9.276-3.824-15.401-10.121
+                  c-6.456-6.636-14.481-14.884-26.671-14.884c-0.076,0-0.155,0-0.231,0.001c-12.725,0.109-20.916,9.077-27.498,16.284
+                  c-5.897,6.458-9.809,10.382-14.351,10.382c-0.008,0-0.015,0-0.022,0c-4.549-0.012-8.369-3.943-14.121-10.413
+                  c-6.26-7.043-14.043-15.802-26.151-15.802c-0.046,0-0.093,0-0.14,0c-4.649,0.026-8.397,3.816-8.371,8.466
+                  c0.026,4.634,3.789,8.371,8.417,8.371c0.029,0.001,0.058,0.001,0.088,0.001c4.245,0,7.964,3.839,13.574,10.15
+                  c6.348,7.142,14.246,16.03,26.659,16.066c0.024,0,0.047,0,0.072,0c12.292,0,20.325-8.794,26.781-15.864
+                  c6.112-6.692,10.186-10.759,15.209-10.803c4.884-0.019,8.76,3.693,14.69,9.788c6.597,6.78,14.804,15.216,27.468,15.216
+                  c0.008,0,0.018,0,0.026,0c12.555-0.011,20.93-8.316,27.659-14.989c5.804-5.755,9.664-9.279,13.849-9.279
+                  c0.073,0,0.146,0.001,0.218,0.002c4.098,0.12,7.23,3.672,12,9.457c5.596,6.784,12.558,15.227,24.505,15.578
+                  c11.925,0.378,20.186-7.82,26.843-14.384c6.288-6.201,10.445-9.985,15.235-9.874c4.69,0.064,8.485-3.62,8.566-8.269
+                  C386.069,216.049,382.369,212.215,377.719,212.133z"></path>
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M434.651,351.513c-12.574-0.391-20.936,7.93-28.32,15.253c-6.085,6.033-11.341,11.248-17.799,11.29
+                  c-5.012-0.109-8.605-3.842-14.035-9.913c-6.203-6.931-13.922-15.558-26.936-15.787c-0.165-0.002-0.328-0.005-0.492-0.005
+                  c-12.762,0-21.683,8.797-28.869,15.883c-5.894,5.812-10.978,10.814-16.474,10.67c-4.831-0.141-8.364-4.136-13.728-10.64
+                  c-6.019-7.298-13.509-16.381-26.216-16.753c-12.563-0.391-20.937,7.93-28.32,15.253c-6.105,6.055-11.378,11.283-17.866,11.29
+                  c-0.003,0-0.008,0-0.011,0c-5.979,0-10.571-4.276-17.42-11.313c-6.96-7.154-15.611-16.045-28.616-16.045
+                  c-0.081,0-0.164,0-0.244,0.001c-13.577,0.116-22.41,9.788-29.509,17.56c-6.599,7.226-10.992,11.616-16.288,11.616
+                  c-0.009,0-0.018,0-0.027,0c-5.308-0.015-9.6-4.416-16.04-11.66c-6.77-7.617-15.168-17.058-28.171-17.024
+                  c-4.649,0.026-8.397,3.816-8.371,8.466c0.026,4.633,3.789,8.371,8.417,8.371c0.019,0.002,0.035,0.002,0.051,0.002
+                  c5.022-0.072,9.186,4.278,15.491,11.372c6.84,7.696,15.353,17.275,28.577,17.312c0.027,0,0.052,0,0.08,0
+                  c13.096-0.001,21.394-9.084,28.715-17.1c6.832-7.481,11.401-12.027,17.22-12.078c0.031,0,0.063,0,0.093,0
+                  c5.501,0,9.934,4.144,16.555,10.95c7.113,7.312,15.965,16.409,29.486,16.409c0.009,0,0.018,0,0.027,0
+                  c13.411-0.012,22.446-8.972,29.706-16.171c6.61-6.555,10.954-10.513,15.973-10.38c4.826,0.141,8.357,4.134,13.719,10.635
+                  c6.02,7.299,13.512,16.385,26.223,16.757c12.696,0.394,21.24-8.066,28.79-15.511c6.06-5.976,11.276-11.172,17.241-11.033
+                  c5.391,0.094,9.093,3.93,14.685,10.18c6.111,6.83,13.717,15.33,26.396,15.52c0.045,0,0.09,0.001,0.135,0.001
+                  c13.411-0.012,22.446-8.972,29.706-16.171c6.611-6.555,10.97-10.497,15.973-10.38c4.654,0.143,8.525-3.521,8.661-8.168
+                  C442.955,355.526,439.298,351.649,434.651,351.513z"></path>
+              </g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            </svg>
+          <span>TORTU</span>
+        </div>
+
+        <!-- Cheseecake -->
+        <div id="cheesecake" class="item" on-tap="_selectCheesecake">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 269.91 269.911" style="enable-background:new 0 0 269.91 269.911;" xml:space="preserve">
+            <g>
+              <g>
+                <path d="M269.196,121.554c-13.5-25.9-41.1-41.7-66.5-54.1c-25-12.1-38.3-10.4-57.4,0.9c-1.8-2.8-3.899-5.3-6.6-7.1
+                  c-4.6-3-10.1-3.2-15.4-2c-0.3-2.3-0.8-4.5-1.3-6.8c-2.6-15.1-12-27.9-24.4-37.6c-5.4-4.3-13,3.3-7.6,7.6
+                  c13.2,10.3,21.3,22.6,21.9,39c-5.7,1.3-10.9,4.6-14.3,10.5c-4.4,7.6-6.7,15.3-4.3,22.7c-30.5,11.1-58.2,28.8-86.4,44.799
+                  c-2.4,1.4-3,4-2.2,6.301c-7.7,31.199-3.8,62.399-3,94.3c0.1,3.5,2.6,5.6,5.9,5.899c44.3,4.9,88.6,6.4,133.2,7.101
+                  c29.7,0.399,62.2,6,91.601,1.6c10.6-1.6,15.6-12,18.899-20.7c12.301-31.899,2.4-69.199,15-101.899c0.301-0.8,0.4-1.6,0.4-2.3
+                  C269.597,128.354,270.796,124.654,269.196,121.554z M96.596,101.154c0.3,0.5,0.6,0.9,1,1.4c13.9,16.2,45.2,10.3,51.2-10
+                  c1-3.5,1.2-7.4,0.801-11.3c23.1-12.4,39.399-7.3,65.399,6.9c12.9,7,24.3,16,34.9,26c10.7,10.1-32.2,15.1-33.5,15.4
+                  c-61.101,11.8-124.701,10.1-186.9,9.5C51.896,126.454,74.496,114.154,96.596,101.154z M218.296,243.454
+                  c-14.5,0.2-29.3-1.8-43.699-2.1c-44.701-1.1-89.301-0.8-133.901-3.6c-19.8-1.4-27.9-14.7-30.8-31.801
+                  c41.1,13,92.2,16.7,135.3,17.601c31.5,0.7,62.9,3.7,94.1,5.1C236.396,237.154,230.496,243.254,218.296,243.454z M244.597,173.454
+                  c-0.7-0.699-1.601-1.199-2.7-1.5c-5.601-2.8-12.9-3.199-18.601-2.1c-0.5,0.1-0.8,0.3-1.199,0.5c-32.2-4.2-73.9,4.8-101.801,3.1
+                  c-16.1-1-56.9-8.899-85.9-6.1c-0.6-0.5-1.2-0.9-2-1.1c-6.8-2-13.9-2.301-21-2.301c-0.8,0-1.5,0.2-2.1,0.4
+                  c0.3-5.2,0.7-10.3,0.9-14.9c81.2,0.2,162.6,2.801,242-15.899C247.896,146.554,245.896,159.954,244.597,173.454z"></path>
+              </g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            </svg>
+          <span>CHEESECAKE</span>
+        </div>
+
+      </div>
+
+      <!-- Iron pages -->
+      <iron-pages selected="[[selectedForm]]" attr-for-selected="data-form">
+
+        <!-- Cake -->
+        <div class="form" data-form="cake">
+
+          <!-- Name -->
+          <label for="cakeFormName">Meno a priezvisko *</label>
+          <input id="cakeFormName" type="text">
+
+          <!-- Email -->
+          <label for="cakeFormEmail">Email *</label>
+          <input id="cakeFormEmail" type="email">
+
+          <!-- Phone -->
+          <label for="cakeFormPhone">Telefónne číslo *</label>
+          <input id="cakeFormPhone" type="tel">
+
+          <!-- Date -->
+          <label for="cakeFormDate">Kedy má byť Vaša objednávka vybavená? *</label>
+          <input id="cakeFormDate" type="date" value="2011-09-29">
+
+          <!-- Floors -->
+          <div class="select-wrap full-width">
+            <label for="cakeFormFloors">Koľko poschodí má mať Vaša torta? *</label>
+            <div class="styled-select">
+              <select id="cakeFormFloors" name="gel">
+                <option value="1" selected="">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Round -->
+          <div class="select-wrap">
+            <label for="cakeFormAverage">Priemer *</label>
+            <div class="styled-select">
+              <select id="cakeFormAverage" name="priemer">
+                <option value="15 cm" selected="">15 cm</option>
+                <option value="20 cm">20 cm</option>
+                <option value="25 cm">25 cm</option>
+                <option value="28 cm">28 cm</option>
+                <option value="30 cm">30 cm</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Taste -->
+          <div class="select-wrap">
+            <label for="cakeFormTaste">Príchuť *</label>
+            <div class="styled-select">
+              <select id="cakeFormTaste" name="prichut">
+                <option value="Čokoládová" selected="">Čokoládová</option>
+                <option value="Marcipánová">Marcipánová</option>
+                <option value="Kremová">Kremová</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Korpus -->
+          <div class="select-wrap">
+            <label for="cakeFormKorpus">Korpus *</label>
+            <div class="styled-select">
+              <select id="cakeFormKorpus" name="korpus">
+                <option value="Kakao" selected="">Kakao</option>
+                <option value="Vanilka">Vanilka</option>
+                <option value="Orech">Orech</option>
+                <option value="Red Velvet">Red Velvet</option>
+                <option value="Čokoláda">Čokoláda</option>
+              </select>
+            </div>
+          </div>
+
+
+          <!-- Cream -->
+          <div class="select-wrap">
+            <label for="cakeFormCream">Krém</label>
+            <div class="styled-select">
+              <select id="cakeFormCream" name="krem">
+                <option value="Mascarpone" selected="">Mascarpone</option>
+                <option value="Pribináčik">Pribináčik</option>
+                <option value="Extra čokoláda">Extra čokoláda</option>
+                <option value="Karamel">Karamel</option>
+                <option value="Jahoda">Jahoda</option>
+                <option value="Malina">Malina</option>
+                <option value="Višňa">Višňa</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Gel -->
+          <div class="select-wrap full-width">
+            <label for="cakeFormGel">Gél</label>
+            <div class="styled-select">
+              <select id="cakeFormGel" name="gel">
+                <option value="Višňa" selected="">Višňa</option>
+                <option value="Malina">Malina</option>
+                <option value="Jahoda">Jahoda</option>
+                <option value="Čučoriedka">Čučoriedka</option>
+                <option value="Lesná zmes">Lesná zmes</option>
+                <option value="Citrón">Citrón</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <label for="cakeFormMessage">Vaša predstava o torte *</label>
+          <textarea id="cakeFormMessage"></textarea>
+
+          <!-- Upload -->
+          <hana-attachment-upload id="cakeFormFileInput"></hana-attachment-upload>
+
+          <!-- Send -->
+          <span class="hana-button" on-tap="_sendEmail">ODOSLAŤ</span>
+
+        </div>
+
+        <!-- Cheesecake -->
+        <div class="form" data-form="cheesecake">
+
+          <!-- Name -->
+          <label for="cheesecakeFormName">Meno a priezvisko *</label>
+          <input id="cheesecakeFormName" type="text">
+
+          <!-- Email -->
+          <label for="cheesecakeFormEmail">Email *</label>
+          <input id="cheesecakeFormEmail" type="email">
+
+          <!-- Phone -->
+          <label for="cheesecakeFormPhone">Telefónne číslo *</label>
+          <input id="cheesecakeFormPhone" type="tel">
+
+          <!-- Date -->
+          <label for="cheesecakeFormDate">Kedy má byť Vaša objednávka vybavená? *</label>
+          <input id="cheesecakeFormDate" type="date">
+
+          <!-- Type -->
+          <paper-radio-group selected="{{cheesecakeType}}">
+            <paper-radio-button name="Chladený">Chladený</paper-radio-button>
+            <paper-radio-button name="Pečený">Pečený</paper-radio-button>
+            <paper-radio-button name="Exkluzívny">Exkluzívny</paper-radio-button>
+          </paper-radio-group>
+
+          <!-- Cooled Variants -->
+          <div class="select-wrap full-width">
+            <label for="cheesecakeCooledVariant">Chladené cheesecakes</label>
+            <div class="styled-select">
+              <select id="cheesecakeCooledVariant" name="chladenyCheesecake">
+                <option value="" disabled="" selected="">Vyber si ten svoj</option>
+                <option value="Dark Chocolate">Dark Chocolate</option>
+                <option value="White chocolate">White chocolate</option>
+                <option value="Black cherry">Black Cherry</option>
+                <option value="Blueberry">Blueberry</option>
+                <option value="Strawberry">Strawberry</option>
+                <option value="Raspberry">Raspberry</option>
+                <option value="Lemon">Lemon</option>
+                <option value="Forest fruits">Forest fruits</option>
+              </select>
+            </div>
+          </div>
+
+
+          <!-- Baked Variants -->
+          <div class="select-wrap full-width">
+            <label for="cheesecakeBakedVariant">Pečené cheesecakes</label>
+            <div class="styled-select">
+              <select id="cheesecakeBakedVariant" name="pecenyCheesecake">
+                <option value="" disabled="" selected="">Vyber si ten svoj</option>
+                <option value="Polka dot">Polka dot</option>
+                <option value="Chocolate-Hazelnut">Chocolate-Hazelnut</option>
+                <option value="Ricotta with Fresh Raspberries">Ricotta with Fresh Raspberries</option>
+                <option value="Red velvet">Red velvet</option>
+                <option value="Ovocná ganache">Ovocná ganache</option>
+                <option value="Caramel">Caramel</option>
+                <option value="Oreo">Oreo</option>
+                <option value="Cinnamon Apple">Cinnamon Apple</option>
+                <option value="Pripitý">Pripitý</option>
+                <option value="Triple čučoriedka">Tripple čučoriedka</option>
+                <option value="Triple choco">Tripple choco</option>
+                <option value="Triple malina">Triple malina</option>
+              </select>
+            </div>
+          </div>
+
+
+          <!-- Exclusive Variants -->
+          <div class="select-wrap full-width">
+            <label for="cheesecakeExclusiveVariant">Exkluzívne cheesecakes</label>
+            <div class="styled-select">
+              <select id="cheesecakeExclusiveVariant" name="exkluzivnyCheesecake">
+                <option value="" disabled="" selected="">Vyber si ten svoj</option>
+                <option value="Cookies and cream">Cookies and cream</option>
+                <option value="Sweet chocolate">Sweet chocolate</option>
+                <option value="White caramel">White caramel</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <label for="cheesecakeFormMessage">Poznámka k objednávke *</label>
+          <textarea id="cheesecakeFormMessage"></textarea>
+
+          <!-- Send -->
+          <span class="hana-button" on-tap="_sendEmail" style="margin-top: 8px">ODOSLAŤ</span>
+
+        </div>
+
+      </iron-pages>
+
+      <!-- Status -->
+      <div id="status"></div>
+
+      <!-- Tips -->
+      <div class="tips">
+        <p>* Formulár slúži len na objednávku tôrt a cheesecakes. Pre objednanie iného typu našich dobrôt, nás, prosím, kontaktujte <b>TELEFONICKY</b>.</p>
+        <p>* Objednávku si môžete vyzdvihnúť na našej pobočke v Sabinove po telefonickom oznámení o vybavení objednávky.</p>
+        <p>* Pre bližsie informácie ohľadom chutí jednotlivých krémoch navštívte, prosím, sekciu <b>ČASTÉ OTÁZKY</b>.</p>
+        <p>* Popis jednotlivých cheesecakes nájdete v našej <b>PONUKE</b>.</p>
+      </div>
+
+    </div>
+
+    <!-- Featured content -->
+    <div class="featured">
+      <h2>Pozri <a href="/faq">TU</a>, ak máš otázky</h2>
+      <p>Naber inšpiráciu pri fotkách našich pochúťok.</p>
+      <a href="/instagram" class="hana-button">#INSTAGRAM</a>
+    </div>
+
+  </template>
+  <script>(function () {
+  'use strict';
+
+  Polymer({
+    /**
+     * Element configuration (is, behaviors, properties, observers).
+     */
+    is: 'x-order',
+    behaviors: [],
+    properties: {
+      cheesecakeType: {
+        type: String,
+        value: 'Chladený'
+      },
+      selectedForm: {
+        type: String,
+        value: 'cake'
+      }
+    },
+    listeners: {},
+    observers: ['_cheesecakeTypeChanged(cheesecakeType)', '_selectedFormChanged(selectedForm)'],
+    ready: function () {
+      var date = moment().format('YYYY-MM-DD');
+      this.$.cakeFormDate.value = date;
+      this.$.cheesecakeFormDate.value = date;
+    },
+    _cheesecakeTypeChanged: function (type) {
+      switch (type) {
+        case 'Chladený':
+          this.$.cheesecakeCooledVariant.parentNode.parentNode.style.display = 'block';
+          this.$.cheesecakeBakedVariant.parentNode.parentNode.style.display = 'none';
+          this.$.cheesecakeExclusiveVariant.parentNode.parentNode.style.display = 'none';
+          break;
+
+        case 'Pečený':
+          this.$.cheesecakeCooledVariant.parentNode.parentNode.style.display = 'none';
+          this.$.cheesecakeBakedVariant.parentNode.parentNode.style.display = 'block';
+          this.$.cheesecakeExclusiveVariant.parentNode.parentNode.style.display = 'none';
+          break;
+
+        case 'Exkluzívny':
+          this.$.cheesecakeCooledVariant.parentNode.parentNode.style.display = 'none';
+          this.$.cheesecakeBakedVariant.parentNode.parentNode.style.display = 'none';
+          this.$.cheesecakeExclusiveVariant.parentNode.parentNode.style.display = 'block';
+          break;
+      }
+    },
+    _clearCakeForm: function () {
+      this.$.cakeFormName.value = null;
+      this.$.cakeFormEmail.value = null;
+      this.$.cakeFormPhone.value = null;
+      this.$.cakeFormDate.value = moment().format('YYYY-MM-DD');
+      this.$.cakeFormFloors.value = 1;
+      this.$.cakeFormAverage.value = '15 cm';
+      this.$.cakeFormTaste.value = 'Čokoládová';
+      this.$.cakeFormKorpus.value = 'Kakao';
+      this.$.cakeFormCream.value = 'Mascarpone';
+      this.$.cakeFormGel.value = 'Višňa';
+      this.$.cakeFormMessage.value = null;
+
+      if (this.$.cakeFormFileInput.file) {
+        this.$.cakeFormFileInput.reset();
+      }
+    },
+    _clearCheesecakeForm: function () {
+      this.$.cheesecakeFormName.value = null;
+      this.$.cheesecakeFormEmail.value = null;
+      this.$.cheesecakeFormPhone.value = null;
+      this.$.cheesecakeFormDate.value = moment().format('YYYY-MM-DD');
+      this.cheesecakeType = 'Chladený';
+      this.$.cheesecakeCooledVariant.value = '';
+      this.$.cheesecakeBakedVariant.value = '';
+      this.$.cheesecakeFormMessage.value = null;
+    },
+    _selectCake: function () {
+      this.selectedForm = 'cake';
+    },
+    _selectCheesecake: function () {
+      this.selectedForm = 'cheesecake';
+    },
+    _selectedFormChanged: function (selectedForm) {
+      if (selectedForm === 'cake') {
+        this.$.cake.classList.add('active');
+        this.$.cheesecake.classList.remove('active');
+      } else {
+        this.$.cake.classList.remove('active');
+        this.$.cheesecake.classList.add('active');
+      }
+    },
+    _sendEmail: function () {
+      if (this.selectedForm === 'cake') {
+        if (this.$.cakeFormName.value && this.$.cakeFormEmail.value && this.$.cakeFormPhone.value && this.$.cakeFormDate.value && this.$.cakeFormFloors.value && this.$.cakeFormAverage.value && this.$.cakeFormTaste.value !== '' && this.$.cakeFormKorpus.value !== '' && this.$.cakeFormCream.value !== '' && this.$.cakeFormGel.value !== '' && this.$.cakeFormMessage.value) {
+          this._showStatusMessage('blue', 'Posielam email. Počkajte, prosím.');
+
+          var formData = new FormData();
+          formData.append('name', this.$.cakeFormName.value);
+          formData.append('email', this.$.cakeFormEmail.value);
+          formData.append('phone', this.$.cakeFormPhone.value);
+          formData.append('date', this.$.cakeFormDate.value);
+          formData.append('floors', this.$.cakeFormFloors.value);
+          formData.append('average', this.$.cakeFormAverage.value);
+          formData.append('taste', this.$.cakeFormTaste.value);
+          formData.append('korpus', this.$.cakeFormKorpus.value);
+          formData.append('cream', this.$.cakeFormCream.value);
+          formData.append('gel', this.$.cakeFormGel.value);
+          formData.append('message', this.$.cakeFormMessage.value);
+
+          if (this.$.cakeFormFileInput.file) {
+            formData.append('file', this.$.cakeFormFileInput.file, this.$.cakeFormFileInput.file.name);
+          }
+
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', 'http://api.hanacakes.sk/mail/cakeOrder.php');
+          xhr.send(formData);
+
+          xhr.onreadystatechange = function () {
+            if (xhr.status == 200) {
+              this._showStatusMessage('green', 'Email bol úspešne odoslaný. Objednávku Vám potvrdíme telefonicky.');
+
+              this._clearCakeForm();
+            } else {
+              this._showStatusMessage('red', 'Pri odosielaní emailu sa vyskytla neočakávana chyba. Skúste to, prosím, neskôr.');
+            }
+          }.bind(this);
+        } else {
+          this._showStatusMessage('red', 'Niektoré údaje sa zdajú byť prázdne. Vyplňte, prosím, všetky požadované údaje.');
+        }
+      } else {
+        if (this.$.cheesecakeFormName.value && this.$.cheesecakeFormEmail.value && this.$.cheesecakeFormPhone.value && this.$.cheesecakeFormDate.value && this.$.cheesecakeFormMessage.value) {
+          this._showStatusMessage('blue', 'Posielam email. Počkajte, prosím.');
+
+          var formData = new FormData();
+          formData.append('name', this.$.cheesecakeFormName.value);
+          formData.append('email', this.$.cheesecakeFormEmail.value);
+          formData.append('phone', this.$.cheesecakeFormPhone.value);
+          formData.append('date', this.$.cheesecakeFormDate.value);
+          formData.append('type', this.cheesecakeType);
+          formData.append('message', this.$.cheesecakeFormMessage.value);
+
+          switch (this.cheesecakeType) {
+            case 'Chladený':
+              if (this.$.cheesecakeCooledVariant.value !== '') {
+                formData.append('variant', this.$.cheesecakeCooledVariant.value);
+              } else {
+                this._showStatusMessage('red', 'Niektoré údaje sa zdajú byť prázdne. Vyplňte, prosím, všetky požadované údaje.');
+
+                return false;
+              }
+
+              break;
+
+            case 'Pečený':
+              if (this.$.cheesecakeBakedVariant.value !== '') {
+                formData.append('variant', this.$.cheesecakeBakedVariant.value);
+              } else {
+                this._showStatusMessage('red', 'Niektoré údaje sa zdajú byť prázdne. Vyplňte, prosím, všetky požadované údaje.');
+
+                return false;
+              }
+
+              break;
+
+            case 'Exkluzívny':
+              if (this.$.cheesecakeExclusiveVariant.value !== '') {
+                formData.append('variant', this.$.cheesecakeExclusiveVariant.value);
+              } else {
+                this._showStatusMessage('red', 'Niektoré údaje sa zdajú byť prázdne. Vyplňte, prosím, všetky požadované údaje.');
+
+                return false;
+              }
+
+              break;
+          }
+
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', 'http://api.hanacakes.sk/mail/cheesecakeOrder.php');
+          xhr.send(formData);
+
+          xhr.onreadystatechange = function () {
+            if (xhr.status == 200) {
+              this._showStatusMessage('green', 'Email bol úspešne odoslaný. Objednávku Vám potvrdíme telefonicky.');
+
+              this._clearCheesecakeForm();
+            } else {
+              this._showStatusMessage('red', 'Pri odosielaní emailu sa vyskytla neočakávana chyba. Skúste to, prosím, neskôr.');
+            }
+          }.bind(this);
+        } else {
+          this._showStatusMessage('red', 'Niektoré údaje sa zdajú byť prázdne. Vyplňte, prosím, všetky požadované údaje.');
+        }
+      }
+    },
+    _showStatusMessage: function (color, text) {
+      if (color) {
+        this.$.status.style.color = color;
+      }
+
+      this.$.status.style.display = 'block';
+      this.$.status.innerHTML = text;
+      setTimeout(function () {
+        this.$.status.style.display = 'none';
+      }.bind(this), 5000);
+    }
+  });
+})();</script>
+</dom-module>

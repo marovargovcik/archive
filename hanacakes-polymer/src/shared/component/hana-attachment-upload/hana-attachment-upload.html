@@ -1,0 +1,92 @@
+<!-- Imports --><link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../../../bower_components/iron-icons/editor-icons.html">
+<link rel="import" href="../../../../bower_components/paper-icon-button/paper-icon-button.html">
+
+<!-- Element -->
+<dom-module id="hana-attachment-upload">
+
+  <!-- CSS -->
+  <style>
+
+    /* Host */
+    :host { display: block; }
+    [hidden] {
+      display: none !important;
+    }
+    paper-icon-button { height: 42px; width: 42px; }
+    span { font-size: .8em; }
+    span iron-icon { margin-left: 12px; --iron-icon-height: 16px; --iron-icon-width: 16px; }
+
+  </style>
+  <template>
+
+    <!-- Icon -->
+    <paper-icon-button noink="" icon="editor:attach-file" on-tap="_fileClick"></paper-icon-button>
+    <span>[[file.name]]<iron-icon hidden$="[[iconHidden]]" icon="icons:clear" on-tap="reset"></iron-icon></span>
+
+    <!-- Invisible input -->
+    <input accept="image/*" hidden="" id="fileInput" on-change="_fileChange" type="file">
+
+  </template>
+  <script>Polymer({
+  is: 'hana-attachment-upload',
+  properties: {
+    file: {
+      type: Object,
+      notify: true,
+      value: null
+    },
+    iconHidden: {
+      type: Boolean,
+      value: true
+    }
+  },
+  observers: ['_fileChanged(file)'],
+
+  /**
+   * Reset all values to default.
+   */
+  reset: function () {
+    this.set('file', null);
+    this.$.fileInput.value = '';
+  },
+
+  /**
+   * Create redirect click from <paper-icon-button> to <input>.
+   *
+   * @private
+   */
+  _fileClick: function () {
+    var elem = this.$.fileInput;
+
+    if (elem && document.createEvent) {
+      var evt = document.createEvent('MouseEvents');
+      evt.initEvent('click', true, false);
+      elem.dispatchEvent(evt);
+    }
+  },
+
+  /**
+   * Function that hides icon when there is no file.
+   *
+   * @param file
+   * @private
+   */
+  _fileChanged: function (file) {
+    this.set('iconHidden', file ? false : true);
+  },
+
+  /**
+   * Observe any changes to <input type="file">
+   *
+   * @param e
+   * @private
+   */
+  _fileChange: function (e) {
+    this.set('file', e.target.files[0]);
+  }
+});</script>
+</dom-module>

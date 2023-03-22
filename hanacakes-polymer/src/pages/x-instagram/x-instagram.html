@@ -1,0 +1,212 @@
+<!-- Imports--><link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../shared/library/instafeed/instafeed.html">
+<link rel="import" href="../../shared/library/moment/moment.html">
+<link rel="import" href="../../shared/style/common-styles.html">
+
+<!-- Element -->
+<dom-module id="x-instagram">
+  <template>
+
+    <!-- CSS -->
+    <style include="common-styles"></style>
+    <style>
+
+      /* Element */
+      :host {
+        display: block;
+      }
+
+      .bottom-banner {
+        padding: 0 9px;
+        text-align: center;
+      }
+
+      .bottom-banner .content {
+        display: inline-block;
+        font-size: 1.4em;
+        margin-top: 12px;
+      }
+
+      /* Instaphotos */
+      .instaphotos {
+        @apply(--layout-horizontal);
+        @apply(--layout-wrap);
+        padding: 9px 0 0;
+      }
+
+      /* Instaphotos - <a> */
+      .instaphotos a {
+        margin: 9px;
+        text-decoration: none;
+        width: calc(20% - 18px);
+      }
+
+      /* Instaphotos - <a> - images */
+      .instaphotos a .image {
+        position: relative;
+      }
+
+      /* Instaphotos - <a> - images - instaicon */
+      .instaphotos a .image .icon {
+        background: url('../../../images/ico/instagram.png') no-repeat center center;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition: .2s;
+        width: 100%;
+      }
+
+      /* Hover over item - changing opacity */
+      .instaphotos a:hover .image .icon {
+        opacity: 1;
+      }
+
+      /* Instaphotos - <a> - images - <img> */
+      .instaphotos a .image img {
+        box-shadow: 0 1px 4px rgba(0,0,0,.2);
+        height: 100%;
+        width: 100%;
+      }
+
+      /* Media queries */
+      @media screen and (max-width: 1191px) {
+        .instaphotos a {
+          width: calc(25% - 18px);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .instaphotos a {
+          width: calc(33.33% - 18px);
+        }
+      }
+
+      @media screen and (max-width: 567px) {
+        .instaphotos a {
+          width: calc(50% - 18px);
+        }
+      }
+
+      @media screen and (max-width: 393px) {
+        .instaphotos a {
+          width: calc(100% - 18px);
+        }
+      }
+
+    </style>
+
+    <!-- Banner -->
+    <div class="banner">
+      <h1>#Instagram</h1>
+    </div>
+    <div class="bottom-banner">
+      <div class="content">Označ hashtagom <b>#hanacakes</b> aj tvoju dobrotu.
+        <div class="border">
+          <div class="line"></div>
+          <img src="../../../images/menu/ico/heart.png" alt="heart.png">
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram photos -->
+    <div class="instaphotos">
+
+      <!-- Item -->
+      <template is="dom-repeat" items="[[images]]">
+        <a href$="[[item.link]]" target="_blank">
+
+          <!-- Container -->
+          <div class="image">
+            <!-- Image -->
+            <img src$="[[item.images.standard_resolution.url]]">
+            <!-- Hover icon -->
+            <div class="icon"></div>
+          </div>
+
+        </a>
+      </template>
+
+    </div>
+
+    <!-- Featured content -->
+    <div class="featured">
+      <h2>Pozri <a href="/faq">TU</a>, ak máš otázky</h2>
+      <p>Objednaj si svoju pochúťku</p>
+      <a href="/objednavka" class="hana-button">OBJEDNAŤ U HANY</a>
+    </div>
+
+  </template>
+  <script>(function () {
+  'use strict';
+
+  Polymer({
+    /**
+     * Element configuration (is, behaviors, properties, observers).
+     */
+    is: 'x-instagram',
+    behaviors: [],
+    properties: {
+      /**
+       * Instagram photos used in repeat template.
+       */
+      images: {
+        type: Array,
+        value: function () {
+          return [];
+        }
+      }
+    },
+    listeners: {},
+    observers: [],
+
+    /**
+     * Invoke InstafeedJS and fetch Instagram photo library. See Instafeedjs.com for more details and params to constructor.
+     */
+    ready: function () {
+      var feed = new Instafeed({
+        accessToken: '3958837412.1677ed0.6bf30b363c694e96ad041236c89bb5f0',
+        clientId: 'a7b6e4a87a9e4fcea6d2119e3ff59497',
+        get: 'user',
+        userId: '3958837412',
+        limit: 20,
+        mock: true,
+        success: function (data) {
+          this.set('images', data.data);
+        }.bind(this)
+      });
+      feed.run();
+    },
+
+    /**
+     * Trim string if it's longer than 90 characters.
+     *
+     * @param text
+     * @returns {string}
+     * @private
+     */
+    _checkCharacterCount: function (text) {
+      if (text.length > 90) {
+        return text.substring(0, 90) + '...';
+      } else {
+        return text;
+      }
+    },
+
+    /**
+     * Transform date object to string format.
+     *
+     * @param date
+     * @returns {string}
+     * @private
+     */
+    _toDate: function (date) {
+      moment.updateLocale('sk', {
+        months: 'Január_Február_Marec_Apríl_Máj_Jún_Júl_August_September_Október_November_December'.split('_')
+      });
+      return moment.unix(date, 'x').format('DD MMMM');
+    }
+  });
+})();</script>
+</dom-module>

@@ -1,0 +1,161 @@
+<!-- Imports--><link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../style/common-styles.html">
+
+<!-- Element -->
+<dom-module id="hana-slider-item">
+  <template>
+
+    <!-- CSS -->
+    <style include="common-styles"></style>
+    <style>
+
+      /* Element */
+      :host {
+        display: block;
+        height: calc(100vh - 112px - 128px);
+        min-height: 572px;
+        position: relative;
+        width: 100%;
+      }
+
+      /* Cover image */
+      .cover {
+        background: no-repeat center center;
+        background-size: cover;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+      }
+
+      /* Fade */
+      .fade {
+        background-color: rgba(0, 0, 0, .4);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+      }
+
+      /* Content text */
+      .text {
+        @apply(--layout-vertical);
+        @apply(--layout-center-justified);
+        @apply(--layout-center);
+        box-sizing: border-box;
+        color: white;
+        height: 100%;
+        padding: 0 48px;
+        text-align: center;
+      }
+
+
+      /* Heading */
+      .text h1 {
+        font-size: 3.5em;
+        margin: 0;
+        text-transform: uppercase;
+      }
+
+      /* Paragraph */
+      .text p {
+        font-size: 1.6em;
+        margin-top: 12px;
+      }
+
+      /* Link */
+      .text a {
+        display: block;
+        font-weight: 400;
+      }
+
+      /* Media queries */
+      @media screen and (max-width: 991px) {
+
+        :host {
+          height: calc(100vh - 76px - 128px);
+          min-height: 0;
+        }
+
+        .text h1 {
+          font-size: 2.9em;
+        }
+
+      }
+
+      @media screen and (max-width: 794px) {
+        .text h1 {
+          font-size: 2.5em;
+        }
+        .text p {
+          font-size: 1.5em;
+        }
+      }
+
+      @media screen and (max-width: 548px) {
+        .text h1 {
+          font-size: 2.3em;
+        }
+        .text p {
+          font-size: 1.3em;
+        }
+      }
+
+      @media screen and (max-width: 412px) {
+        .text h1 {
+          font-size: 1.7em;
+        }
+        .text p {
+          font-size: 1.1em;
+        }
+      }
+
+    </style>
+
+    <!-- Cover -->
+    <div class="cover" style$="background-image: url('[[src]]');"></div>
+    <!-- Fade -->
+    <div class="fade"></div>
+    <!-- Text -->
+    <div class="text">
+      <h1>[[heading]]</h1>
+      <p>[[subtext]]</p>
+      <a href$="[[url]]" class="hana-button">[[buttonText]]</a>
+    </div>
+
+  </template>
+  <script>(function () {
+  'use strict';
+
+  Polymer({
+    /**
+     * Element configuration (is, behaviors, properties, observers).
+     */
+    is: 'hana-slider-item',
+    behaviors: [],
+    properties: {
+      buttonText: {
+        type: String
+      },
+      heading: {
+        type: String
+      },
+      src: {
+        type: String
+      },
+      subtext: {
+        type: String
+      },
+      url: {
+        type: String
+      }
+    },
+    listeners: {},
+    observers: []
+  });
+})();</script>
+</dom-module>

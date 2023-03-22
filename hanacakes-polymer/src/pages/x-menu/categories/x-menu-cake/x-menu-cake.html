@@ -1,0 +1,377 @@
+<!-- Imports--><link rel="import" href="../../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../../../shared/component/hana-menu-gallery-v2/hana-menu-gallery-v2.html">
+<link rel="import" href="../../../../shared/component/monmar-modal/monmar-modal.html">
+
+<!-- Element -->
+<dom-module id="x-menu-cake">
+  <template>
+
+    <!-- CSS -->
+    <style>
+
+      /* Element */
+      :host {
+        display: block;
+      }
+
+      .navigation {
+        border-bottom: 1px solid var(--primary-color);
+      }
+
+      .navigation .tab {
+        display: inline-block;
+        padding: 6px;
+      }
+
+      .navigation .tab:hover {
+        cursor: pointer;
+      }
+
+      .navigation .tab.selected {
+        background-color: var(--primary-color);
+        color: white;
+      }
+
+      /* Pages */
+      iron-pages {}
+
+      /* Selected item */
+      iron-pages .category {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+        margin-top: 24px;
+      }
+
+      iron-pages .category .pricing {
+        @apply(--layout-flex-6);
+      }
+
+      /* Item table */
+      iron-pages .category .pricing table {
+        border: 1px solid var(--primary-color);
+        border-collapse: collapse;
+        margin: auto;
+      }
+
+      /* Row */
+      iron-pages .category .pricing table tr {
+        height: 32px;
+      }
+
+      /* Heading cell */
+      iron-pages .category .pricing table tr th {
+        border: 1px solid var(--primary-color);
+        width: 72px;
+      }
+
+      /* Information */
+      iron-pages .category .pricing table tr td {
+        border: 1px solid var(--primary-color);
+        text-align: center;
+        width: 72px;
+      }
+
+      /* Additional informations */
+      iron-pages .category .pricing .info {
+        text-align: center;
+      }
+
+      /* Paragraphs */
+      iron-pages .category .pricing .info p {
+        margin: 4px 0;
+      }
+
+      /* Gallery */
+      iron-pages .category .gallery {
+        @apply(--layout-flex-5);
+        padding-left: 12px;
+      }
+
+      /* Gallery element */
+      iron-pages .category .gallery hana-menu-gallery-v2 {}
+
+      @media screen and (max-width: 991px) {
+        iron-pages .category {
+          @apply(--layout-vertical);
+        }
+
+        iron-pages .category .gallery {
+          margin-top: 12px;
+          padding: 0;
+        }
+      }
+
+      /* Media queries */
+      @media screen and (max-width: 381px) {
+        .navigation .tab {
+          font-size: .9em;
+        }
+      }
+
+      /* Media queries */
+      @media screen and (max-width: 351px) {
+        .navigation .tab {
+          font-size: .8em;
+        }
+      }
+
+    </style>
+
+    <!-- Navigation -->
+    <div id="navigation" class="navigation">
+      <span class="tab" on-tap="_select" data-category="cream">KRÉMOVÁ</span>
+      <span class="tab" on-tap="_select" data-category="chocolate">ČOKOLÁDOVÁ</span>
+      <span class="tab" on-tap="_select" data-category="marcipan">MARCIPÁNOVÁ</span>
+    </div>
+
+    <!-- Sizes -->
+    <iron-pages attr-for-selected="data-category" selected="[[category]]">
+
+      <!-- Cream -->
+      <div class="category" data-category="cream">
+
+        <!-- Pricing -->
+        <div class="pricing">
+
+          <!-- Pricing table -->
+          <table>
+            <tbody><tr>
+              <th>Priemer</th>
+              <td>15cm</td>
+              <td>20cm</td>
+              <td>25cm</td>
+              <td>28cm</td>
+              <td>30cm</td>
+            </tr>
+            <tr>
+              <th>Cena</th>
+              <td>23€</td>
+              <td>28€</td>
+              <td>32€</td>
+              <td>40€</td>
+              <td>45€</td>
+            </tr>
+          </tbody></table>
+
+          <!-- Additional info -->
+          <div class="info">
+            <p>2 poschodové torty od <b>50€</b></p>
+            <p>3 (malé) poschodové torty od <b>75€</b></p>
+            <p>3 (veľké) poschodové torty od <b>85€</b></p>
+          </div>
+
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery">
+          <hana-menu-gallery-v2 images="[[gallery.cream]]" on-open-modal="_openModal"></hana-menu-gallery-v2>
+        </div>
+
+      </div>
+
+      <!-- Chocolate -->
+      <div class="category" data-category="chocolate">
+
+        <!-- Pricing -->
+        <div class="pricing">
+
+          <!-- Pricing table -->
+          <table>
+            <tbody><tr>
+              <th>Priemer</th>
+              <td>15cm</td>
+              <td>20cm</td>
+              <td>25cm</td>
+              <td>28cm</td>
+              <td>30cm</td>
+            </tr>
+            <tr>
+              <th>Cena</th>
+              <td>25€</td>
+              <td>33€</td>
+              <td>35€</td>
+              <td>45€</td>
+              <td>50€</td>
+            </tr>
+          </tbody></table>
+
+          <!-- Additional info -->
+          <div class="info">
+            <p>2 poschodové torty od <b>55€</b></p>
+            <p>3 (malé) poschodové torty od <b>85€</b></p>
+            <p>3 (veľké) poschodové torty od <b>95€</b></p>
+          </div>
+
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery">
+          <hana-menu-gallery-v2 images="[[gallery.chocolate]]" on-open-modal="_openModal"></hana-menu-gallery-v2>
+        </div>
+
+      </div>
+
+      <!-- Marcipan -->
+      <div class="category" data-category="marcipan">
+
+        <!-- Pricing -->
+        <div class="pricing">
+
+          <!-- Pricing table -->
+          <table>
+            <tbody><tr>
+              <th>Priemer</th>
+              <td>15cm</td>
+              <td>20cm</td>
+              <td>25cm</td>
+              <td>28cm</td>
+              <td>30cm</td>
+            </tr>
+            <tr>
+              <th>Cena</th>
+              <td>28€</td>
+              <td>35€</td>
+              <td>38€</td>
+              <td>50€</td>
+              <td>55€</td>
+            </tr>
+          </tbody></table>
+
+          <!-- Additional info -->
+          <div class="info">
+            <p>2 poschodové torty od <b>60€</b></p>
+            <p>3 (malé) poschodové torty od <b>95€</b></p>
+            <p>3 (veľké) poschodové torty od <b>105€</b></p>
+          </div>
+
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery">
+          <hana-menu-gallery-v2 images="[[gallery.marcipan]]" on-open-modal="_openModal"></hana-menu-gallery-v2>
+        </div>
+
+      </div>
+
+    </iron-pages>
+
+    <!-- Modal -->
+    <monmar-modal id="modal"></monmar-modal>
+
+  </template>
+  <script>(function () {
+  'use strict';
+
+  Polymer({
+    /**
+     * Element configuration (is, behaviors, properties, observers).
+     */
+    is: 'x-menu-cake',
+    behaviors: [],
+    properties: {
+      category: {
+        type: String,
+        value: 'cream'
+      },
+      gallery: {
+        type: Object,
+        value: {
+          cream: [{
+            image: '../../../../images/menu/cake/cream/1.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/cream/2.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/cream/3.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/cream/4.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/cream/5.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/cream/6.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/cream/7.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/cream/8.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/cream/9.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/cream/10.jpg',
+            name: ''
+          }],
+          chocolate: [{
+            image: '../../../../images/menu/cake/chocolate/1.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/chocolate/2.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/chocolate/3.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/chocolate/4.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/chocolate/5.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/chocolate/6.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/chocolate/7.jpg',
+            name: ''
+          }],
+          marcipan: [{
+            image: '../../../../images/menu/cake/marcipan/1.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/marcipan/2.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/marcipan/3.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/marcipan/4.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/marcipan/5.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/marcipan/6.jpg',
+            name: ''
+          }, {
+            image: '../../../../images/menu/cake/marcipan/7.jpg',
+            name: ''
+          }]
+        }
+      }
+    },
+    listeners: {},
+    observers: ['_categoryChanged(category)'],
+    _categoryChanged: function (category) {
+      Polymer.dom(this.$.navigation).querySelectorAll('.tab').forEach(function (tab) {
+        if (tab.dataset.category === category) {
+          tab.classList.add('selected');
+        } else {
+          tab.classList.remove('selected');
+        }
+      });
+    },
+    _openModal: function (e) {
+      this.$.modal.open(e.detail.index, e.detail.images);
+    },
+    _select: function (e) {
+      this.category = event.target.dataset.category;
+    }
+  });
+})();</script>
+</dom-module>

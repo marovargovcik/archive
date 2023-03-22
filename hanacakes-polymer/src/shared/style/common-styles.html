@@ -1,0 +1,159 @@
+<!-- Imports--><link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<!-- Element -->
+<dom-module id="common-styles">
+  <template>
+    <style>
+
+      .hana-button {
+        background-color: var(--primary-color);
+        box-sizing: border-box;
+        color: white;
+        display: inline-block;
+        font-size: .9em;
+        line-height: 28px;
+        min-height: 28px;
+        min-width: 84px;
+        padding: 4px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .hana-button:hover {
+        background-color: var(--hover-color);
+        cursor: pointer;
+      }
+
+      .hana-button:after {
+        border: var(--primary-color) 2px solid;
+        bottom: -4px;
+        content: '';
+        left: -4px;
+        position: absolute;
+        right: -4px;
+        top: -4px;
+      }
+
+      .container {
+        margin: auto;
+        width: 50%;
+      }
+
+      .featured {
+        color: var(--text-color);
+        margin: 48px 0;
+        padding: 0 12px;
+        text-align: center;
+      }
+
+      .featured h2 {
+        font-size: 2.3em;
+        font-weight: 400;
+        margin: 0;
+      }
+
+      .featured h2 a {
+        color: inherit;
+        font-weight: bold;
+      }
+
+      .featured h2 a:hover {
+        color: var(--primary-color);
+      }
+
+      .featured p {
+        font-size: 1.1em;
+      }
+
+      .banner {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+        @apply(--layout-center-justified);
+        background: var(--primary-color) url('../../../images/pattern.png') repeat center center;
+        height: 274px;
+      }
+
+      .banner h1 {
+        color: white;
+        font-family: 'Clicker Script', cursive;
+        font-size: 8.4em;
+        font-weight: 300;
+      }
+
+      .border {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+      }
+
+      .border .line {
+        @apply(--layout-flex);
+        background-color: var(--primary-color);
+        height: 1px;
+      }
+
+      .border img {
+        margin: 0 12px;
+        width: 24px;
+      }
+
+      @media screen and (max-width: 638px) {
+        .banner h1 {
+          font-size: 6.4em;
+        }
+      }
+
+      @media screen and (max-width: 507px) {
+        .banner {
+          height: 198px;
+        }
+        .banner h1 {
+          font-size: 5.3em;
+        }
+      }
+
+      @media screen and (max-width: 427px) {
+        .banner h1 {
+          font-size: 4.6em;
+        }
+      }
+
+      @media screen and (max-width: 352px) {
+        .banner h1 {
+          font-size: 3.8em;
+        }
+      }
+
+      @media screen and (max-width: 1439px) {
+        .container {
+          width: 60%;
+        }
+      }
+
+      @media screen and (max-width: 1279px) {
+        .container {
+          width: 65%;
+        }
+      }
+
+      @media screen and (max-width: 991px) {
+        .container {
+          width: 75%;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .container {
+          width: 85%;
+        }
+      }
+
+      @media screen and (max-width: 527px) {
+        .container {
+          width: 90%;
+        }
+      }
+
+    </style>
+  </template>
+</dom-module>

@@ -1,0 +1,183 @@
+<!-- Imports--><link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../shared/style/common-styles.html">
+
+<!-- Element -->
+<dom-module id="x-cooperation">
+  <template>
+
+    <!-- CSS -->
+    <style include="common-styles"></style>
+    <style>
+
+      /* Element */
+      :host {
+        display: block;
+      }
+
+      /* Parters */
+      .partners {
+        @apply(--layout-horizontal);
+        @apply(--layout-wrap);
+        color: inherit;
+        padding: 48px 0;
+      }
+
+      /* Partner */
+      .partners .partner {
+        @apply(--layout-vertical);
+        @apply(--layout-end-justified);
+        box-sizing: border-box;
+        padding: 24px;
+        text-align: center;
+        width: 33.33%;
+      }
+
+      /* Logo */
+      .partners .partner img {
+        margin: auto;
+        width: 70%;
+      }
+
+      /* Name */
+      .partners .partner h2 {
+        font-size: 1.4em;
+        margin-bottom: 0;
+      }
+
+      /* Address */
+      .partners .partner span {
+        font-size: .8em;
+      }
+
+      /* Links */
+      .partners .partner .links {
+        @apply(--layout-horizontal);
+        @apply(--layout-center-justified);
+        margin-top: 12px;
+      }
+
+      /* <a> tag */
+      .partners .partner .links a {
+        margin: 0 4px;
+      }
+
+      /* Icon */
+      .partners .partner .links a img {
+        height: auto;
+        width: 24px;
+      }
+
+      /* Media queries */
+      @media screen and (max-width: 767px) {
+        .partners .partner {
+          width: 50%;
+        }
+      }
+
+      /* Media queries */
+      @media screen and (max-width: 507px) {
+        .partners .partner {
+          width: 100%;
+        }
+      }
+
+    </style>
+
+    <!-- Banner -->
+    <div class="banner">
+      <h1>Spolupráca</h1>
+    </div>
+
+    <!-- Partners -->
+    <div class="container partners" id="partner">
+
+      <!-- Partner -->
+      <template is="dom-repeat" items="[[partners]]" as="partner">
+        <div class="partner">
+
+          <!-- Logo -->
+          <img src$="../../../images/cooperation/[[partner.logo]]" alt="[[partner.logo]]">
+
+          <!-- Name -->
+          <h2>[[partner.name]]</h2>
+          <span>[[partner.address]]</span>
+
+          <!-- Links -->
+          <div class="links">
+
+            <!-- Facebook -->
+            <a href$="[[partner.fb]]" target="_blank">
+              <img src="../../../images/cooperation/ico/fb.png" alt="fb.png">
+            </a>
+
+            <!-- Map -->
+            <a href$="[[partner.map]]" target="=_blank">
+              <img src="../../../images/cooperation/ico/map.png" alt="map.png">
+            </a>
+
+          </div>
+
+        </div>
+      </template>
+
+    </div>
+
+  </template>
+  <script>(function () {
+  'use strict';
+
+  Polymer({
+    /**
+     * Element configuration (is, behaviors, properties, observers).
+     */
+    is: 'x-cooperation',
+    behaviors: [],
+    properties: {
+      partners: {
+        type: Array,
+        value: function () {
+          return [{
+            logo: 'corsini.png',
+            name: 'Caffé CORSINI',
+            address: 'Ku Kumštu 2, Prešov',
+            fb: 'https://www.facebook.com/CafeCorsiniPresov/?fref=ts',
+            map: 'https://www.google.sk/maps/place/Cafe+CORSINI/@49.0010125,21.2363369,17z/data=!3m1!4b1!4m5!3m4!1s0x473ef29ded1739cd:0x29506490c0611439!8m2!3d49.0010125!4d21.2385256'
+          }, {
+            logo: 'infinity.png',
+            name: 'Infinity Coffee',
+            address: 'Kúpelná 3, Prešov',
+            fb: 'https://www.facebook.com/Infinity-Coffee-1496757020538714/',
+            map: 'https://www.bing.com/maps/default.aspx?v=2&pc=FACEBK&mid=8100&rtp=~pos.48.99225_21.2393_Infinity+Coffee&cp=48.99225~21.2393&lvl=16&sty=r&rtop=0~0~0~&mode=D&FORM=FBKPL6&mkt=en-US'
+          }, {
+            logo: 'ka.png',
+            name: 'KA coffee',
+            address: 'Vihorlatská 2/A, Prešov',
+            fb: 'https://www.facebook.com/KaCoffee/?fref=ts',
+            map: 'https://www.google.sk/maps/place/Ka+Coffee/@48.9907068,21.2717486,12z/data=!4m8!1m2!2m1!1ska+coffe!3m4!1s0x473eed14dae0a41d:0xde3de0e2210e7c7b!8m2!3d48.9980887!4d21.270749'
+          }, {
+            logo: 'nico.jpeg',
+            name: 'Nico caffé',
+            address: '17.novembra 106, Prešov',
+            fb: 'https://www.facebook.com/nicocaffepo/?fref=ts',
+            map: 'https://www.google.sk/maps/place/NICO+CAFF%C3%89/@48.9895004,21.234291,17z/data=!3m1!4b1!4m5!3m4!1s0x473eed7efa0dfbcd:0xc17cd98d49dcb9dc!8m2!3d48.9895004!4d21.2364797'
+          }, {
+            logo: 'zwicker.jpg',
+            name: 'Zwicker restaurant',
+            address: 'Bardejovská 48B, Ľubotice',
+            fb: 'https://www.facebook.com/zwickerpresov/?fref=ts',
+            map: 'https://www.google.sk/maps/place/Penzi%C3%B3n+Zwicker/@49.0134385,21.2634052,17z/data=!3m1!4b1!4m5!3m4!1s0x473eed4ffd5c39fb:0x2e73ca717974beb0!8m2!3d49.0134385!4d21.2655939'
+          }, {
+            logo: 'coffecake.png',
+            name: 'Coffee & Cake',
+            address: 'Námestie slobody 8, Sabinov',
+            fb: 'https://www.facebook.com/Coffee-Cake-923447997780978/',
+            map: 'https://www.google.sk/maps/place/Coffee+Cake/@49.1031678,21.092467,17z/data=!3m1!4b1!4m5!3m4!1s0x473e8a60a8546ebf:0x5140b40855875af7!8m2!3d49.1031643!4d21.0946557'
+          }];
+        }
+      }
+    },
+    listeners: {},
+    observers: []
+  });
+})();</script>
+</dom-module>

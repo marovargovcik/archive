@@ -1,0 +1,144 @@
+<!-- Imports--><link rel="import" href="../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../../../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../../../bower_components/iron-icons/iron-icons.html">
+
+<!-- Element -->
+<dom-module id="monmar-modal">
+  <template>
+
+    <!-- CSS -->
+    <style>
+
+      /* Element */
+      :host { background: rgba(0, 0, 0, 0.54) none repeat scroll 0 0; display: none; height: 100%; overflow-y: auto; position: fixed; right: 0; top:0; transition: opacity 0.15s linear; width: 100%; z-index: 2; }
+      div.modal-wrap { display: table; height: 100%; margin: auto; max-width: 95%; }
+      div.modal-wrap div.modal-content { display: table-cell; vertical-align: middle; margin: auto; position: relative; width: 100%; }
+      div.modal-wrap div.modal-content.open { animation: dropdown .3s ease-out; }
+      div.modal-wrap div.modal-content iron-icon { bottom: 50%; color: #f6f6f6; display: inline-block; height: 100px; line-height: 100px; position: absolute; right: 0; top: calc(50% - 50px); transition: .2s; width: 80px; z-index: 3; }
+      div.modal-wrap div.modal-content iron-icon:hover { color: white; cursor: pointer; width: 85px; }
+      div.modal-wrap div.modal-content iron-icon:first-child { left: 0; }
+      div.modal-wrap div.modal-content iron-icon:last-child { right: 0; }
+      div.modal-wrap div.modal-content div { display: none; }
+      div.modal-wrap div.modal-content div.iron-selected { animation: fadein .3s ease-out; display: block; position: relative; }
+      div.modal-wrap div.modal-content img { max-height: 95vh; max-width: 100%; z-index: 2; }
+      div.modal-wrap div.modal-content span { bottom: 12px; color: var(--primary-color); font-weight: bold; position: absolute; right: 12px; }
+
+      @keyframes fadein {
+        from { opacity: 0 }
+        to { opacity: 1; }
+      }
+
+      @keyframes dropdown {
+        from { top: -150px; }
+        to { top: 0 }
+      }
+
+    </style>
+
+    <!-- Wrap -->
+    <div class="modal-wrap">
+
+      <!-- Content -->
+      <div class="modal-content" id="modal">
+
+        <!-- Next -->
+        <iron-icon icon="icons:chevron-left" class="arrow" hidden$="[[_arrowsHidden(images.length)]]" on-tap="_prev"></iron-icon>
+
+        <!-- Img -->
+        <iron-selector selected="[[index]]" id="selector">
+          <template is="dom-repeat" items="[[images]]">
+            <div>
+              <img src$="[[item.image]]">
+              <span>[[item.name]]</span>
+            </div>
+          </template>
+        </iron-selector>
+
+        <!-- Prev -->
+        <iron-icon icon="icons:chevron-right" class="arrow" hidden$="[[_arrowsHidden(images.length)]]" on-tap="_next"></iron-icon>
+
+      </div>
+
+    </div>
+
+  </template>
+  <script>(function () {
+  'use strict';
+
+  Polymer({
+    /**
+     * Element configuration (is, behaviors, properties, observers).
+     */
+    is: 'monmar-modal',
+    behaviors: [],
+    properties: {
+      images: {
+        type: Array,
+        value: function () {
+          return [];
+        }
+      },
+      index: {
+        type: Number
+      },
+      visible: {
+        type: Boolean,
+        value: false
+      }
+    },
+    listeners: {
+      'tap': '_clickOutOfBox'
+    },
+    observers: ['_visibleChanged(visible)'],
+    close: function () {
+      this.style.display = 'none';
+      this.visible = false;
+      this.fire('iron-signal', {
+        name: 'modal-close'
+      });
+    },
+    open: function (index, array) {
+      this.set('images', array);
+      this.index = index;
+      this.visible = true;
+      this.$$('.modal-content').classList.add('open');
+      this.fire('iron-signal', {
+        name: 'modal-open'
+      });
+    },
+    _arrowsHidden: function (length) {
+      return length === 1;
+    },
+    _clickOutOfBox: function (e) {
+      var span = Polymer.dom(this.root).querySelectorAll('.arrow');
+      var target = Polymer.dom(e).rootTarget;
+
+      if (target != span[0] && target != span[1] && target != Polymer.dom(this.root).querySelector('.iron-selected')) {
+        this.close();
+      }
+    },
+    _next: function () {
+      if (this.images.length - 1 > this.index) {
+        this.index++;
+      } else {
+        this.index = 0;
+      }
+    },
+    _prev: function () {
+      if (this.index != 0) {
+        this.index--;
+      } else {
+        this.index = this.images.length - 1;
+      }
+    },
+    _visibleChanged: function (visible) {
+      if (visible) {
+        this.style.display = 'block';
+      } else {
+        this.style.display = 'none';
+      }
+    }
+  });
+})();</script>
+</dom-module>

@@ -1,0 +1,47 @@
+<!-- Imports --><link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<!-- Behavior -->
+<script>(function () {
+  'use strict';
+  /**
+   * Behavior implementing lazy loading of pages.
+   * @polymerBehavior
+   */
+
+  Polymer.XLazyLoadBehavior = {
+    /**
+     * Attempt to lazy load a page from server. Parameter must be either a <neon-animated-pages> or <iron-pages>
+     * element. Selected page is retrieved from selectedItem attribute from the pages element.
+     *
+     * Pages element MUST contain 'data-file' attribute that contains a relative path to source file for the element
+     * that needs to be loaded.
+     *
+     * Developer MUST make sure some element is selected (default element must be handled).
+     *
+     * Example:
+     * <neon-animated-pages id="lazyPages" ...>
+     *    <neon-animatable data-page="my-page" data-file="my-page/my-page.html">
+     *        <my-page>
+     *    </neon-animatable>
+     *    ...
+     * <neon-animated-pages>
+     *
+     * ...
+     *
+     * this.lazyLoad(this.$.lazyPages);
+     *
+     * @param pages <neon-animated-pages> or <iron-pages> element that contain lazy loaded pages.
+     */
+    lazyLoad: function (event) {
+      event.stopPropagation();
+      var selectedPage = event.detail.item;
+      var file = selectedPage.dataset.file;
+
+      if (file) {
+        if (!Polymer.isInstance(selectedPage.firstElementChild)) {
+          this.importHref(this.resolveUrl(file), function () {}, function () {}, true);
+        }
+      }
+    }
+  };
+})();</script>

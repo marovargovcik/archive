@@ -1,0 +1,132 @@
+<!-- Imports--><link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../shared/style/common-styles.html">
+
+<!-- Element -->
+<dom-module id="x-faq">
+  <template>
+
+    <!-- CSS -->
+    <style include="common-styles"></style>
+    <style>
+
+      /* Element */
+      :host {
+        display: block;
+      }
+
+      /* Questions */
+      .questions {
+        padding: 48px 0;
+      }
+
+      /* Category */
+      .questions .category {
+        border-bottom: 1px dashed #f3f2ea;
+      }
+
+      /* Category name */
+      .questions .category h1 {
+        color: var(--primary-color);
+        font-size: 2.5em;
+      }
+
+      /* Question wrapper */
+      .questions .category .question {}
+
+      /* Question */
+      .questions .category .question h2 {
+        font-size: 1.7em;
+        margin-bottom: 0;
+      }
+
+      /* Answer */
+      .questions .category .question p {
+        font-size: 1.1em;
+      }
+
+      /* List */
+      .questions .category .question ul {}
+
+      /* List item */
+      .questions .category .question ul li {
+        font-size: 1.1em;
+        margin: 6px 0;
+      }
+
+      /* Media queries */
+      @media screen and (max-width: 527px) {
+        .questions {
+          padding: 24px 0;
+        }
+      }
+
+    </style>
+
+    <!-- Banner -->
+    <div class="banner">
+      <h1>Časté otázky</h1>
+    </div>
+
+    <!-- Container -->
+    <div class="container questions">
+      <div class="category">
+        <h1>Otázky</h1>
+        <div class="question">
+          <h2>Koľko u Vás stojí candy bar?</h2>
+          <p>Cena candy barov je rôzna, všetko závisi od množstva daného produktu.</p>
+        </div>
+        <div class="question">
+          <h2>Koľko stojí aranžovanie candy baru a inventár?</h2>
+          <p>Aranžovanie je zadarmo a za inventár sa platí vratná záloha.</p>
+        </div>
+        <div class="question">
+          <h2>Kedy si môžem u&nbsp;Vás objednať?</h2>
+          <p>Najlepšie je si u&nbsp;nás objednať hneď ako viete termín svojej objednávky, aby sme Vám vedeli rezervovať miesto.</p>
+        </div>
+        <div class="question">
+          <h2>Akými krémami su plnené torty?</h2>
+          <p>Ponuka krémov na rok 2017 je:</p>
+          <ul>
+            <li><b>pribináčikový krém</b>: Tvarohový krém s&nbsp;príchuťou citrónu.</li>
+            <li><b>mascarpone krém</b>: Je chutný, letný a&nbsp;svieži krém, ktorý je najčastejšie doladený ovocím.</li>
+            <li><b>extra čokoláda</b>: Extra čokoládovy krém s&nbsp;obsahom 52% pravej čokolády, ktorý je to pravé pre ozajstných čokoholikov.</li>
+            <li><b>toffe krém</b>: Nadýchaný sladký krém, ktorého hlavnú časť tvorí karamel.</li>
+            <li><b>ovocné krémy</b>: S&nbsp;ovocných krémov máte na výber z&nbsp;malinového, jahodového a&nbsp;višnového krému. Je už len na Vás. ktorý si vyberiete.</li>
+            <li>Najobľubenejšia kombinácia je malinový krém doladený malinovým gélom.</li>
+          </ul>
+        </div>
+        <div class="question">
+          <h2>Aká je cena za kilogram torty?</h2>
+          <p>Cena torty nie je daná hmotnosťou. Ceny tôrt sú dané rozmermi, ktoré sú bližšie uvedené v&nbsp;ponuke.</p>
+        </div>
+        <div class="question">
+          <h2>Ako si objednať 3D nápis?</h2>
+          <p>3D nápis je potrebné objednať aspoň týždeň pred odberom torty. Cena je individuálna, podľa veľkosti nápisu.</p>
+        </div>
+        <div class="question">
+          <h2>Aké torty su momentálne trendy?</h2>
+          <p>Hitom tohto roka sú ovocné torty doladené čerstvým ovocím, živými kvetmi alebo jedlou oplátkou, ktorá vystihuje daný motív Vašej oslavy.</p>
+        </div>
+        <div class="question">
+          <h2>Potrebujete poradiť s&nbsp;výberom torty?</h2>
+          <p>Neváhajte nás kontaktovať a&nbsp;my Vám radi odpovieme na všetky Vaše otázky.</p>
+        </div>
+      </div>
+    </div>
+
+  </template>
+  <script>(function () {
+  'use strict';
+
+  Polymer({
+    /**
+     * Element configuration (is, behaviors, properties, observers).
+     */
+    is: 'x-faq',
+    behaviors: [],
+    properties: {},
+    listeners: {},
+    observers: []
+  });
+})();</script>
+</dom-module>

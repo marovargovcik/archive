@@ -1,0 +1,315 @@
+<!-- Imports--><link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../shared/style/common-styles.html">
+
+<!-- Element -->
+<dom-module id="x-header">
+  <template>
+
+    <!-- CSS -->
+    <style include="common-styles"></style>
+    <style>
+
+      /* Element */
+      :host {
+        background-color: rgba(255,255,255,.96);
+        height: 112px;
+        position: fixed;
+        transition: .3s;
+        width: 100%;
+        z-index: 2;
+      }
+
+      /* Hidden */
+      [hidden] {
+        display: none !important;
+      }
+
+      /* Navigation */
+      .desktop-navigation {
+        @apply(--layout-horizontal);
+        @apply(--layout-justified);
+        @apply(--layout-center);
+        box-sizing: border-box;
+        height: inherit;
+        padding: 0 16px;
+      }
+
+      /* Brand logo */
+      .desktop-navigation .brand {
+        @apply(--layout-flex);
+      }
+
+      /* Brand - img */
+      .desktop-navigation .brand img {
+        height: 104px;
+        transition: .3s;
+        width: auto;
+      }
+
+      /* Navigation unordered list */
+      .desktop-navigation ul {
+        @apply(--layout-flex-10);
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      /* Item */
+      .desktop-navigation ul li {
+        display: inline-block;
+        margin: 0 8px;
+      }
+
+      /* Item - <a> */
+      .desktop-navigation ul li a {
+        color: var(--text-color);
+        font-size: 1.35em;
+        font-weight: bold;
+        text-decoration: none;
+        transition: .2s;
+      }
+
+      /* Item - <a> hover */
+      .desktop-navigation ul li a:hover {
+        color: #8a5c22;
+      }
+
+      /* Item - <a> active */
+      .desktop-navigation ul li a.active {
+        color: var(--primary-color) !important;
+        position: relative;
+      }
+
+      /* Item - <a> active after */
+      .desktop-navigation ul li a.active:after {
+        border-bottom: var(--primary-color) 2px solid;
+        border-top: var(--primary-color) 2px solid;
+        bottom: -5px;
+        content: '';
+        left: -5px;
+        position: absolute;
+        right: -5px;
+        top: -5px;
+      }
+
+      /* Navigation - order button */
+      .desktop-navigation .order {
+        @apply(--layout-flex);
+        text-align: right;
+      }
+
+      /* Navigation - menu button */
+      .desktop-navigation .toggle {
+        color: var(--text-color);
+        font-size: 0.9em;
+        font-weight: bold;
+        padding: 6px;
+        border-radius: 4px;
+      }
+
+      /* Navigation - menu button hover */
+      .desktop-navigation .toggle:hover {
+        background-color: #f8f8f8;
+      }
+
+      /* Navigation - menu button - icon */
+      .desktop-navigation .toggle iron-icon {
+        color: var(--primary-color);
+      }
+
+      /* Mobile navigation */
+      .mobile-navigation {
+        background-color: rgba(255,255,255,.95);
+        border-top: 1px solid #f8f8f8;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s ease-out;
+      }
+
+      .mobile-navigation.opened{
+        max-height: 300px;
+      }
+
+      /* Mobile navigation - list */
+      .mobile-navigation ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Mobile navigation - list - item */
+      .mobile-navigation ul li {}
+
+      /* Mobile navigation - list -item - <a> */
+      .mobile-navigation ul li a {
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+        color: var(--text-color);
+        display: block;
+        font-weight: 300;
+        padding: 16px;
+        text-decoration: none;
+      }
+
+      /* Mobile navigation - list -item - <a> active */
+      .mobile-navigation ul li a.active {
+        border-bottom: 1px solid var(--primary-color);
+        border-top: 1px solid var(--primary-color);
+        color: var(--primary-color);
+      }
+
+      /* Less than 992px */
+      @media screen and (max-width: 1102px) {
+
+        /* Lowering header height */
+        :host {
+          height: 76px;
+        }
+
+        /* Lowering navigation's padding */
+        .desktop-navigation {
+          padding: 0 8px;
+        }
+
+        .desktop-navigation .brand img {
+          height: 68px;
+        }
+
+      }
+
+    </style>
+
+    <!-- Navigation -->
+    <nav class="desktop-navigation">
+
+      <!-- Brand -->
+      <a href="/" class="brand">
+        <img src="../../images/logo.png" alt="logo.png">
+      </a>
+
+      <!-- Links -->
+      <ul id="desktopNav" hidden$="[[isMobile]]">
+        <li><a href="/ponuka" data-page="ponuka">PONUKA</a></li>
+        <li><a href="/spolupraca" data-page="spolupraca">SPOLUPRÁCA</a></li>
+        <li><a href="/instagram" data-page="instagram">#INSTAGRAM</a></li>
+        <li><a href="/faq" data-page="faq">ČASTÉ OTÁZKY</a></li>
+      </ul>
+
+      <!-- Order -->
+      <div class="order">
+        <a hidden="[[isMobile]]" href="/objednavka" class="hana-button" data-page="objednavka">OBJEDNAŤ</a>
+      </div>
+
+      <!-- Menu -->
+      <span class="toggle" hidden$="[[!isMobile]]" on-tap="_clickMenu">MENU <iron-icon icon="icons:menu"></iron-icon></span>
+
+    </nav>
+
+    <!-- Mobile version of navigation -->
+    <nav class="mobile-navigation">
+      <ul id="mobileNav">
+        <li><a href="/objednavka" data-page="objednavka">OBJEDNAŤ</a></li>
+        <li><a href="/ponuka" data-page="ponuka">PONUKA </a></li>
+        <li><a href="/spolupraca" data-page="spolupraca">SPOLUPRÁCA</a></li>
+        <li><a href="/instagram" data-page="instagram">#INSTAGRAM</a></li>
+        <li><a href="/faq" data-page="faq">ČASTÉ OTÁZKY</a></li>
+      </ul>
+    </nav>
+
+  </template>
+  <script>(function () {
+  'use strict';
+
+  Polymer({
+    /**
+     * Element configuration (is, behaviors, properties, observers).
+     */
+    is: 'x-header',
+    behaviors: [],
+    properties: {
+      /**
+       * Active page from URL pattern determines which link is active and should be highlighted.
+       */
+      activePage: {
+        type: String
+      },
+
+      /**
+       * isMobile property determines if screen is not wider than 991px.
+       */
+      isMobile: {
+        type: Boolean
+      },
+      logoVisible: {
+        type: Boolean,
+        value: false
+      }
+    },
+    listeners: {},
+    observers: ['_onActivePageChanged(activePage)', '_onIsMobileChanged(isMobile)'],
+    ready: function () {
+      document.addEventListener('scroll', function () {
+        this.logoVisible = document.body.scrollTop >= 32;
+      }.bind(this));
+    },
+
+    /**
+     * Open menu.
+     */
+    _clickMenu: function () {
+      this.$.mobileNav.parentNode.classList.toggle('opened');
+    },
+
+    /**
+     * Observe any change on property 'page', query all links selectors and highlight current active link.
+     * Also close mobile navigation if opened.
+     *
+     * @param page
+     * @private
+     */
+    _onActivePageChanged: function (page) {
+      this.debounce('_onActivePageChanged', function () {
+        /* Desktop navigation selectors */
+        Polymer.dom(this.$.desktopNav).querySelectorAll('a').forEach(function (a) {
+          if (page === a.dataset.page) {
+            a.classList.add('active');
+          } else {
+            a.classList.remove('active');
+          }
+        });
+        /* Mobile navigation selectors */
+
+        Polymer.dom(this.$.mobileNav).querySelectorAll('a').forEach(function (a) {
+          if (page === a.dataset.page) {
+            a.classList.add('active');
+          } else {
+            a.classList.remove('active');
+          }
+        });
+        /* Closer */
+
+        if (this.$.mobileNav.parentNode.className.search('opened') || this.$.mobileNav.parentNode.className.value.search('opened')) {
+          this.$.mobileNav.parentNode.classList.remove('opened');
+        }
+      });
+    },
+
+    /**
+     * Observe any change on property 'isMobile' and if mobile navigation is opened and mobile layout isn't active
+     * close mobile navigation.
+     *
+     * @param isMobile
+     * @private
+     */
+    _onIsMobileChanged: function (isMobile) {
+      if (!isMobile && this.$.mobileNav.parentNode.className === 'mobile-navigation opened') {
+        this.$.mobileNav.parentNode.classList.remove('opened');
+      }
+    }
+  });
+})();</script>
+</dom-module>

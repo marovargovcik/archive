@@ -1,0 +1,509 @@
+<!-- Imports--><link rel="import" href="../../../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../../../shared/component/hana-menu-gallery-v2/hana-menu-gallery-v2.html">
+<link rel="import" href="../../../../shared/component/monmar-modal/monmar-modal.html">
+
+<!-- Element -->
+<dom-module id="x-menu-cheesecake">
+  <template>
+
+    <!-- CSS -->
+    <style>
+
+      /* Element */
+      :host {
+        display: block;
+      }
+
+      .navigation {
+        border-bottom: 1px solid var(--primary-color);
+      }
+
+      .navigation .tab {
+        display: inline-block;
+        padding: 6px;
+      }
+
+      .navigation .tab:hover {
+        cursor: pointer;
+      }
+
+      .navigation .tab.selected {
+        background-color: var(--primary-color);
+        color: white;
+      }
+
+      /* Pages */
+      iron-pages {}
+
+      /* Selected item */
+      iron-pages .category {
+        @apply(--layout-horizontal);
+        margin-top: 24px;
+      }
+
+      iron-pages .category .pricing {
+        @apply(--layout-flex-6);
+      }
+
+      iron-pages .category .pricing .cheesecake {
+        margin-bottom: 12px;
+      }
+
+      iron-pages .category .pricing .cheesecake .border {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+      }
+
+      iron-pages .category .pricing .cheesecake .border .line {
+        @apply(--layout-flex);
+        background-color: var(--primary-color);
+        height: 1px;
+      }
+
+      iron-pages .category .pricing .cheesecake .border img {
+        margin: 0 12px;
+        width: 24px;
+      }
+
+      iron-pages .category .pricing .cheesecake:last-of-type {
+        margin: 0;
+      }
+
+      iron-pages .category .pricing .cheesecake h3 {
+        color: var(--primary-color);
+        margin: 0;
+      }
+
+      iron-pages .category .pricing .cheesecake p {
+        margin: 8px 0;
+      }
+
+      iron-pages .category .pricing .cheesecake i {
+        font-size: .9em;
+      }
+
+      /* Gallery */
+      iron-pages .category .gallery {
+        @apply(--layout-flex-5);
+        padding-left: 12px;
+      }
+
+      .allergen-list {
+        @apply(--layout-horizontal);
+        @apply(--layout-center-justified);
+        @apply(--layout-wrap);
+        margin-top: 24px;
+      }
+
+      .allergen-list .allergen {
+        @apply(--layout-vertical);
+        @apply(--layout-center);
+        margin: 0 12px;
+        min-width: 64px;
+        width: calc((100% / 6) - 24px);
+      }
+
+      .allergen-list .allergen .number {}
+
+      .allergen-list .allergen .icon {
+        border: 2px dashed black;
+        border-radius: 50%;
+        height: 50px;
+        margin: 4px 0;
+        padding: 9px;
+        text-align: center;
+        width: 50px;
+      }
+
+      .allergen-list .allergen .icon img {
+        width: 46px;
+      }
+
+      .allergen-list .allergen .name {
+        text-align: center;
+      }
+
+      /* Gallery element */
+      iron-pages .category .gallery hana-menu-cake-gallery {}
+
+      @media screen and (max-width: 991px) {
+        iron-pages .category {
+          @apply(--layout-vertical);
+        }
+
+        iron-pages .category .gallery {
+          margin-top: 12px;
+          padding: 0;
+        }
+      }
+
+      /* Media queries */
+      @media screen and (max-width: 381px) {
+        .navigation .tab {
+          font-size: .9em;
+        }
+      }
+
+      /* Media queries */
+      @media screen and (max-width: 351px) {
+        .navigation .tab {
+          font-size: .8em;
+        }
+      }
+
+    </style>
+
+    <!-- Navigation -->
+    <div id="navigation" class="navigation">
+      <span class="tab" on-tap="_select" data-category="cooled">CHLADENÉ</span>
+      <span class="tab" on-tap="_select" data-category="baked">PEČENÉ</span>
+      <span class="tab" on-tap="_select" data-category="exclusive">EXKLUZÍVNE</span>
+    </div>
+
+    <!-- Sizes -->
+    <iron-pages attr-for-selected="data-category" selected="[[category]]">
+
+      <!-- Cream -->
+      <div class="category" data-category="cooled">
+
+        <!-- Pricing -->
+        <div class="pricing">
+
+          <template is="dom-repeat" items="[[kind.cooled]]">
+            <div class="cheesecake">
+              <h3>[[item.name]]</h3>
+              <p>[[item.description]]</p>
+              <i>Alergény: [[item.allergens]]</i>
+              <div class="border">
+                <div class="line"></div>
+                <img src="../../../../../images/menu/ico/heart.png" alt="heart.png">
+                <div class="line"></div>
+              </div>
+            </div>
+          </template>
+
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery">
+          <hana-menu-gallery-v2 images="[[gallery.cooled]]" naming="" on-open-modal="_openModal"></hana-menu-gallery-v2>
+        </div>
+
+      </div>
+
+      <!-- Chocolate -->
+      <div class="category" data-category="baked">
+
+        <!-- Pricing -->
+        <div class="pricing">
+          <template is="dom-repeat" items="[[kind.baked]]">
+            <div class="cheesecake">
+              <h3>[[item.name]]</h3>
+              <p>[[item.description]]</p>
+              <i>Alergény: [[item.allergens]]</i>
+              <div class="border">
+                <div class="line"></div>
+                <img src="../../../../../images/menu/ico/heart.png" alt="heart.png">
+                <div class="line"></div>
+              </div>
+            </div>
+          </template>
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery">
+          <hana-menu-gallery-v2 images="[[gallery.baked]]" naming="" on-open-modal="_openModal"></hana-menu-gallery-v2>
+        </div>
+
+      </div>
+
+      <!-- Chocolate -->
+      <div class="category" data-category="exclusive">
+
+        <!-- Pricing -->
+        <div class="pricing">
+          <template is="dom-repeat" items="[[kind.exclusive]]">
+            <div class="cheesecake">
+              <h3>[[item.name]]</h3>
+              <p>[[item.description]]</p>
+              <i>Alergény: [[item.allergens]]</i>
+              <div class="border">
+                <div class="line"></div>
+                <img src="../../../../../images/menu/ico/heart.png" alt="heart.png">
+                <div class="line"></div>
+              </div>
+            </div>
+          </template>
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery">
+          <hana-menu-gallery-v2 images="[[gallery.exclusive]]" naming="" on-open-modal="_openModal"></hana-menu-gallery-v2>
+        </div>
+
+      </div>
+
+    </iron-pages>
+
+    <!-- Allergens list -->
+    <div class="allergen-list">
+
+      <template is="dom-repeat" items="[[allergens]]">
+        <div class="allergen">
+          <span class="number">[[item.number]]</span>
+          <span class="icon">
+            <img src$="[[item.icoPath]]">
+          </span>
+          <span class="name">[[item.name]]</span>
+        </div>
+      </template>
+
+    </div>
+
+    <!-- Modal -->
+    <monmar-modal id="modal"></monmar-modal>
+
+  </template>
+  <script>(function () {
+  'use strict';
+
+  Polymer({
+    /**
+     * Element configuration (is, behaviors, properties, observers).
+     */
+    is: 'x-menu-cheesecake',
+    behaviors: [],
+    properties: {
+      allergens: {
+        type: Array,
+        value: function () {
+          return [{
+            number: 1,
+            icoPath: '../../../../../images/menu/ico/1.png',
+            name: 'MLIEKO'
+          }, {
+            number: 2,
+            icoPath: '../../../../../images/menu/ico/2.png',
+            name: 'OBILNINY'
+          }, {
+            number: 3,
+            icoPath: '../../../../../images/menu/ico/3.png',
+            name: 'VAJCIA'
+          }, {
+            number: 4,
+            icoPath: '../../../../../images/menu/ico/4.png',
+            name: 'ORECHY'
+          }, {
+            number: 5,
+            icoPath: '../../../../../images/menu/ico/5.png',
+            name: 'ARAŠIDY'
+          }, {
+            number: 6,
+            icoPath: '../../../../../images/menu/ico/6.png',
+            name: 'SÓJOVÉ ZRNÁ'
+          }];
+        }
+      },
+      category: {
+        type: String,
+        value: 'cooled'
+      },
+      gallery: {
+        type: Object,
+        value: {
+          cooled: [{
+            image: '../../../../images/menu/cheesecake/cooled/1.jpg',
+            name: 'Black cherry'
+          }, {
+            image: '../../../../images/menu/cheesecake/cooled/2.jpg',
+            name: 'Blackberry'
+          }, {
+            image: '../../../../images/menu/cheesecake/cooled/3.jpg',
+            name: 'Dark chocolate'
+          }, {
+            image: '../../../../images/menu/cheesecake/cooled/4.jpg',
+            name: 'Forest Fruits'
+          }, {
+            image: '../../../../images/menu/cheesecake/cooled/5.jpg',
+            name: 'Lemon'
+          }, {
+            image: '../../../../images/menu/cheesecake/cooled/6.jpg',
+            name: 'Raspberry'
+          }, {
+            image: '../../../../images/menu/cheesecake/cooled/7.jpg',
+            name: 'Strawberry'
+          }, {
+            image: '../../../../images/menu/cheesecake/cooled/8.jpg',
+            name: 'White chocolate'
+          }],
+          baked: [{
+            image: '../../../../images/menu/cheesecake/baked/4.jpg',
+            name: 'Polka dot'
+          }, {
+            image: '../../../../images/menu/cheesecake/baked/2.jpg',
+            name: 'Chocolate-Hazelnut'
+          }, {
+            image: '../../../../images/menu/cheesecake/baked/8.jpg',
+            name: 'Riccota with Fresh Raspberries'
+          }, {
+            image: '../../../../images/menu/cheesecake/baked/7.jpg',
+            name: 'Red velvet'
+          }, {
+            image: '../../../../images/menu/cheesecake/baked/6.jpg',
+            name: 'Ovocná ganache'
+          }, {
+            image: '../../../../images/menu/cheesecake/baked/9.jpg',
+            name: 'Caramel'
+          }, {
+            image: '../../../../images/menu/cheesecake/baked/3.jpg',
+            name: 'Oreo'
+          }, {
+            image: '../../../../images/menu/cheesecake/baked/1.jpg',
+            name: 'Cinnamon Apple'
+          }, {
+            image: '../../../../images/menu/cheesecake/baked/5.jpg',
+            name: 'Pripitý'
+          }, {
+            image: '../../../../images/menu/cheesecake/baked/10.jpg',
+            name: 'Triple čučoriedka'
+          }, {
+            image: '../../../../images/menu/cheesecake/baked/11.jpg',
+            name: 'Triple choco'
+          }, {
+            image: '../../../../images/menu/cheesecake/baked/12.jpg',
+            name: 'Triple malina'
+          }],
+          exclusive: [{
+            image: '../../../../images/menu/cheesecake/exclusive/1.jpg',
+            name: 'Cookies and cream'
+          }, {
+            image: '../../../../images/menu/cheesecake/exclusive/2.jpg',
+            name: 'Sweet chocolate'
+          }, {
+            image: '../../../../images/menu/cheesecake/exclusive/3.jpg',
+            name: 'White caramel'
+          }]
+        }
+      },
+      kind: {
+        type: Object,
+        value: {
+          cooled: [{
+            name: 'Dark chocolate',
+            description: 'Chladený cheesecake so smotanovo tvarohovou náplňou poliaty pravou 52% čokoládou.',
+            allergens: '1, 2, 3, 4'
+          }, {
+            name: 'White chocolate',
+            description: 'Chladený cheesecake so smotanovo tvarohovou náplňou poliaty pravou bielou čokoládou.',
+            allergens: '1, 2, 3, 4'
+          }, {
+            name: 'Black cherry',
+            description: 'Višnový cheesecake s mascarpone, sušienkovým základom.',
+            allergens: '1, 2, 3, 4'
+          }, {
+            name: 'Blueberry',
+            description: 'Čučoriedkový cheesecakes mascarpone a sušienkovým základom.',
+            allergens: '1, 2, 3, 4'
+          }, {
+            name: 'Strawberry',
+            description: 'Jahodový cheesecake s mascarpone a sušienkovým základom.',
+            allergens: '1, 2, 3, 4'
+          }, {
+            name: 'Raspberry',
+            description: 'Malinový cheesecake s mascarpone a sušienkovým základom.',
+            allergens: '1, 2, 3, 4'
+          }, {
+            name: 'Lemon',
+            description: 'Citrónový cheesecake s mascarpone a sušienkovým základom.',
+            allergens: '1, 2, 3, 4'
+          }, {
+            name: 'Forest fruits',
+            description: 'Lesná zmes cheesecake s mascarpone a sušienkovým základom.',
+            allergens: '1, 2, 3, 4'
+          }],
+          baked: [{
+            name: 'Polka dot',
+            description: 'Bodovaný cheesecake s príchuťou talianského syru ricotta ochutený pravou citrónovou štavou a zdobený čokoládovými bodkami na vrchu.',
+            allergens: '1, 2, 3'
+          }, {
+            name: 'Chocolate-Hazelnut',
+            description: 'Lieskovcový cheesecake s pravou bielou čokoládou plnený talianským syrom mascarpone a tvarohom ochutený vanilkovým extraktom.',
+            allergens: '1, 2, 3, 4'
+          }, {
+            name: 'Ricotta with Fresh Raspberries',
+            description: 'Ricottový cheesecake plnený tvarohom a čerstvými malinami.',
+            allergens: '1, 2, 3'
+          }, {
+            name: 'Red velvet',
+            description: 'Jemná zamatová piškóta preliatá mascarpone krémom dochutená mletým kardamónom.',
+            allergens: '1, 2, 3'
+          }, {
+            name: 'Ovocná ganache',
+            description: 'V ponuke máme aj malinovú, jahodovú, čučoriedkovú ganache a lesná zmes ganache.',
+            allergens: '1'
+          }, {
+            name: 'Caramel',
+            description: 'Karamelový cheesecake s jemnou karamelovou vrstvou, plnený smotanovým syrom.',
+            allergens: '1, 2, 3'
+          }, {
+            name: 'Oreo',
+            description: 'Oreo cheesecake je plnený a zdobený výhradne pravými oreo sušienkami pre originálnu chuť. Poliaty ganache z pravej čokolády.',
+            allergens: '1, 2, 3'
+          }, {
+            name: 'Cinnamon Apple',
+            description: 'Jablkovo škoricový cheesecake kombinuje chute syru mascarpone, tvarohu a čerstvých jabĺk ochutený vlašskými orechmi.',
+            allergens: '1, 2, 3, 4'
+          }, {
+            name: 'Pripity',
+            description: 'Cheesecake s chuťou pravej 52% čokolády a čokoládového likéru plnený syrom mascarpone.',
+            allergens: '1, 2, 3'
+          }, {
+            name: 'Triple čučoriedka',
+            description: 'Lahodná čokoládová piškóta, stred tvorí chutný krém doladený ovocím podľa výberu s príchuťou čerstvých čučoriedok.',
+            allergens: '1, 2, 3'
+          }, {
+            name: 'Triple choco',
+            description: 'Lahodná čokoládová piškóta, stred tvorí chutný krém doladený ovocím podľa výberu s príchuťou pravej čokolády.',
+            allergens: '1, 2, 3, 4'
+          }, {
+            name: 'Triple malina',
+            description: 'Lahodná čokoládová piškóta, stred tvorí chutný krém doladený ovocím podľa výberu s príchuťou čerstvých malín',
+            allergens: '1, 2, 3'
+          }],
+          exclusive: [{
+            name: 'Cookies and cream',
+            description: 'Cheesecake z kvalitnej bielej čokolády a lahodného smotanového syra doplnený pravým oreom.',
+            allergens: '1, 2, 3, 4, 6'
+          }, {
+            name: 'Sweet chocolate',
+            description: 'Lahodný extra čokoládový cheesecake s poriadnou dávkou tvarohu a ovocia.',
+            allergens: '1, 2, 3, 4'
+          }, {
+            name: 'White caramel',
+            description: 'Karamelový cheesecake s pravou bielou čokoládou plnený smotanovým syrom a zdobený ovocím.',
+            allergens: '1, 2, 3, 4'
+          }]
+        }
+      }
+    },
+    listeners: {},
+    observers: ['_categoryChanged(category)'],
+    _categoryChanged: function (category) {
+      Polymer.dom(this.root).querySelectorAll('.tab').forEach(function (tab) {
+        if (tab.dataset.category === category) {
+          tab.classList.add('selected');
+        } else {
+          tab.classList.remove('selected');
+        }
+      });
+    },
+    _openModal: function (e) {
+      this.$.modal.open(e.detail.index, e.detail.images);
+    },
+    _select: function (e) {
+      this.category = event.target.dataset.category;
+    }
+  });
+})();</script>
+</dom-module>

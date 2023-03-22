@@ -1,0 +1,261 @@
+<!-- Imports--><link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../shared/style/common-styles.html">
+<link rel="import" href="../../shared/component/hana-slider/hana-slider.html">
+
+<!-- Element -->
+<dom-module id="x-home">
+  <template>
+
+    <!-- CSS -->
+    <style include="common-styles"></style>
+    <style>
+
+      /* Element */
+      :host {
+        display: block;
+      }
+
+      /* Section */
+      section {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+        min-height: 424px;
+        padding: 24px;
+      }
+
+      /* Section - flex */
+      section .flex-one-empty {
+        @apply(--layout-flex);
+      }
+
+      /* Colors */
+      section.celebrations {
+        background-color: #aeebdf;
+      }
+
+      section.cooperation {
+        background-color: #fffef6;
+      }
+
+      section.fruit {
+        background-color: #ffd5cd;
+      }
+
+      /* Position of image */
+      section.left .image {
+        text-align: left;
+        padding-right: 28px;
+      }
+
+      section.right .image {
+        text-align: right;
+      }
+
+      /* Content */
+      section .content {
+        @apply(--layout-flex-3);
+        color: var(--text-color);
+      }
+
+      /* Content - heading */
+      section .content h1 {
+        font-size: 3em;
+        margin: 0 0 18px;
+      }
+
+      /* Content - paragraph */
+      section .content p {
+        font-size: 1.5em;
+      }
+
+      /* Content - image */
+      section .image {
+        @apply(--layout-flex-3);
+      }
+
+      /* Content - image - img */
+      section .image img {
+        height: auto;
+        max-width: 500px;
+        width: 100%;
+      }
+
+      /* Media queries */
+      @media screen and (max-width: 1146px) {
+        section .content, section .image {
+          @apply(--layout-flex-5);
+        }
+      }
+
+      @media screen and (max-width: 891px) {
+        section .content h1 {
+          font-size: 2.4em;
+        }
+        section .content p {
+          font-size: 1.3em;
+        }
+      }
+
+      @media screen and (max-width: 703px) {
+        section .content h1 {
+          font-size: 2.1em;
+        }
+        section .content p {
+          font-size: 1.2em;
+        }
+      }
+
+      @media screen and (max-width: 627px) {
+        section .content, section .image {
+          @apply(--layout-flex-7);
+        }
+        section .content h1 {
+          font-size: 1.9em;
+        }
+        section .content p {
+          font-size: 1.1em;
+        }
+      }
+
+      @media screen and (max-width: 531px) {
+        section {
+          @apply(--layout-vertical);
+          text-align: center;
+        }
+        section.left .image {
+          order: 2;
+          padding: 0;
+        }
+        section .image {
+          margin-top: 12px;
+          text-align: center !important;
+        }
+        section .image img {
+          width: 80%;
+        }
+      }
+
+    </style>
+
+    <!-- Slider -->
+    <hana-slider images="[[images]]"></hana-slider>
+
+    <!--&lt;!&ndash; Celebrations &ndash;&gt;-->
+    <!--<section class="celebrations right">-->
+
+      <!--&lt;!&ndash; Empty flex as padding &ndash;&gt;-->
+      <!--<div class="flex-one-empty"></div>-->
+
+      <!--&lt;!&ndash; Content &ndash;&gt;-->
+      <!--<div class="content">-->
+        <!--<h1>MILUJEME VÁM POMÁHAŤ PRI OSLAVÁCH</h1>-->
+        <!--<p>Možno práve táto dobrota vyčarí úsmev Vašej drahej ratolesti či polovičke.</p>-->
+        <!--<a href="/ponuka" class="hana-button">PONUKA</a>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Image &ndash;&gt;-->
+      <!--<div class="image">-->
+        <!--<img src="../../../images/home/hana-slider/4a.jpg" alt="cupcake.png">-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Empty flex as padding &ndash;&gt;-->
+      <!--<div class="flex-one-empty"></div>-->
+
+    <!--</section>-->
+
+    <!-- Cooperation -->
+    <section class="cooperation left">
+
+      <!-- Empty flex as padding -->
+      <div class="flex-one-empty"></div>
+
+      <!-- Image -->
+      <div class="image">
+        <img src="../../../images/cooperation/nico.jpeg" alt="nico.jpeg">
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <h1>SPOLUPRACUJEME S PODNIKMI</h1>
+        <p>Ochutnajte naš skvelý cheesacake v našich partnerských podnikoch.</p>
+        <a href="/spolupraca" class="hana-button">SPOLUPRÁCA</a>
+      </div>
+
+      <!-- Empty flex as padding -->
+      <div class="flex-one-empty"></div>
+
+    </section>
+
+    <!-- Fresh fruit -->
+    <section class="fruit right">
+
+      <!-- Empty flex as padding -->
+      <div class="flex-one-empty"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <h1>ČERSTVÉ SEZÓNNE OVOCIE</h1>
+        <p>Čerstvé ovocie je to čo robí naše produkty výnimočnými. Radosť pozerať aj ochutnať!</p>
+        <a href="/objednavka" class="hana-button">OBJEDNAŤ</a>
+      </div>
+
+      <!-- Image -->
+      <div class="image">
+        <img src="../../../images/home/fruit.png" alt="fruit.png">
+      </div>
+
+      <!-- Empty flex as padding -->
+      <div class="flex-one-empty"></div>
+
+    </section>
+
+  </template>
+  <script>(function () {
+  'use strict';
+
+  Polymer({
+    /**
+     * Element configuration (is, behaviors, properties, observers).
+     */
+    is: 'x-home',
+    behaviors: [],
+    properties: {
+      /**
+       * Array of images with source address to image and url to redirect user.
+       */
+      images: {
+        type: Array,
+        value: function () {
+          return [{
+            src: '../../../../images/home/hana-slider/1a.jpg',
+            heading: 'Vyber si svoj obľúbený cheesecake',
+            buttonText: 'PONUKA',
+            subtext: 'Koláčik, ktorému sa nedá odolať.',
+            url: '/ponuka/cheesecake'
+          }, {
+            src: '../../../../images/home/hana-slider/2a.jpg',
+            heading: 'Torty pečené s vášnou',
+            buttonText: 'PONUKA',
+            subtext: 'Pripravované z tých najkvalitnejších surovín.',
+            url: '/ponuka/torta'
+          }, {
+            src: '../../../../images/home/hana-slider/3b.jpg',
+            heading: 'Tvoj vlastný candy bar',
+            buttonText: 'PONUKA',
+            subtext: 'Vytvor si svoj vlasný candy bar, ktorý očarí hostí aj chuťové bunky.',
+            url: '/ponuka/candybar'
+          }, {
+            src: '../../../../images/home/hana-slider/4c.jpg',
+            heading: 'MILUJEME VÁM POMÁHAŤ PRI OSLAVÁCH',
+            buttonText: 'PONUKA',
+            subtext: 'Možno práve táto dobrota vyčarí úsmev Vašej drahej ratolesti či polovičke.',
+            url: '/ponuka'
+          }];
+        }
+      }
+    },
+    listeners: {},
+    observers: []
+  });
+})();</script>
+</dom-module>

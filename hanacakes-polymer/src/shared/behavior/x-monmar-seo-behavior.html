@@ -1,0 +1,53 @@
+<!-- Imports --><link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<!-- Behavior -->
+<script>(function () {
+  'use strict';
+  /**
+   * @polymerBehavior
+   */
+
+  Polymer.XMonmarSeoBehavior = {
+    changeMetadata: function (title, description, ogimage) {
+      var query = {
+        title: title,
+        description: description,
+        ogtitle: title,
+        ogdescription: description,
+        ogimage: ogimage
+      };
+
+      for (var data in query) {
+        if (query[data]) {
+          switch (data) {
+            case 'title':
+              document.title = query[data];
+              break;
+
+            case 'description':
+              document.head.querySelector('[name="description"]').content = query[data];
+              break;
+
+            case 'ogtitle':
+              document.head.querySelector('[property="og:title"]').content = query[data];
+              break;
+
+            case 'ogdescription':
+              document.head.querySelector('[property="og:description"]').content = query[data];
+              break;
+
+            case 'ogimage':
+              document.head.querySelector('[property="og:image"]').content = location.origin + query[data];
+              break;
+          }
+        }
+      }
+
+      setTimeout(function () {
+        this.fire('iron-signal', {
+          name: 'metadata-updated'
+        });
+      }.bind(this), 500);
+    }
+  };
+})();</script>

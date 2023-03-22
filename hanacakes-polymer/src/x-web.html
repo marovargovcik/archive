@@ -1,0 +1,198 @@
+<!-- Imports--><link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/app-route/app-location.html">
+<link rel="import" href="../bower_components/app-route/app-route.html">
+<link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-signals/iron-signals.html">
+<link rel="import" href="shared/behavior/x-lazy-load-behavior.html">
+<link rel="import" href="shared/behavior/x-monmar-seo-behavior.html">
+<link rel="import" href="x-header/x-header.html">
+<link rel="import" href="x-footer/x-footer.html">
+
+<!-- Element -->
+<dom-module id="x-web">
+  <template>
+
+    <!-- CSS -->
+    <style>
+
+      :root {
+        --primary-color: #d73853;
+        --secondary-color: #aeebdf;
+        --text-color: #6c3f21;
+        --hover-color: #e53c58;
+      }
+
+      /* Element */
+      :host {
+        display: block;
+      }
+
+      iron-pages {
+        padding-top: 112px;
+        transition: .3s;
+      }
+
+      @media screen and (max-width: 1103px) {
+        iron-pages {
+          padding-top: 76px;
+        }
+      }
+
+    </style>
+
+    <!-- Top level routing -->
+    <app-location route="{{route}}"></app-location>
+    <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{routeTail}}"></app-route>
+    <app-route route="{{route}}" pattern="/ponuka/:kind" data="{{metaData}}" active="{{isSubpageActive}}"></app-route>
+
+    <!-- Header -->
+    <x-header active-page="[[page]]" is-mobile="[[isMobile]]"></x-header>
+
+    <!-- Pages -->
+    <iron-pages selected="[[page]]" attr-for-selected="name" on-iron-select="lazyLoad">
+      <x-home name="uvod" data-file="pages/x-home/x-home.html"></x-home>
+      <x-menu name="ponuka" data-file="pages/x-menu/x-menu.html" route="{{routeTail}}"></x-menu>
+      <x-instagram name="instagram" data-file="pages/x-instagram/x-instagram.html"></x-instagram>
+      <x-cooperation name="spolupraca" data-file="pages/x-cooperation/x-cooperation.html"></x-cooperation>
+      <x-order name="objednavka" data-file="pages/x-order/x-order.html"></x-order>
+      <x-faq name="faq" data-file="pages/x-faq/x-faq.html"></x-faq>
+    </iron-pages>
+
+    <!-- Footer -->
+    <x-footer></x-footer>
+
+    <!-- Media query -->
+    <iron-media-query query="(max-width: 1103px)" query-matches="{{isMobile}}"></iron-media-query>
+
+    <!-- Iron signals -->
+    <iron-signals on-iron-signal-modal-open="_disableScrolling" on-iron-signal-modal-close="_allowScrolling" on-iron-signal-metadata-updated="_metadataUpdated">
+    </iron-signals>
+
+  </template>
+  <script>(function () {
+  'use strict';
+
+  Polymer({
+    /**
+     * Element configuration (is, behaviors, properties, observers).
+     */
+    is: 'x-web',
+    behaviors: [Polymer.XLazyLoadBehavior, Polymer.XMonmarSeoBehavior],
+    properties: {
+      isSubpageActive: {
+        type: Boolean
+      },
+      isMobile: {
+        type: Boolean
+      },
+      page: {
+        type: String,
+        value: 'uvod'
+      },
+      route: {
+        type: Object
+      },
+      routeData: {
+        type: Object
+      },
+      routeTail: {
+        type: Object
+      }
+    },
+    listeners: {},
+    observers: ['_routeDataChanged(routeData)', '_pageChanged(metaData, routeData, isSubpageActive)', '_isActiveChanged(isActive)'],
+
+    /**
+     * Firing event to allow scrolling (only when visitor exit image modal show).
+     *
+     * @private
+     */
+    _allowScrolling: function () {
+      this.fire('allow-scrolling');
+    },
+
+    /**
+     * Firing event to disable scrolling (only when visitor enter image modal show).
+     *
+     * @private
+     */
+    _disableScrolling: function () {
+      this.fire('disable-scrolling');
+    },
+    _metadataUpdated: function () {
+      this.fire('metadata-updated');
+    },
+
+    /**
+         * Observe any change to objects metaData, routeData, isSubpageActive and change metadata for each page currently selected.
+         *
+         * @param metaData
+         * @param routeData
+         * @param isSubpageActive
+         * @private
+         */
+    _pageChanged: function (metaData, routeData, isSubpageActive) {
+      this.debounce('_pageChanged', function () {
+        if (!isSubpageActive) {
+          this.set('metaData', null);
+        }
+
+        switch (routeData.page) {
+          case '':
+            this.changeMetadata('Hana Cakes - Cukrárenská výroba Sabinov', 'Pečieme s láskou chutné pochúťky pre každú príležitosť.', null);
+            break;
+
+          case 'ponuka':
+            if (isSubpageActive) {
+              switch (metaData.kind) {
+                case 'torta':
+                  this.changeMetadata('Torty - Hana Cakes', 'Oslava bez torty je iba stretnutie.', null);
+                  firebase.database();
+                  break;
+
+                case 'cheesecake':
+                  this.changeMetadata('Cheesecakes - Hana Cakes', 'Chutné a lahodné cheesecake z tych najkvalitnejších surovín.', null);
+                  break;
+
+                case 'candybar':
+                  this.changeMetadata('Candybar - Hana Cakes', 'Vytvor si svoj vlasntý candy bar.', null);
+                  break;
+              }
+            } else {
+              this.changeMetadata('Ponuka - Hana Cakes', 'Kompletná ponuka produktov Hana Cakes.', null);
+            }
+
+            break;
+
+          case 'spolupraca':
+            this.changeMetadata('Spolupráca - Hana Cakes', 'Máte záujem o spoluprácu? Neváhajte nás kontaktovať.', null);
+            break;
+
+          case 'instagram':
+            this.changeMetadata('#Instagram - Hana Cakes', 'Označ nás hashtagom #hanacakes.', null);
+            break;
+
+          case 'faq':
+            this.changeMetadata('Časté otázky - Hana Cakes', 'Najčastejšie otázky nájdeš tu! Alebo sa pýtaj priamo Hany.', null);
+            break;
+
+          case 'objednavka':
+            this.changeMetadata('Objednávka - Hana Cakes', 'Objednaj si svoju sladkú maškrtu hneď!', null);
+            break;
+        }
+      });
+    },
+
+    /**
+     * Observe changes to object routeData and change selected view.
+     *
+     * @param routeData
+     * @private
+     */
+    _routeDataChanged: function (routeData) {
+      this.page = routeData.page || 'uvod';
+    }
+  });
+})();</script>
+</dom-module>
