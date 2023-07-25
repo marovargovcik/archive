@@ -154,6 +154,7 @@ const Tag = ({ tag }: { tag: TagsTypes.TagWithRecipeCount }) => {
           Delete
         </button>
       </Form>
+      <br />
     </>
   );
 };

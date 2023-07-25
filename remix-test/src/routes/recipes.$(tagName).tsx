@@ -27,6 +27,7 @@ const Route = () => {
         {recipes.map((recipe) => (
           <li key={recipe.name}>
             <Link to={`/recipes/detail/${recipe.name}`}>{recipe.name}</Link>
+            {' - '}
             <span>Tags: {recipe.tags.map((tag) => tag.name).join(', ')}</span>
           </li>
         ))}
