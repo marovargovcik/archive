@@ -1,0 +1,20 @@
+# dependencies
+node_modules
+
+# build
+.cache
+tsconfig.tsbuildinfo
+build
+public/build
+
+# os
+.DS_Store
+
+# editor/ide
+.idea
+.vscode
+
+# sensitive
+.env
+database.db
+database.db-*
