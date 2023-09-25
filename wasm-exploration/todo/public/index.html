@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TODO list - Rust + WebAssembly</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script type="module">
+        import htm from 'https://unpkg.com/htm?module';
+        import init, { TodoItem, TodoList } from '/todo.js';
+
+        const html = htm.bind(React.createElement);
+    
+        (async() => {
+            await init();
+
+            const todoList = TodoList.new();
+
+            const listeners = [];
+
+            const store = {
+                subscribe: (listener) => {
+                    listeners.push(listener);
+
+                    return () => {
+                        listeners = listeners.filter(l => l !== listener);
+                    };
+                },
+                add: (todoItemName) => {
+                    todoList.add(todoItemName);
+                    listeners.forEach(listener => listener());
+                },
+                remove: (todoItemName) => {
+                    todoList.remove(todoItemName);
+                    listeners.forEach(listener => listener());
+                },
+                markDone: (todoItemName) => {
+                    todoList.mark_done(todoItemName);
+                    listeners.forEach(listener => listener());
+                },
+                markUndone: (todoItemName) => {
+                    todoList.mark_undone(todoItemName);
+                    listeners.forEach(listener => listener());
+                },
+                items: () => JSON.stringify(todoList.items().items, null, 2)
+            };
+
+            const AppOne = () => {
+                const state = React.useSyncExternalStore(store.subscribe, store.items);
+                const items = JSON.parse(state);
+
+                const handleClick = (todo) => () => {
+                    if (todo.is_done) {
+                        store.markUndone(todo.name);
+                    } else {
+                        store.markDone(todo.name);
+                    }
+                };
+
+                const handleDelete = (todo) => () => {
+                    store.remove(todo.name);
+                };
+
+                const handleSubmit = (event) => {
+                    event.preventDefault();
+
+                    const input = event.target['todoItemName'];
+
+                    store.add(input.value);
+
+                    event.target.reset();
+
+                    input.focus();
+                };
+
+                return html`
+                    <${React.Fragment}>
+                        <form onSubmit=${handleSubmit}>
+                            <label htmlFor="todoItemName">Add TODO</label>
+                            <br />
+                            <input id="todoItemName" name="todoItemName" type="text" />
+                            <br />
+                            <button type="submit">Add</button>
+                        </form>
+                        <ul>
+                            ${items.map(item => html`
+                                <li key=${item.name}>
+                                    <span 
+                                        onClick=${handleClick(item)} 
+                                        style=${{textDecoration: item.is_done ? "line-through" : 'none'}}
+                                    >
+                                        ${item.name}
+                                    </span>
+                                    ${' '}
+                                    <button onClick=${handleDelete(item)}>Remove</button>
+                                </li>
+                            `)}
+                        </ul>
+                    </${React.Fragment}>
+                `;
+            };
+
+            const AppTwo = () => {
+                const state = React.useSyncExternalStore(store.subscribe, store.items);
+
+                return html`<pre>${state}</pre>`;
+            };
+
+            const App = () => html`
+                <${React.Fragment}>
+                    <${AppOne} />
+                    <${AppTwo} />
+                </${React.Fragment}>
+            `;
+
+            ReactDOM.createRoot(document.querySelector('#root')).render(html`<${App} />`);
+        })();
+    </script>
+</body>
+</html>

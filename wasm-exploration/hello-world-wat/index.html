@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello, World - WAT</title>
+</head>
+
+<body>
+    <script>
+        (async () => {
+            const BINARY_PATH = '/helloworld.wasm';
+
+            const response = await fetch(BINARY_PATH);
+            const bytes = await response.arrayBuffer();
+
+            const wasm = await WebAssembly.instantiate(bytes, {
+                log: console.log,
+                alert: alert,
+            });
+
+            console.log(w);
+
+            const { instance } = w;
+
+            const result = document.getElementById("result");
+
+            const memory = new Uint32Array(instance.exports.memory.buffer);
+
+            function readWasmString(ptr) {
+                let end = ptr;
+                while (memory[end] !== 0x00) {
+                    end++;
+                }
+                return new TextDecoder('utf8').decode(memory.subarray(ptr, end));
+            }
+            
+            console.log(readWasmString(instance.exports.helloworld()));
+        })();
+
+
+    </script>
+    <div id="result"></div>
+</body>
+
+</html>

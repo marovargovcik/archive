@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Counter - Rust + WebAssembly</title>
+</head>
+<body>
+    <script>
+        (async () => {
+            const BINARY_PATH = '/counter.wasm';
+
+            const response = await fetch(BINARY_PATH);
+            const bytes = await response.arrayBuffer();
+
+            const {instance} = await WebAssembly.instantiate(bytes, {});
+
+            const {increment, decrement, get} = instance.exports;
+
+            const counter = document.querySelector('#counter');
+
+            counter.textContent = get();
+
+            document.querySelector('#increment').addEventListener('click', () => {
+                increment();
+
+                counter.textContent = get();
+            });
+
+            document.querySelector('#decrement').addEventListener('click', () => {
+                decrement();
+                
+                counter.textContent = get();
+            });
+        })();
+    </script>
+    <h1 id="counter"></h1>
+    <button id="increment" type="button">Increment</button>
+    <button id="decrement" type="button">Decrement</button>
+</body>
+</html>
