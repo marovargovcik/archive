@@ -1,0 +1,28 @@
+# sbt
+.ensime
+.ensime_cache/
+.history
+.sbt-scripted/
+dist/*
+lib_managed/
+local.sbt
+project/boot/
+project/local-plugins.sbt
+project/plugins/project/
+src_managed/
+target/
+
+# bloop
+.bsp
+
+# ide
+.vscode/
+
+# metals
+.bloop/
+.metals/
+metals.sbt
+
+# os
+.DS_Store
+Zone.Identifier
